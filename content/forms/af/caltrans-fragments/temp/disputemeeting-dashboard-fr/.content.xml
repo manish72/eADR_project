@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[granite:FinalArea]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/fd/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2022-08-24T07:25:56.840Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/fd/af/templateForFragment/defaultFragmentTemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="disputemeeting-dashboard-fr"
+        sling:resourceType="fd/af/components/page/basePageForFragment">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2022-07-03T10:28:56.595Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideFragmentContainer"
+            disableSwipeGesture="{Boolean}false"
+            enableLayoutLayer="false"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="fragment1">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                cq:cssClass="guide-1657093823590"
+                jcr:lastModified="{Date}2022-06-26T14:17:20.687Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                cssStyle=".guide-1657093823590 .guideVerticalTabbedPanelLayout .tab-navigators{&#xa;overflow:visible;&#xa;display:inline;&#xa;&#xa;}&#xa;.guide-1657093823590 .afTabTopPanel{&#xa;&#xa;}&#xa;.guide-1657093823590 .guideLayout.guideVerticalTabbedPanelLayout{&#xa;&#xa;}&#xa;"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                    <panel1656252988382
+                        cq:cssClass="guide-1657094014869"
+                        jcr:lastModified="{Date}2022-06-26T14:17:33.092Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1657094014869 .guideVerticalTabbedPanelLayout .tab-navigators{&#xa;display:inline;&#xa;&#xa;}&#xa;.guide-1657094014869 .guide-tab-scroller.guide-tab-scroller-previous{&#xa;visibility: hidden;&#xa;}&#xa;.guide-1657094014869 .wizard-nav-arrow.wizard-nav-next{&#xa;&#xa;}&#xa;.guide-1657094014869 .wizard-nav-arrow.wizard-nav-prev{&#xa;&#xa;}&#xa;.guide-1657094014869 .afTabTopPanel{&#xa;padding-right:0px;&#xa;padding-left:0px;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="mainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/verticalTabbedPanelLayout"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <panel_copy
+                                jcr:created="{Date}2022-06-14T09:43:21.679Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-14T09:44:15.624Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dashboard"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="dashboard"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidebutton_copy
+                                        jcr:created="{Date}2022-06-16T04:54:01.718Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-16T04:54:38.199Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Request a new Dispute Meeting"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="newDisputeMeeting"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.newDisputeMeeting&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//newDisputeMeetingrequest.visible = true;\\n//mainPanel.visible = false;\\n//fetch dispute details from ea and district\\nvar params = new URLSearchParams(window.location.search);\\nvar actualData=JSON.parse(window.atob(params.get('input')));\\n//console.log(actualData);\\n//console.log(\\&quot;hh\\&quot;)\\nvar jsonData = {\\n  \\&quot;contractKey\\&quot; : actualData.contract_number\\n}; \\n//console.log(jsonData);\\nvar dollarUSLocale12 = Intl.NumberFormat('en-US');\\n$.ajax({ \\n    type: 'GET'\, \\n    data: jsonData\,\\n    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetTotalPCPDetails'\,\\n    success: function (data) { \\n          //console.log(data);\\n      \\t  data=JSON.parse(data);\\n          if(typeof(data.PCP_Details.Record.PCP_MAIN_PK)===\\&quot;undefined\\&quot;){\\n          \\tcount1=data.PCP_Details.Record.length;\\n          }\\n          else{\\n            count1=1;\\n          }\\n      \\t  if(count1===1){\\n              tablenewDisputeRow1.instanceManager.addInstance(1);\\n              tablenewDisputeRow1.instanceManager.instances[0].PCRNoNew.value=data.PCP_Details.Record.PCP_MAIN_PK;\\n              if(data.PCP_Details.Record.D_IPC_DESCR!==\\&quot;null\\&quot;){\\n                tablenewDisputeRow1.instanceManager.instances[0].DescNew.value=data.PCP_Details.Record.D_IPC_DESCR;\\n              }\\n              if(data.PCP_Details.Record.E_EST_COST!==\\&quot;null\\&quot;){\\n               tablenewDisputeRow1.instanceManager.instances[0].DollarNew.value=\\&quot;$ \\&quot;+dollarUSLocale12.format(data.PCP_Details.Record.E_EST_COST);\\n              }\\n              if(data.PCP_Details.Record.E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n               tablenewDisputeRow1.instanceManager.instances[0].DelayDaysNew.value=data.PCP_Details.Record.E_TIME_IMPACT;\\n              }\\n              if(data.PCP_Details.Record.E_REC_DATE!==\\&quot;null\\&quot;){\\n                tablenewDisputeRow1.instanceManager.instances[0].DateSuppNew.value=data.PCP_Details.Record.E_REC_DATE;\\n              }\\n              tablenewDisputeRow1.instanceManager.instances[0].visible=true;\\n          }\\n          else{\\n            \\tfor(var i=0; i&lt;data.PCP_Details.Record.length; i++){\\n                  tablenewDispute.tablenewDisputeRow1.instanceManager.addInstance(1);\\n                  //alert(data.PCP_Details.Record[i].PCP_MAIN_PK);\\n                  tablenewDispute.tablenewDisputeRow1.instanceManager.instances[i].PCRNoNew.value=data.PCP_Details.Record[i].PCP_MAIN_PK;\\n                  if(data.PCP_Details.Record[i].D_IPC_DESCR!==\\&quot;null\\&quot;){\\n                   tablenewDisputeRow1.instanceManager.instances[i].DescNew.value=data.PCP_Details.Record[i].D_IPC_DESCR;\\n                  }\\n                  if(data.PCP_Details.Record[i].E_EST_COST!==\\&quot;null\\&quot;){\\n                  tablenewDisputeRow1.instanceManager.instances[i].DollarNew.value=\\&quot;$ \\&quot;+dollarUSLocale12.format(data.PCP_Details.Record[i].E_EST_COST);\\n                  }\\n                  if(data.PCP_Details.Record[i].E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n                   tablenewDisputeRow1.instanceManager.instances[i].DelayDaysNew.value=data.PCP_Details.Record[i].E_TIME_IMPACT;\\n                  }\\n                  if(data.PCP_Details.Record[i].E_REC_DATE!==\\&quot;null\\&quot;){\\n                    tablenewDisputeRow1.instanceManager.instances[i].DateSuppNew.value=data.PCP_Details.Record[i].E_REC_DATE;\\n                  }\\n                  tablenewDisputeRow1.instanceManager.instances[i].visible=true;\\n                 }\\n          }\\n     newDisputeMeetingrequest.visible = true;\\n\\tmainPanel.visible = false;\\n    }\,\\n  \\terror: function(err){\\n      \\n\\t}\\n});&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_copy>
+                                    <panel1654170861659_c
+                                        jcr:lastModified="{Date}2022-06-02T12:24:09.010Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Dispute Meeting"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        maxOccur="-1"
+                                        name="disputeMeeting"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                            columns="1"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                            <table_copy
+                                                cq:cssClass="guide-1657709846087"
+                                                jcr:created="{Date}2022-05-16T06:15:58.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-14T17:45:16.000Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Table"
+                                                sling:resourceType="fd/af/components/table"
+                                                columnWidth="1/7,1/7,1/7,1/7,1/7,2/7"
+                                                cssStyle=".guide-1657709846087 .guideTableNode table .guideTableRowNode.guideTableHeader th{&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTable"
+                                                name="DisputeDashDisTable"
+                                                sortingEnabled="false"
+                                                textIsRich="true">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/tableLayout"
+                                                    columns="2"
+                                                    mobileLayout="headersLeft"
+                                                    rows="2"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/tableLayout">
+                                                    <HeaderRow
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Header Row"
+                                                        sling:resourceType="fd/af/components/tableHeader"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTableRow"
+                                                        name="headerRow">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/headerLayout"
+                                                            nonNavigable="{Boolean}true"/>
+                                                        <items
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/headerLayout">
+                                                            <tableItem
+                                                                jcr:lastModified="{Date}2022-07-04T10:36:46.533Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Select Dispute Meeting&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652682189355
+                                                                jcr:lastModified="{Date}2022-05-16T06:24:04.979Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Dispute Meeting ID&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16526821893551652682189591"
+                                                                textIsRich="true"/>
+                                                            <tableItem1
+                                                                jcr:lastModified="{Date}2022-07-04T10:37:19.972Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Overall Status&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem1"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652682120340
+                                                                jcr:lastModified="{Date}2022-07-04T10:37:48.155Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Type of Meeting&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16526821203401652682120570"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652682207792
+                                                                jcr:lastModified="{Date}2022-07-04T10:38:03.215Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Position Paperdue Date&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16526822077921652682208096"
+                                                                textIsRich="true"/>
+                                                            <headerItem1656931089276
+                                                                jcr:lastModified="{Date}2022-07-04T10:38:26.438Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Meeting Date&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16569310892761656931089569"
+                                                                textIsRich="true"/>
+                                                        </items>
+                                                    </HeaderRow>
+                                                    <Row1
+                                                        jcr:lastModified="{Date}2022-06-02T12:32:43.953Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Row 1"
+                                                        sling:resourceType="fd/af/components/tableRow"
+                                                        enabled="{Boolean}true"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTableRow"
+                                                        maxOccur="-1"
+                                                        minOccur="0"
+                                                        name="Row1"
+                                                        visible="{Boolean}false">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/rowLayout"
+                                                            nonNavigable="{Boolean}true"/>
+                                                        <items
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/rowLayout">
+                                                            <tableItem
+                                                                jcr:lastModified="{Date}2022-05-17T06:47:28.818Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text Box"
+                                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                                alignment="guideFieldHorizontalAlignment"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideCheckBox"
+                                                                hideTitle="true"
+                                                                name="tableItem11"
+                                                                options="[Y=]"
+                                                                textIsRich="[true,true]">
+                                                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                                <fd:scripts
+                                                                    fd:valueCommit="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.DisputeDashDisTable.Row1.tableItem11&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if(this.value==\\&quot;Y\\&quot;){  \\n  DisputeDashPCPTable.visible=false;\\n  if(StoreOldCount.value!==null){\\n  for(var j=0;j&lt;StoreOldCount.value; j++){\\n \\tDisputeDashPCPTable.Tabel2Row1.instanceManager.removeInstance(1);\\n  }\\n  }\\n  //DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item1.value\\n  var dollarUSLocale = Intl.NumberFormat('en-US');\\n  DisputeMeetIDHide.value=DisputeDashDisTable.Row1.instanceManager.instances[this.parent.instanceIndex].table1_item1.value;\\n  var Disid1 = DisputeMeetIDHide.value;\\n  DisputeDashPCPTable.visible=true;                  \\n$.ajax({\\n          type: 'GET'\, \\n   \\t\\tdata: {'DisputeID':Disid1}\,\\n            contentType: 'application/json'\,\\n          url: 'http://'+window.location.hostname+':8080'+'/rest/services/Caltrans-eADR/Processes/GetPCPDetails'\,\\n            dataType: \\&quot;json\\&quot;\,\\n          success: function (data) {  \\n            //console.log(data.PCP_Details.Record.PCP_MAIN_PK);\\n            var count1;\\n            if(typeof(data.PCP_Details.Record.PCP_MAIN_PK)===\\&quot;undefined\\&quot;){\\n              count1=data.PCP_Details.Record.length;\\n            }\\n            else{\\n              count1=1;\\n            }\\n            StoreOldCount.value=count1;\\n            //alert(StoreOldCount.value);\\n            if(count1===1){\\n              \\tTabel2Row1.instanceManager.addInstance(1);\\n           \\t\\tTabel2Row1.tableItem11.value=data.PCP_Details.Record.PCP_MAIN_PK;\\n                if(data.PCP_Details.Record.D_IPC_DESCR!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478188541652847819037.value=data.PCP_Details.Record.D_IPC_DESCR;\\n                }\\n              \\tif(data.PCP_Details.Record.E_EST_COST!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478138731652847814057.value=\\&quot;$ \\&quot;+dollarUSLocale.format(data.PCP_Details.Record.E_EST_COST);\\n                }\\n              \\tif(data.PCP_Details.Record.E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478095261652847809695.value=data.PCP_Details.Record.E_TIME_IMPACT;\\n                }\\n              \\tif(data.PCP_Details.Record.E_REC_DATE!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.tableItem12.value=data.PCP_Details.Record.E_REC_DATE;\\n                }\\n                Tabel2Row1.visible=true;\\n            }\\n            else{\\n              for(var i=0; i&lt;data.PCP_Details.Record.length; i++){\\n              //alert(i);\\n\\t\\t\\t\\tTabel2Row1.instanceManager.addInstance(1);\\n           \\t\\tTabel2Row1.tableItem11.value=data.PCP_Details.Record[i].PCP_MAIN_PK;\\n                if(data.PCP_Details.Record[i].D_IPC_DESCR!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478188541652847819037.value=data.PCP_Details.Record[i].D_IPC_DESCR;\\n                }\\n              \\tif(data.PCP_Details.Record[i].E_EST_COST!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478138731652847814057.value=\\&quot;$ \\&quot;+dollarUSLocale.format(data.PCP_Details.Record[i].E_EST_COST);\\n                }\\n              \\tif(data.PCP_Details.Record[i].E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.headerItem16528478095261652847809695.value=data.PCP_Details.Record[i].E_TIME_IMPACT;\\n                }\\n              \\tif(data.PCP_Details.Record[i].E_REC_DATE!==\\&quot;null\\&quot;){\\n                \\tTabel2Row1.tableItem12.value=data.PCP_Details.Record[i].E_REC_DATE;\\n                }\\n                Tabel2Row1.visible=true;\\n               } \\n            }                      \\n          }\,\\n          error: function(err){\\n            alert(\\&quot;something went wrong\\&quot;);\\n          }\\n        });\\n   var cCount = this.parent.instanceIndex;\\n  var tCount = this.parent.instanceManager.instanceCount;\\n  for(var k=0; k&lt;tCount; k++){\\n \\tif(k!==cCount){\\n    DisputeDashDisTable.Row1.instanceManager.instances[k].tableItem11.value =null;\\n  }\\n }\\n}\\n/*if(this.value===null){\\n  table_2.visible=false;\\n  //table_2.resetData();\\n  for(var j=0;j&lt;textbox1652851019334.value; j++){\\n Tabel2Row1.instanceManager.removeInstance(1);\\n  }\\t\\t\\n  \\n}*/\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                                                    jcr:primaryType="nt:unstructured"/>
+                                                            </tableItem>
+                                                            <headerItem1652682189455
+                                                                jcr:lastModified="{Date}2022-06-02T12:16:27.499Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                hideTitle="true"
+                                                                name="table1_item1"
+                                                                textIsRich="[true,true,true]">
+                                                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                            </headerItem1652682189455>
+                                                            <tableItem1
+                                                                jcr:lastModified="{Date}2022-06-02T12:16:34.935Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text Box"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                hideTitle="true"
+                                                                name="table1_item2"
+                                                                textIsRich="[true,true,true]"/>
+                                                            <headerItem1652682120438
+                                                                jcr:lastModified="{Date}2022-06-02T12:16:54.291Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                hideTitle="true"
+                                                                name="table1_item3"
+                                                                textIsRich="[true,true,true]"/>
+                                                            <headerItem1652682207892
+                                                                jcr:lastModified="{Date}2022-07-13T10:54:00.035Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="table1_item4"
+                                                                textIsRich="[true,true,true]">
+                                                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                            </headerItem1652682207892>
+                                                            <headerItem1656931089401
+                                                                jcr:lastModified="{Date}2022-07-13T10:54:28.185Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="table1_item5"
+                                                                textIsRich="[true,true,true]">
+                                                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                            </headerItem1656931089401>
+                                                        </items>
+                                                    </Row1>
+                                                </items>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_tableheadercell
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[]"/>
+                                                </style>
+                                            </table_copy>
+                                            <table_1286468565_cop
+                                                jcr:created="{Date}2022-05-18T04:23:08.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-04T08:07:02.469Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Table"
+                                                sling:resourceType="fd/af/components/table"
+                                                guideNodeClass="guideTable"
+                                                name="DisputeDashPCPTable"
+                                                sortingEnabled="false"
+                                                textIsRich="true"
+                                                visible="{Boolean}false">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/tableLayout"
+                                                    columns="2"
+                                                    mobileLayout="headersLeft"
+                                                    rows="2"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/tableLayout">
+                                                    <HeaderRow
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Header Row"
+                                                        sling:resourceType="fd/af/components/tableHeader"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTableRow"
+                                                        name="headerRow">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/headerLayout"
+                                                            nonNavigable="{Boolean}true"/>
+                                                        <items
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/headerLayout">
+                                                            <tableItem
+                                                                jcr:lastModified="{Date}2022-05-18T04:24:32.087Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>PCR&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652847818735
+                                                                jcr:lastModified="{Date}2022-07-04T10:38:56.277Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Brief Description of the Dispute&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16528478187351652847818989"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652847813775
+                                                                jcr:lastModified="{Date}2022-07-04T10:39:22.666Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Dollar Value of the Potential Claim(per contractor)&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16528478137751652847814013"
+                                                                textIsRich="true"/>
+                                                            <headerItem1652847809424
+                                                                jcr:lastModified="{Date}2022-07-04T10:40:05.621Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Delay Days on Controlling Item of Work (per contractor)&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16528478094241652847809658"
+                                                                textIsRich="true"/>
+                                                            <tableItem1
+                                                                jcr:lastModified="{Date}2022-07-04T10:40:28.721Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Date Supplemental Potential Claim Record (SPCR) Submitted&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem1"
+                                                                textIsRich="true"/>
+                                                            <headerItem1656931233559
+                                                                jcr:lastModified="{Date}2022-07-04T10:40:55.431Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Date Resident Engineer Responded to SPCR&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16569312335591656931233854"
+                                                                textIsRich="true"/>
+                                                            <headerItem1656931239492
+                                                                jcr:lastModified="{Date}2022-07-04T10:41:26.018Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>Date DRB/DRA Referred (see note)&lt;/p>&#xa;"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                name="headerItem16569312394921656931239808"
+                                                                textIsRich="true"/>
+                                                        </items>
+                                                    </HeaderRow>
+                                                    <Row1
+                                                        jcr:lastModified="{Date}2022-05-18T04:56:59.272Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Row 1"
+                                                        sling:resourceType="fd/af/components/tableRow"
+                                                        enabled="{Boolean}true"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTableRow"
+                                                        maxOccur="-1"
+                                                        minOccur="0"
+                                                        name="Tabel2Row1"
+                                                        visible="{Boolean}false">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/rowLayout"
+                                                            nonNavigable="{Boolean}true"/>
+                                                        <items
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="fd/af/layouts/table/rowLayout">
+                                                            <tableItem
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text Box"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                hideTitle="{Boolean}true"
+                                                                name="tableItem11"/>
+                                                            <headerItem1652847818854
+                                                                jcr:lastModified="{Date}2022-07-06T01:45:11.451Z"
+                                                                jcr:lastModifiedBy="admin"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                autofillFieldKeyword="name"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="headerItem16528478188541652847819037"
+                                                                textIsRich="[true,true,true]"/>
+                                                            <headerItem1652847813873
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextDraw"
+                                                                hideTitle="true"
+                                                                name="headerItem16528478138731652847814057"/>
+                                                            <headerItem1652847809526
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="headerItem16528478095261652847809695"/>
+                                                            <tableItem1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text Box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="{Boolean}true"
+                                                                name="tableItem12"/>
+                                                            <headerItem1656931233683
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="headerItem16569312336831656931233922"/>
+                                                            <headerItem1656931239615
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Text box"
+                                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                                guideComponentType="true"
+                                                                guideNodeClass="guideTextBox"
+                                                                hideTitle="true"
+                                                                name="headerItem16569312396151656931239861"/>
+                                                        </items>
+                                                    </Row1>
+                                                </items>
+                                            </table_1286468565_cop>
+                                            <panel_copy
+                                                jcr:created="{Date}2022-06-16T04:56:29.361Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-06-16T05:06:51.721Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Buttons"
+                                                sling:resourceType="fd/af/components/panel"
+                                                guideNodeClass="guidePanel"
+                                                name="buttons"
+                                                textIsRich="true"
+                                                validateOnStepCompletion="{Boolean}false">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                                    columns="3"
+                                                    nonNavigable="{Boolean}true"
+                                                    toolbarPosition="Bottom"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                                    <guidebutton_15990140
+                                                        jcr:created="{Date}2022-06-16T04:57:31.115Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-07-11T17:37:45.299Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Submit Due Date and Meeting Date"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="SubmitDueMeetDateButton"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts
+                                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.SubmitDueMeetDateButton&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//alert(tablenewDispute.tablenewDisputeRow1.instanceManager.instanceCount);\\nvar meetingType\,disputeID;\\nfor(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n\\tif(DisputeDashDisTable.Row1.instanceManager.instances[i].tableItem11.value==='Y'){\\n\\t  meetingType = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value;\\n\\t  disputeID = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value;\\n\\t  break;\\n\\t}\\n}\\nvar jsonData = {\\n\\t\\&quot;ea\\&quot; : ea.value\,\\n\\t\\&quot;district\\&quot; : district.value\,\\n\\t\\&quot;DisputeID\\&quot; : disputeID\,\\n\\t\\&quot;MeetingType\\&quot; : meetingType\,\\n\\t\\&quot;DRType\\&quot; : SelectDRADRB.value\\n}; \\n\\n//console.log(jsonData);\\n\\n$.ajax({ \\n    type: 'GET'\, \\n    data: jsonData\,\\n    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetNewDisputeCreatedDate'\,\\n    success: function (data) {  \\n     //console.log(data);\\n      panelduedate.visible = true;\\n      NotifyAllDatesButton.visible=true;\\n      UpdateMeetPosDates.visible=false;\\n      mainPanel.visible = false;\\n      DisputeCreatedDatePM.value=data.getElementsByTagName(\\&quot;DisputeCreatedDate\\&quot;)[0].innerHTML;\\n      SuccDates.visible = false;\\n      ErrorDates.visible = false;\\n    }\,\\n  \\terror: function(err){\\n      \\n\\t}\\n});&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton_15990140>
+                                                    <guidebutton_1914617553
+                                                        jcr:created="{Date}2022-06-16T04:57:07.788Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-06-17T10:51:15.821Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="RE Position Paper - Review"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="button1655355427866"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules
+                                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.button1655355427866&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button1655355427866&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SET_FOCUS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.position-RE&quot;\,&quot;displayName&quot;:&quot;Position Paper-RE&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/Position Paper-RE/&quot;\,&quot;name&quot;:&quot;position-RE&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.mainPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.setFocus(guideBridge.resolveNode(\\&quot;position-RE\\&quot;).somExpression);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton_1914617553>
+                                                    <guidebutton
+                                                        jcr:created="{Date}2022-06-16T04:56:06.548Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-06-16T05:07:59.400Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Contractor Position Paper - Review"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="button1655355366706"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules
+                                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.button1655355366706&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button1655355366706&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SET_FOCUS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.position&quot;\,&quot;displayName&quot;:&quot;Position Paper-Contractor&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/Position Paper-Contractor/&quot;\,&quot;name&quot;:&quot;position&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.mainPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n *  WHEN Contractor Position Paper - Review is clicked  THEN Set Focus to  to Position Paper-Contractor\\n *\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.setFocus(position.somExpression);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton>
+                                                    <guidebutton_2022604472
+                                                        jcr:created="{Date}2022-06-16T04:57:21.044Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-06-16T05:08:27.668Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Recommendation Report - Review"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="button_20226044721655355441131"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules
+                                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.button_20226044721655355441131&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button_20226044721655355441131&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SET_FOCUS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.recReport&quot;\,&quot;displayName&quot;:&quot;Recommendation Report&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/Recommendation Report/&quot;\,&quot;name&quot;:&quot;recReport&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.mainPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n *  WHEN Contractor Position Paper - Review is clicked  THEN Set Focus to  to Position Paper-Contractor\\n *\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.setFocus(recReport.somExpression);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton_2022604472>
+                                                    <guidebutton_488618028
+                                                        jcr:created="{Date}2022-06-16T04:57:41.000Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-07-14T19:28:58.000Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Close Dispute Meeting"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="closeDispute"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules
+                                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.closeDispute&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;closeDispute&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SHOW_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.closeDispute&quot;\,&quot;displayName&quot;:&quot;Section&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;isDuplicate&quot;:true\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/Dashboard/Section/&quot;\,&quot;name&quot;:&quot;closeDispute&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\ndashboard.closeDispute.visible = true;\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton_488618028>
+                                                    <guidebutton_1638010038
+                                                        jcr:created="{Date}2022-06-16T04:57:48.000Z"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2022-07-11T17:58:38.824Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Reschedule Dispute Meeting"
+                                                        sling:resourceType="fd/af/components/guidebutton"
+                                                        dorExclusion="true"
+                                                        guideNodeClass="guideButton"
+                                                        name="RescheduleDisputeMeet"
+                                                        textIsRich="[true,true]"
+                                                        type="Button">
+                                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                        <fd:scripts
+                                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting.buttons.RescheduleDisputeMeet&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//alert(tablenewDispute.tablenewDisputeRow1.instanceManager.instanceCount);\\nvar meetingType\,disputeID;\\nfor(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n\\tif(DisputeDashDisTable.Row1.instanceManager.instances[i].tableItem11.value==='Y'){\\n\\t  meetingType = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value;\\n\\t  disputeID = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value;\\n\\t  break;\\n\\t}\\n}\\nvar jsonData = {\\n\\t\\&quot;ea\\&quot; : ea.value\,\\n\\t\\&quot;district\\&quot; : district.value\,\\n\\t\\&quot;DisputeID\\&quot; : disputeID\,\\n\\t\\&quot;MeetingType\\&quot; : meetingType\,\\n\\t\\&quot;DRType\\&quot; : SelectDRADRB.value\\n}; \\n\\n//console.log(jsonData);\\n\\n$.ajax({ \\n    type: 'GET'\, \\n    data: jsonData\,\\n    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetNewDisputeCreatedDate'\,\\n    success: function (data) {  \\n      //console.log(data);\\n      panelduedate.visible = true;\\n      NotifyAllDatesButton.visible=false;\\n      UpdateMeetPosDates.visible=true;\\n      mainPanel.visible = false;\\n      DisputeCreatedDatePM.value=data.getElementsByTagName(\\&quot;DisputeCreatedDate\\&quot;)[0].innerHTML;\\n      if(data.getElementsByTagName(\\&quot;PosDueDate\\&quot;)[0].innerHTML===\\&quot;null\\&quot; || data.getElementsByTagName(\\&quot;PosDueDate\\&quot;)[0].innerHTML===\\&quot;\\&quot;){\\n        \\n      }\\n      else{\\n        PosPaperDueDateDash.value=data.getElementsByTagName(\\&quot;PosDueDate\\&quot;)[0].innerHTML;\\n      }\\n      if(data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML===\\&quot;null\\&quot; || data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML===\\&quot;\\&quot;){\\n        \\n      }\\n      else{\\n        MeetDateDash.value=data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML;\\n      }\\n      SuccDates.visible = false;\\n      ErrorDates.visible = false;\\n    }\,\\n  \\terror: function(err){\\n      \\n\\t}\\n});&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                                            jcr:primaryType="nt:unstructured"/>
+                                                    </guidebutton_1638010038>
+                                                </items>
+                                            </panel_copy>
+                                            <guidetextbox_copy
+                                                jcr:created="{Date}2022-05-18T05:16:59.245Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-04T08:19:59.724Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text Box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="StoreOldCount"
+                                                textIsRich="[true,true,true]"
+                                                visible="{Boolean}false"/>
+                                            <guidetextbox
+                                                jcr:created="{Date}2022-07-04T08:35:37.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-14T19:28:00.398Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text Box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="DisputeMeetIDHide"
+                                                textIsRich="[true,true,true]"
+                                                visible="{Boolean}false"/>
+                                        </items>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;//fetch dispute details from ea and district\\nvar params = new URLSearchParams(window.location.search);\\nvar actualData=JSON.parse(window.atob(params.get('input')));\\n//console.log(actualData);\\nea.value=actualData.ea;\\ndistrict.value=actualData.district;\\nvar jsonData={'ea':ea.value\,'district':district.value\,'InfoType':'Complete'};\\n//console.log(jsonData);\\n$.ajax({ \\n          type: 'GET'\, \\n          contentType: 'application/xml'\,        \\n          url: 'http://'+window.location.hostname+':8080'+'/rest/services/Caltrans-eADR/Processes/GetDisputeMeetings'\,\\n          data: jsonData\,\\n          success: function (data) {        \\n            //console.log(data.getElementsByTagName(\\&quot;GetRowCount\\&quot;)[0].innerHTML);\\n            count=parseInt(data.getElementsByTagName(\\&quot;GetRowCount\\&quot;)[0].innerHTML);\\n            if(count>0){\\n                jsonResponse = JSON.parse(data.getElementsByTagName(\\&quot;DRBMembersDetailsJson\\&quot;)[0].innerHTML);\\n               // console.log(jsonResponse.Dispute_Meetings);\\n                //console.log(data.Dispute_Meetings.Meeting.length);\\n                if(count===1){\\n                  //console.log(table1.Row1.instanceManager.instances);\\n                  DisputeDashDisTable.Row1.instanceManager.addInstance(1);\\n                  //tableItem11.value=data[i].Select;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item1.value=jsonResponse.Dispute_Meetings.Meeting.DISPUTE_MEETING_ID;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item2.value=jsonResponse.Dispute_Meetings.Meeting.OVERALL_STATUS;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item3.value=jsonResponse.Dispute_Meetings.Meeting.TYPE_OF_MEETING;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item4.value=jsonResponse.Dispute_Meetings.Meeting.POSITION_PAPER_DUEDATE;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].table1_item5.value=jsonResponse.Dispute_Meetings.Meeting.MEETING_DATE;\\n                  DisputeDashDisTable.Row1.instanceManager.instances[0].visible=true;\\n                }\\n              else{\\n                    for(var i=0; i&lt;count; i++){ \\n                      //console.log(table1.Row1.instanceManager.instances);\\n                      DisputeDashDisTable.Row1.instanceManager.addInstance(1);\\n                      //tableItem11.value=data[i].Select;\\n                      DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value=jsonResponse.Dispute_Meetings.Meeting[i].DISPUTE_MEETING_ID;\\n                      DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item2.value=jsonResponse.Dispute_Meetings.Meeting[i].OVERALL_STATUS;\\n                      DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value=jsonResponse.Dispute_Meetings.Meeting[i].TYPE_OF_MEETING;                           \\t\\t\\t\\t\\t\\t DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item4.value=jsonResponse.Dispute_Meetings.Meeting[i].POSITION_PAPER_DUEDATE;\\n                      DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item5.value=jsonResponse.Dispute_Meetings.Meeting[i].MEETING_DATE; \\n                      DisputeDashDisTable.Row1.instanceManager.instances[i].visible=true;\\n                    }\\n                    //console.log(table1.Row1.instanceManager.instanceCount);\\n                }\\n            }\\n          }\,\\n          error: function(err){\\n            alert(\\&quot;something went wrong\\&quot;);\\n          }\\n});&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.disputeMeeting&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel1654170861659_c>
+                                    <panel
+                                        jcr:created="{Date}2022-06-20T04:24:35.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-07-14T19:27:20.807Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        name="closeDispute"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false"
+                                        visible="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                            columns="1"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                            <guidedropdownlist
+                                                jcr:created="{Date}2022-06-20T04:25:12.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-14T19:05:37.617Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Select Reason:"
+                                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                                guideNodeClass="guideDropDownList"
+                                                name="DisputeReasonDropdown"
+                                                options="[Move from Informal to Traditional,Dispute Withdrawn,New Dispute Request Rejected]"
+                                                textIsRich="[true,true]"/>
+                                            <guidetextbox
+                                                jcr:created="{Date}2022-06-20T04:25:24.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-14T19:05:13.585Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Comments"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                multiLine="true"
+                                                name="DisputeCloseComments"
+                                                textIsRich="[true,true,true]"/>
+                                            <guidebutton
+                                                jcr:created="{Date}2022-06-20T04:25:34.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-06-20T04:25:45.000Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Submit"
+                                                sling:resourceType="fd/af/components/guidebutton"
+                                                dorExclusion="true"
+                                                guideNodeClass="guideButton"
+                                                name="button1655699134180"
+                                                textIsRich="[true,true]"
+                                                type="Button">
+                                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                                <fd:scripts
+                                                    fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;var meetingType\,disputeID;\\nvar disList =  DisputeDashDisTable.Row1.instanceManager.instances;\\nfor(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n  if(disList[i].tableItem11.value==='Y'){\\n    meetingType = disList[i].table1_item3.value;\\n    disputeID = disList[i].table1_item1.value;\\n    break;\\n  }\\n}\\nif(typeof(disputeID)!==\\&quot;undefined\\&quot; || typeof(meetingType)!==\\&quot;undefined\\&quot;){\\n    var jsonData = {\\n      \\&quot;ea\\&quot; : ea.value\,\\n      \\&quot;district\\&quot; : district.value\,\\n      \\&quot;UserID\\&quot; : userID.value\,\\n      \\&quot;disputeID\\&quot; : disputeID\,\\n      \\&quot;MeetingType\\&quot; : meetingType\,\\n      \\&quot;DRType\\&quot; : SelectDRADRB.value\,\\n      \\&quot;Comments\\&quot;:DisputeCloseComments.value\,\\n      \\&quot;Reason\\&quot;:DisputeReasonDropdown.value\\n    }; \\n    xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n  \\t//console.log(xmlData);\\n    url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/CloseDisputeMeeting';\\n    $.ajax({ \\n      type: 'POST'\,\\n      headers: {\\n        'Content-Type' : 'application/xml'\,\\n        'Accept' : '*/*'\\n      }\,\\n      url: url\,\\n      data: xmlData\,\\n      success: function (data) {\\n        //console.log(data);\\n      }\,\\n      error: function(err){\\n        //this block is executed when server encounters any problem\\n        ErrorCloseDisputeMssge.visible=true;\\n        ErrorCloseDisputeMssge.value=\\&quot;something went wrong\\&quot;;\\n      }\\n    });\\n}\\nelse{\\n  alert(\\&quot;Please select dispute ID\\&quot;);\\n}&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard.closeDispute.button1655699134180&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidebutton>
+                                            <guidebutton_830822535
+                                                jcr:created="{Date}2022-06-21T06:31:14.510Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-06-21T06:31:23.659Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Cancel"
+                                                sling:resourceType="fd/af/components/guidebutton"
+                                                dorExclusion="true"
+                                                guideNodeClass="guideButton"
+                                                name="button_8308225351655793074580"
+                                                textIsRich="[true,true]"
+                                                type="Button">
+                                                <fd:rules
+                                                    fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.dashboard.closeDispute.button_8308225351655793074580&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button_8308225351655793074580&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HIDE_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.dashboard.closeDispute&quot;\,&quot;displayName&quot;:&quot;Section&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;isDuplicate&quot;:true\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/Dashboard/Section/&quot;\,&quot;name&quot;:&quot;closeDispute&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.dashboard&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\ncloseDispute.visible = false;\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                            </guidebutton_830822535>
+                                            <guidetextdraw
+                                                cq:cssClass="guide-1657826618868"
+                                                jcr:created="{Date}2022-07-14T19:22:42.000Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-07-14T19:22:59.000Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>The text will appear here&lt;/p>"
+                                                cssStyle=".guide-1657826618868 .guideTextDraw.guideStaticText{&#xa;color:#EB1719;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextDraw"
+                                                name="ErrorCloseDisputeMssge">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_textdraw
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#EB1719]"/>
+                                                </style>
+                                            </guidetextdraw>
+                                        </items>
+                                    </panel>
+                                </items>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;var params = new URLSearchParams(window.location.search);\\nvar actualData=JSON.parse(window.atob(params.get('input')));\\n//console.log(actualData);\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;RE\\&quot; || actualData.userRole.toString().toUpperCase()===\\&quot;CONTRACTOR\\&quot;){\\n  newDisputeMeeting.enabled=true;\\n}\\nelse{\\n  newDisputeMeeting.enabled=false;\\n}\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;DRB_CHAIR\\&quot; || actualData.userRole.toString().toUpperCase()===\\&quot;DRA\\&quot;){\\n  SubmitDueMeetDateButton.enabled=true;\\n}\\nelse{\\n  SubmitDueMeetDateButton.enabled=false;\\n}\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;DRB_CHAIR\\&quot; || actualData.userRole.toString().toUpperCase()===\\&quot;DRA\\&quot;){\\n  RescheduleDisputeMeet.enabled=true;\\n}\\nelse{\\n  RescheduleDisputeMeet.enabled=false;\\n}\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;DRB_CHAIR\\&quot; || actualData.userRole.toString().toUpperCase()===\\&quot;DRA\\&quot;){\\n  CloseDisputeButton.enabled=true;\\n}\\nelse{\\n  CloseDisputeButton.enabled=false;\\n}&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.mainPanel.dashboard&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel_copy>
+                            <panel_1774090199_cop
+                                jcr:created="{Date}2022-06-14T09:43:28.923Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-20T02:17:01.886Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Position Paper-Contractor"
+                                sling:resourceType="fd/af/components/panel"
+                                fragRef="/content/dam/formsanddocuments/caltrans-fragments/positionpaper"
+                                guideNodeClass="guidePanel"
+                                name="position"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured"/>
+                            </panel_1774090199_cop>
+                            <panel_547247398_copy
+                                jcr:created="{Date}2022-06-14T09:43:36.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-20T02:21:16.030Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Position Paper-RE"
+                                sling:resourceType="fd/af/components/panel"
+                                fragRef="/content/dam/formsanddocuments/caltrans-fragments/positionpaper-RE"
+                                guideNodeClass="guidePanel"
+                                name="position-RE"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured"/>
+                            </panel_547247398_copy>
+                            <panel_769133156_copy
+                                jcr:created="{Date}2022-06-14T09:43:42.585Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-03T10:38:33.623Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Recommendation Report"
+                                sling:resourceType="fd/af/components/panel"
+                                fragRef="/content/dam/formsanddocuments/caltrans-fragments/recommendationreport-chair"
+                                guideNodeClass="guidePanel"
+                                name="recReport"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured"/>
+                            </panel_769133156_copy>
+                            <panel_965048011_copy
+                                jcr:created="{Date}2022-06-14T09:43:48.661Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-03T06:00:39.221Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dispute Meeting Main Page"
+                                sling:resourceType="fd/af/components/panel"
+                                fragRef="/content/dam/formsanddocuments/caltrans-fragments/dispute-meeting-report-main-page"
+                                guideNodeClass="guidePanel"
+                                name="DMReportPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"/>
+                            </panel_965048011_copy>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[display:inline]"/>
+                            <af_wizardtoolbarprevscroll
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[cssOverride:visibility: hidden;]"
+                                default_x0023_default_x0023_ui="[positionPopover:Set]"/>
+                            <af_wizardpanelnextscroll
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"
+                                default_x0023_default_x0023_ui="[positionPopover:Set]"/>
+                            <af_wizardpanelprevscroll
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"
+                                default_x0023_default_x0023_ui="[positionPopover:Set]"/>
+                            <af_tabsontopcontentarea
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[padding-right:0px,padding-left:0px]"
+                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:Set,paddingLock:linkOff,paddingPopover:—\, 0px\, —\, 0px]"/>
+                        </style>
+                    </panel1656252988382>
+                    <panel
+                        jcr:created="{Date}2022-06-26T14:19:47.419Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-26T14:21:12.892Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="newDisputeMeetingrequest"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="newDisputeMeetingrequest"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <table
+                                jcr:lastModified="{Date}2022-06-26T14:26:22.713Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Table"
+                                sling:resourceType="fd/af/components/table"
+                                guideNodeClass="guideTable"
+                                name="tablenewDispute"
+                                sortingEnabled="false"
+                                textIsRich="true">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/tableLayout"
+                                    columns="2"
+                                    mobileLayout="headersLeft"
+                                    rows="2"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/tableLayout">
+                                    <HeaderRow
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Header Row"
+                                        sling:resourceType="fd/af/components/tableHeader"
+                                        guideComponentType="true"
+                                        guideNodeClass="guideTableRow"
+                                        name="headerRow">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/table/headerLayout"
+                                            nonNavigable="{Boolean}true"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/table/headerLayout">
+                                            <tableItem
+                                                jcr:lastModified="{Date}2022-06-20T02:33:56.611Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Select PCRs&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem"
+                                                textIsRich="true"/>
+                                            <headerItem1655692393274
+                                                jcr:lastModified="{Date}2022-06-20T02:34:11.730Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>PotentialClaim Record (PCR)#&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923932741655692393509"
+                                                textIsRich="true"/>
+                                            <headerItem1655692387224
+                                                jcr:lastModified="{Date}2022-06-20T02:34:32.297Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Brief Description of the Dispute&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923872241655692387437"
+                                                textIsRich="true"/>
+                                            <headerItem1655692384765
+                                                jcr:lastModified="{Date}2022-06-20T02:35:08.943Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Dollar Value of the PotentialClaim(per contractor)&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923847651655692384991"
+                                                textIsRich="true"/>
+                                            <headerItem1655692382752
+                                                jcr:lastModified="{Date}2022-06-20T02:35:25.491Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Delay Days on Controlling Item of Work (per contractor&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923827521655692382962"
+                                                textIsRich="true"/>
+                                            <headerItem1655692380816
+                                                jcr:lastModified="{Date}2022-06-20T02:36:11.597Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Date of Supplemental Potential Claim Record (SPCR) Submitted&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923808161655692381062"
+                                                textIsRich="true"/>
+                                            <headerItem1655692378607
+                                                jcr:lastModified="{Date}2022-06-20T02:36:31.917Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Date Resident EngineerResponded to SPCR&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923786071655692378832"
+                                                textIsRich="true"/>
+                                            <headerItem1655692376440
+                                                jcr:lastModified="{Date}2022-06-20T02:36:53.644Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>Date DRB/DRA Referred (see note)&lt;/p>&#xa;"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextDraw"
+                                                name="headerItem16556923764401655692376684"
+                                                textIsRich="true"/>
+                                        </items>
+                                    </HeaderRow>
+                                    <Row1
+                                        jcr:lastModified="{Date}2022-07-11T18:08:04.480Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Row 1"
+                                        sling:resourceType="fd/af/components/tableRow"
+                                        enabled="{Boolean}true"
+                                        guideComponentType="true"
+                                        guideNodeClass="guideTableRow"
+                                        maxOccur="-1"
+                                        minOccur="0"
+                                        name="tablenewDisputeRow1"
+                                        visible="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/table/rowLayout"
+                                            nonNavigable="{Boolean}true"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/table/rowLayout">
+                                            <tableItem
+                                                jcr:lastModified="{Date}2022-06-26T14:26:59.796Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text Box"
+                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideCheckBox"
+                                                hideTitle="true"
+                                                name="newDisputetableItem11"
+                                                options="[Y=]"
+                                                textIsRich="[true,true]"/>
+                                            <headerItem1655692393388
+                                                jcr:lastModified="{Date}2022-07-04T14:01:56.343Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="PCRNoNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692387316
+                                                jcr:lastModified="{Date}2022-07-04T12:50:52.954Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DescNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692384875
+                                                jcr:lastModified="{Date}2022-07-04T12:51:05.331Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DollarNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692382845
+                                                jcr:lastModified="{Date}2022-07-04T12:51:20.813Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DelayDaysNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692380922
+                                                jcr:lastModified="{Date}2022-07-04T13:32:03.562Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DateSuppNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692378694
+                                                jcr:lastModified="{Date}2022-07-04T13:32:38.286Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DateResNew"
+                                                textIsRich="[true,true,true]"/>
+                                            <headerItem1655692376562
+                                                jcr:lastModified="{Date}2022-07-04T13:33:45.935Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Text box"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTextBox"
+                                                hideTitle="true"
+                                                name="DateReferNew"
+                                                textIsRich="[true,true,true]"/>
+                                        </items>
+                                    </Row1>
+                                </items>
+                            </table>
+                            <guidebutton
+                                jcr:lastModified="{Date}2022-07-04T08:50:10.046Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Link"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="button1655692643039"
+                                textIsRich="[true,true]"
+                                type="Button"
+                                visible="{Boolean}false"/>
+                            <guidedropdownlist
+                                jcr:lastModified="{Date}2022-07-04T08:49:38.137Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Select Informal/Traditional:"
+                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                css="drophide"
+                                guideNodeClass="guideDropDownList"
+                                name="MeetingType"
+                                options="[Informal,Traditional]"
+                                placeholderText="- SELECT -"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="3"/>
+                                </cq:responsive>
+                            </guidedropdownlist>
+                            <guidebutton_1878485822
+                                jcr:lastModified="{Date}2022-06-20T02:37:44.000Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="button_18784858221655692656075"
+                                textIsRich="[true,true]"
+                                type="Button">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="1"/>
+                                </cq:responsive>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.newDisputeMeetingrequest.button_18784858221655692656075&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//alert(tablenewDispute.tablenewDisputeRow1.instanceManager.instanceCount);\\nvar pcrstring = \\&quot;\\&quot;;\\nfor(var i=0;i&lt;tablenewDispute.tablenewDisputeRow1.instanceManager.instanceCount-1;i++){\\n  if(tablenewDisputeRow1.instanceManager.instances[i].newDisputetableItem11.value==='Y'){\\n    pcrstring = pcrstring +tablenewDisputeRow1.instanceManager.instances[i].PCRNoNew.value+\\&quot;-\\&quot;;\\n  }\\n}\\npcrstring = pcrstring.substring(0\,pcrstring.length-1);\\n//alert(pcrstring);\\nvar jsonData = {\\n  \\&quot;ea\\&quot; : ea.value\,\\n  \\&quot;district\\&quot; : district.value\,\\n  \\&quot;UserID\\&quot; : userID.value\,\\n  \\&quot;disputeID\\&quot; : createdisputeid(6)\,\\n  \\&quot;PCR\\&quot; : pcrstring\,\\n  \\&quot;MeetingType\\&quot; : MeetingType.value\,\\n  \\&quot;DRType\\&quot; : SelectDRADRB.value\\n}; \\n\\n//console.log(jsonData);\\n\\n$.ajax({ \\n    type: 'GET'\, \\n    data: jsonData\,\\n    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InsertNewDispute'\,\\n    success: function (data) {  \\n      //console.log(\\&quot;in success\\&quot;);\\n      SucNewDisputeMeetMessage.value=\\&quot;&lt;p>\\&quot;+data+\\&quot;&lt;/p>\\&quot;;\\n      ErrNewDisputeMeetMessage.visible=false;\\n      SucNewDisputeMeetMessage.visible=true;\\n    }\,\\n  \\terror: function(err){\\n      ErrNewDisputeMeetMessage.value=\\&quot;&lt;p>Something went wrong&lt;/p>\\&quot;;\\n      SucNewDisputeMeetMessage.visible=false;\\n      ErrNewDisputeMeetMessage.visible=true;\\n\\t}\\n});&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidebutton_1878485822>
+                            <guidebutton_1067895455
+                                cq:cssClass="guide-1656924681036"
+                                jcr:lastModified="{Date}2022-06-20T02:45:18.000Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Back"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                cssStyle=".guide-1656924681036 button:not(.af-icon-button),.guide-1656924681036 input[type='button']{&#xa;margin-left:11px;&#xa;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="button_10678954551655693108073"
+                                textIsRich="[true,true]"
+                                type="Button">
+                                <fd:rules
+                                    fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.newDisputeMeetingrequest.button_10678954551655693108073&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button_10678954551655693108073&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SHOW_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel&quot;\,&quot;displayName&quot;:&quot;mainPanel&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/&quot;\,&quot;name&quot;:&quot;mainPanel&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HIDE_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.newDisputeMeetingrequest&quot;\,&quot;displayName&quot;:&quot;newDisputeMeetingrequest&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/newDisputeMeetingrequest/&quot;\,&quot;name&quot;:&quot;newDisputeMeetingrequest&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nmainPanel.visible = true;\\nnewDisputeMeetingrequest.visible = false;\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="1"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_button
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:11px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 11px]"/>
+                                </style>
+                            </guidebutton_1067895455>
+                            <guidetextdraw
+                                jcr:created="{Date}2022-07-04T06:48:45.846Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-27T11:43:39.325Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="SucNewDisputeMeetMessage"
+                                visible="{Boolean}false"/>
+                            <guidetextdraw_1405592900
+                                jcr:created="{Date}2022-07-27T11:44:00.607Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-27T11:44:19.029Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="ErrNewDisputeMeetMessage"
+                                visible="{Boolean}false"/>
+                        </items>
+                    </panel>
+                    <panel_137164514
+                        jcr:created="{Date}2022-06-26T14:30:43.526Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-26T14:33:30.826Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="duedate"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="panelduedate"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidedatepicker_1789252689
+                                jcr:created="{Date}2022-07-05T13:53:42.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-01T06:12:07.137Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dispute Created Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                guideNodeClass="guideDatePicker"
+                                name="DisputeCreatedDatePM"
+                                textIsRich="[true,true]"
+                                visible="{Boolean}false"/>
+                            <guidedatepicker
+                                jcr:lastModified="{Date}2022-07-05T12:25:54.827Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Position Paper Due:"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                guideNodeClass="guideDatePicker"
+                                name="PosPaperDueDateDash"
+                                textIsRich="[true,true]">
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;SuccDates.visible=false;\\nErrorDates.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.panelduedate.datepicker1655693502298&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidedatepicker>
+                            <guidedatepicker_1358376565
+                                jcr:lastModified="{Date}2022-07-05T12:25:39.499Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Meeting Date:"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                guideNodeClass="guideDatePicker"
+                                name="MeetDateDash"
+                                textIsRich="[true,true]">
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;//console.log(this.value);\\nSuccDates.visible=false;\\nErrorDates.visible=false;\\nvar posdate = new Date(this.value);\\nposdate.setDate(posdate.getDate()-15);\\nvar month=\\&quot;\\&quot;;\\nif(posdate.getMonth().toString().length===1){\\n  if(posdate.getMonth()===9){\\n    month=(parseInt(posdate.getMonth())+1);\\n  }\\n  else{\\n    month=\\&quot;0\\&quot;+(parseInt(posdate.getMonth())+1);\\n  }  \\n}\\nelse if(posdate.getMonth().toString().length===2){\\n  month=(parseInt(posdate.getMonth())+1);\\n}\\nPosPaperDueDateDash.value=posdate.getFullYear()+\\&quot;-\\&quot;+month+\\&quot;-\\&quot;+posdate.getDate();&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.panelduedate.MeetDateDash&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidedatepicker_1358376565>
+                            <guidebutton
+                                jcr:lastModified="{Date}2022-07-21T12:13:32.705Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Notify All Parties"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="NotifyAllDatesButton"
+                                textIsRich="[true,true]"
+                                type="Button">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="2"/>
+                                </cq:responsive>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.panelduedate.NotifyAllDatesButton&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if(MeetDateDash.value!==null &amp;&amp; MeetDateDash.value!==\\&quot;\\&quot; &amp;&amp; PosPaperDueDateDash.value!==null &amp;&amp; PosPaperDueDateDash.value!==\\&quot;\\&quot;){\\n    if(MeetDateDash.value > PosPaperDueDateDash.value){\\n      if(SelectDRADRB.value===\\&quot;DRB\\&quot;){\\n        var disputeEarly = new Date(DisputeCreatedDatePM.value);\\n        disputeEarly.setDate(disputeEarly.getDate() + 30); // Set now + 30 days as the new date\\n        var disputeLate = new Date(DisputeCreatedDatePM.value);\\n        disputeLate.setDate(disputeLate.getDate() + 60); // Set now + 30 days as the new date\\n        var check = new Date(MeetDateDash.value);\\n        //console.log(disputeEarly+\\&quot; \\&quot;+disputeLate);\\n        if(check > disputeEarly &amp;&amp; check &lt; disputeLate){\\n              var meetingType\,disputeID;\\n              for(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n                if(DisputeDashDisTable.Row1.instanceManager.instances[i].tableItem11.value==='Y'){\\n                  meetingType = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value;\\n                  disputeID = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value;\\n                  break;\\n                }\\n              }\\n              var jsonData = {\\n                \\&quot;ea\\&quot; : ea.value\,\\n                \\&quot;district\\&quot; : district.value\,\\n                \\&quot;UserID\\&quot; : userID.value\,\\n                \\&quot;DisputeID\\&quot; : disputeID\,\\n                \\&quot;MeetingType\\&quot; : meetingType\,\\n                \\&quot;DRType\\&quot; : SelectDRADRB.value\,\\n                \\&quot;PosDate\\&quot; : PosPaperDueDateDash.value\,\\n                \\&quot;MeetDate\\&quot; : MeetDateDash.value\\n              };\\n          \\t  xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n          \\t//console.log(xmlData);\\n              $.ajax({ \\n                  type: 'POST'\,\\n                  headers: {\\n                  'Content-Type' : 'application/xml'\,\\n                  'Accept' : '*/*'\\n                  }\,\\n                  data: xmlData\,\\n                  url: 'http://'+window.location.hostname+':8080/rest/async_invoke/Caltrans-eADR/Processes/InsertMeetingPPDates'\,\\n                  success: function (data) { \\n                   // console.log(\\&quot;in success\\&quot;);\\n                    SuccDates.visible=true;\\n                    SuccDates.value=\\&quot;Details saved successfully\\&quot;;\\n                    ErrorDates.visible=false;\\n                  }\,\\n                  error: function(err){\\n                    ErrorDates.visible=true;\\n                    ErrorDates.value=\\&quot;Something went wrong\\&quot;;\\n                    SuccDates.visible=false;\\n                  }\\n              });\\n        }\\n        else{\\n          ErrorDates.visible=true;\\n          ErrorDates.value=\\&quot;Please select Meeting Date between Dispute Created Date + 30 Days and Dispute Created Date + 60 Days\\&quot;;\\n          SuccDates.visible=false;\\n        }\\n      }\\n      else if(SelectDRADRB.value===\\&quot;DRA\\&quot;){\\n        var disputeLate = new Date(DisputeCreatedDatePM.value);\\n        disputeLate.setDate(disputeLate.getDate() + 25);\\n        var check = new Date(MeetDateDash.value);\\n        //console.log(check &lt; disputeLate);\\n        if(check &lt; disputeLate){\\n          var meetingType\,disputeID;\\n            for(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n              if(DisputeDashDisTable.Row1.instanceManager.instances[i].tableItem11.value==='Y'){\\n                meetingType = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value;\\n                disputeID = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value;\\n                break;\\n              }\\n            }\\n            var jsonData = {\\n              \\&quot;ea\\&quot; : ea.value\,\\n              \\&quot;district\\&quot; : district.value\,\\n              \\&quot;UserID\\&quot; : userID.value\,\\n              \\&quot;DisputeID\\&quot; : disputeID\,\\n              \\&quot;MeetingType\\&quot; : meetingType\,\\n              \\&quot;DRType\\&quot; : SelectDRADRB.value\,\\n              \\&quot;PosDate\\&quot; : PosPaperDueDateDash.value\,\\n              \\&quot;MeetDate\\&quot; : MeetDateDash.value\\n            };\\n          \\txmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n            $.ajax({ \\n                type: 'POST'\,\\n                headers: {\\n                'Content-Type' : 'application/xml'\,\\n                'Accept' : '*/*'\\n                }\,\\n                data: xmlData\,\\n                url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InsertMeetingPPDates'\,\\n                success: function (data) {  \\n                 // console.log(\\&quot;in success\\&quot;);\\n                  SuccDates.visible=true;\\n                  SuccDates.value=\\&quot;Details saved successfully\\&quot;;\\n                  ErrorDates.visible=false;\\n                }\,\\n                error: function(err){\\n                  ErrorDates.visible=true;\\n                  ErrorDates.value=\\&quot;Something went wrong\\&quot;;\\n                  SuccDates.visible=false;\\n                }\\n            });\\n        }\\n      \\telse{\\n          ErrorDates.visible=true;\\n          ErrorDates.value=\\&quot;Please select Meeting Date before Dispute Created Date + 25 Days\\&quot;;\\n          SuccDates.visible=false;\\n        }\\n      }\\n   }\\n  else{\\n    ErrorDates.visible=true;\\n\\tErrorDates.value=\\&quot;Meeting Date should be greater than Position Paper Due Date\\&quot;;\\n    SuccDates.visible=false;\\n  }\\n}\\nelse{\\n  ErrorDates.visible=true;\\n  ErrorDates.value=\\&quot;Please enter details\\&quot;;\\n  SuccDates.visible=false;\\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidebutton>
+                            <guidebutton_685991430
+                                jcr:created="{Date}2022-07-21T11:12:07.022Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-21T12:12:12.033Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Update"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="UpdateMeetPosDates"
+                                textIsRich="[true,true]"
+                                type="Button"
+                                visible="{Boolean}false">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="2"/>
+                                </cq:responsive>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;if(MeetDateDash.value!==null &amp;&amp; MeetDateDash.value!==\\&quot;\\&quot; &amp;&amp; PosPaperDueDateDash.value!==null &amp;&amp; PosPaperDueDateDash.value!==\\&quot;\\&quot;){\\n    if(MeetDateDash.value > PosPaperDueDateDash.value){\\n      \\t\\t\\tvar meetingType\,disputeID;\\n              for(var i=0;i &lt; DisputeDashDisTable.Row1.instanceManager.instanceCount-1;i++){\\n                if(DisputeDashDisTable.Row1.instanceManager.instances[i].tableItem11.value==='Y'){\\n                  meetingType = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item3.value;\\n                  disputeID = DisputeDashDisTable.Row1.instanceManager.instances[i].table1_item1.value;\\n                  break;\\n                }\\n              }\\n              var jsonData = {\\n                \\&quot;ea\\&quot; : ea.value\,\\n                \\&quot;district\\&quot; : district.value\,\\n                \\&quot;DisputeID\\&quot; : disputeID\,\\n                \\&quot;MeetingType\\&quot; : meetingType\,\\n                \\&quot;DRType\\&quot; : SelectDRADRB.value\,\\n                \\&quot;PosDate\\&quot; : PosPaperDueDateDash.value\,\\n                \\&quot;MeetDate\\&quot; : MeetDateDash.value\\n              };\\n          \\t  xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n          \\t//console.log(xmlData);\\n              $.ajax({ \\n                  type: 'POST'\,\\n                  headers: {\\n                  'Content-Type' : 'application/xml'\,\\n                  'Accept' : '*/*'\\n                  }\,\\n                  data: xmlData\,\\n                  url: 'http://'+window.location.hostname+':8080/rest/async_invoke/Caltrans-eADR/Processes/InsertMeetingPPDates'\,\\n                  success: function (data) { \\n                   // console.log(\\&quot;in success\\&quot;);\\n                    SuccDates.visible=true;\\n                    SuccDates.value=\\&quot;Details saved successfully\\&quot;;\\n                    ErrorDates.visible=false;\\n                  }\,\\n                  error: function(err){\\n                    ErrorDates.visible=true;\\n                    ErrorDates.value=\\&quot;Something went wrong\\&quot;;\\n                    SuccDates.visible=false;\\n                  }\\n              });\\n   }\\n  else{\\n    ErrorDates.visible=true;\\n\\tErrorDates.value=\\&quot;Meeting Date should be greater than Position Paper Due Date\\&quot;;\\n    SuccDates.visible=false;\\n  }\\n}\\nelse{\\n  ErrorDates.visible=true;\\n  ErrorDates.value=\\&quot;Please enter details\\&quot;;\\n  SuccDates.visible=false;\\n}&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.panelduedate.UpdateMeetPosDates&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidebutton_685991430>
+                            <guidebutton_10678954
+                                jcr:lastModified="{Date}2022-06-20T02:45:18.031Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Back"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="button_10678954551655693108073"
+                                textIsRich="[true,true]"
+                                type="Button">
+                                <fd:rules
+                                    fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.panelduedate.button_10678954551655693108073&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;button_10678954551655693108073&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SHOW_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel&quot;\,&quot;displayName&quot;:&quot;mainPanel&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/mainPanel/&quot;\,&quot;name&quot;:&quot;mainPanel&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HIDE_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.panelduedate&quot;\,&quot;displayName&quot;:&quot;duedate&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;isDuplicate&quot;:true\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/duedate/&quot;\,&quot;name&quot;:&quot;panelduedate&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nmainPanel.visible = true;\\npanelduedate.visible = false;\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="2"/>
+                                </cq:responsive>
+                            </guidebutton_10678954>
+                            <guidetextdraw
+                                jcr:created="{Date}2022-07-05T12:08:24.174Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-05T12:09:14.263Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="SuccDates"
+                                visible="{Boolean}false"/>
+                            <guidetextdraw_112330299
+                                jcr:created="{Date}2022-07-05T12:08:50.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-05T15:37:19.665Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="ErrorDates"
+                                visible="{Boolean}false"/>
+                        </items>
+                    </panel_137164514>
+                </items>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_tabsontopnavgrp1
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[overflow:visible,display:inline]"
+                        default_x0023_default_x0023_ui="[positionPopover:Set]"/>
+                    <af_tabsontopcontentarea
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[]"
+                        default_x0023_default_x0023_ui="[paddingLock:linkOff,positionPopover:Set,marginLock:linkOff,marginPopover:Set,paddingPopover:Set]"/>
+                    <af_tabsontop
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[]"
+                        default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:Set]"/>
+                </style>
+            </rootPanel>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer
+                    jcr:primaryType="nt:unstructured"
+                    countryCodeSource="form"
+                    emailSource="form"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer"/>
+            </signerInfo>
+        </guideContainer>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <smallScreen
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Decimal}479"/>
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}767"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}991"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

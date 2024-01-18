@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2022-10-01T12:01:16.401Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/TestEditTemplate/settings/wcm/templates/testtemplate"
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Register Form"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            dorType="none"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/caltrans/caltrans-theme">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                    <guideseparator_copy
+                        jcr:created="{Date}2022-04-11T05:45:53.205Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-11T05:48:50.334Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Separator"
+                        sling:resourceType="fd/af/components/guideseparator"
+                        guideNodeClass="guideSeparator"
+                        name="separator1649655953561"
+                        thickness="3"/>
+                    <panel_copy
+                        cq:cssClass="guide-1649756377057"
+                        jcr:created="{Date}2022-03-31T10:17:31.320Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-08-09T05:25:18.080Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Login Register Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1649756377057 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="LoginRegisterPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}true">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextdraw
+                                cq:cssClass="guide-1649756804252"
+                                jcr:created="{Date}2022-03-31T11:17:35.864Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T09:43:14.516Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>User Registration&lt;/p>&#xa;"
+                                cssStyle=".guide-1649756804252 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;color:#2A3342;&#xa;font-size:20px;&#xa;font-weight:bold;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="RegisterLabel"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center,color:#2A3342,font-size:20px,font-weight:bold]"
+                                        default_x0023_default_x0023_ui="[marginPopover:Set,marginLock:linkOff]"/>
+                                </style>
+                            </guidetextdraw>
+                            <guidetextdraw_2129028731
+                                cq:cssClass="guide-1649835955122"
+                                jcr:created="{Date}2022-04-13T06:05:50.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T05:22:46.990Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                cssStyle=".guide-1649835955122 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ErrorMessageRegister"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#FF0000,font-size:14px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_2129028731>
+                            <guidetextdraw_1154208666
+                                cq:cssClass="guide-1649855075839"
+                                jcr:created="{Date}2022-04-13T13:03:56.568Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T05:23:00.224Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                cssStyle=".guide-1649855075839 .guideTextDraw.guideStaticText{&#xa;color:#2E8B57;&#xa;font-size:14px;&#xa;margin-left:410px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="SuccessMessageRegister"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#2E8B57,font-size:14px,margin-left:410px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_1154208666>
+                            <guidebutton_copy_cop
+                                cq:cssClass="guide-1649830303063"
+                                jcr:created="{Date}2022-04-13T06:11:19.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-09-07T10:26:50.165Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="https://dot.ca.gov/programs/construction/iewb/iewb-district-admin-list"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                cssStyle=".guide-1649830303063 button:not(.af-icon-button),.guide-1649830303063 input[type='button']{&#xa;background:#FFFFFF;&#xa;border-color:#FFFFFF;&#xa;border-style:hidden;&#xa;text-decoration:underline;&#xa;margin-left:400px;&#xa;cursor: pointer;&#xa;&#xa;}&#xa;.guide-1649830303063 button .iconButton-label{&#xa;color:#009DDC;&#xa;text-decoration:underline;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="RedirectConURL"
+                                textIsRich="[true,true]"
+                                type="Button"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_button
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[background:#FFFFFF,border-color:#FFFFFF,border-style:hidden,text-decoration:underline,cssOverride:cursor: pointer;&#xa;,margin-left:400px]"
+                                        default_x0023_default_x0023_ui="[backgroundColor:#FFFFFF,marginLock:linkOff,marginPopover:—\, —\, —\, 400px]"/>
+                                    <af_buttontext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#009DDC,text-decoration:underline,font-size:14px]"/>
+                                </style>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="12"/>
+                                </cq:responsive>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.LoginRegisterPanel.RedirectConURL&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;guidelib.util.GuideUtil.navigateToURL('https://dot.ca.gov/programs/construction/iewb/iewb-district-admin-list'\,'SAME_TAB');\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidebutton_copy_cop>
+                            <guidebutton_copy
+                                cq:cssClass="guide-1649830303063"
+                                jcr:created="{Date}2022-04-13T06:11:19.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T05:30:57.989Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Click here to Relogin"
+                                sling:resourceType="fd/af/components/guidebutton"
+                                cssStyle=".guide-1649830303063 button:not(.af-icon-button),.guide-1649830303063 input[type='button']{&#xa;background:#FFFFFF;&#xa;border-color:#FFFFFF;&#xa;border-style:hidden;&#xa;text-decoration:underline;&#xa;margin-left:400px;&#xa;cursor: pointer;&#xa;&#xa;}&#xa;.guide-1649830303063 button .iconButton-label{&#xa;color:#009DDC;&#xa;text-decoration:underline;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guideButton"
+                                name="RedirectLogin"
+                                textIsRich="[true,true]"
+                                type="Button"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_button
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[background:#FFFFFF,border-color:#FFFFFF,border-style:hidden,text-decoration:underline,cssOverride:cursor: pointer;&#xa;,margin-left:400px]"
+                                        default_x0023_default_x0023_ui="[backgroundColor:#FFFFFF,marginLock:linkOff,marginPopover:—\, —\, —\, 400px]"/>
+                                    <af_buttontext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#009DDC,text-decoration:underline,font-size:14px]"/>
+                                </style>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="12"/>
+                                </cq:responsive>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.LoginRegisterPanel.RedirectLogin&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;guidelib.util.GuideUtil.navigateToURL('http://'+window.location.hostname+':8080/lc/content/forms/af/caltrans-eadr/login_form.html?wcmmode=disabled'\,'SAME_TAB');\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidebutton_copy>
+                            <guidetextdraw_1892335893
+                                cq:cssClass="guide-1649833958781"
+                                jcr:created="{Date}2022-04-13T07:08:22.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-22T07:54:28.536Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Username&lt;/p>&#xa;"
+                                cssStyle=".guide-1649833958781 .guideTextDraw.guideStaticText{&#xa;width:160px;&#xa;height:24px;&#xa;margin-left:410px;&#xa;color:#333F51;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="userNameFortxt"
+                                text="&lt;p>The text will appear here&lt;/p>"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:160px,height:24px,margin-left:410px,color:#333F51]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_1892335893>
+                            <guidetextbox
+                                cq:cssClass="guide-1649833984324"
+                                jcr:created="{Date}2022-04-13T07:08:29.928Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T05:23:20.433Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                cssStyle=".guide-1649833984324 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;&#xa;}&#xa;.guide-1649833984324 .textField input[type='text']{&#xa;height:46px;&#xa;background:#FFFFFF;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;&#xa;}&#xa;.guide-1649833984324 .guideFieldWidget.textField {&#xa;width:358px;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                hideTitle="true"
+                                name="userNameRegister"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                    <af_textboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.textField&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},height:46px,background:#FFFFFF,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px]"
+                                        default_x0023_default_x0023_ui="[width:358px,backgroundColor:#FFFFFF,borderRadiusPopover:8px,borderWidthPopover:2px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;ErrorMessageFogot.visible=false;\\nSuccessMessageForgot.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ForgotPasswdPanel.userNameTxtFogor&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox>
+                            <panel1649847583676
+                                jcr:lastModified="{Date}2022-08-09T05:23:30.138Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="ButtonsPanelRegister"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <guidebutton
+                                        cq:cssClass="guide-1649758232219"
+                                        jcr:created="{Date}2022-03-31T10:22:18.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-09T05:23:39.249Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Submit"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649758232219 button:not(.af-icon-button):hover{&#xa;box-shadow:0px 1px 2px 0px #6951FF;&#xa;background:#00C3B0;&#xa;&#xa;}&#xa;.guide-1649758232219 button:not(.af-icon-button),.guide-1649758232219 input[type='button']{&#xa;margin-left:410px;&#xa;height:46px;&#xa;border-color:#22C55E;&#xa;border-style:hidden;&#xa;margin-top:10px;&#xa;background:#00B1B0;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649758232219.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649758232219.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649758232219 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="SubmitRegister"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[margin-left:410px,addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-color:#22C55E,border-style:hidden,margin-top:10px,cssOverride:cursor: pointer;,background:#00B1B0]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,marginPopover:10px\, —\, —\, 410px,backgroundColor:#00B1B0]"
+                                                default_x0023_hover="[box-shadow:0px 1px 2px 0px #6951FF,background:#00C3B0]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1649848681701&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#6951FF&quot;}]},backgroundColor:#00C3B0]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;if(userNameRegister.value!==null &amp;&amp; userNameRegister.value!==\\&quot;\\&quot;){\\nvar xmlData = \\&quot;&lt;data>&lt;UserLoginID>\\&quot;+userNameRegister.value.toUpperCase()+\\&quot;&lt;/UserLoginID>&lt;ProcessType>Register&lt;/ProcessType>&lt;/data>\\&quot;;\\n$.ajax({ \\n    type: 'POST'\, \\n    //data: {'UserLoginID':userNameTxtFogor.value.toUpperCase()\,'ProcessType':\\&quot;Reset\\&quot;}\,\\n    headers: {\\n      'Content-type' : 'application/xml'\,\\n      'Accept' : '*/*'\\n    }\, \\n    data : xmlData\,\\n    //url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/SetPassword:1.0'\,\\n    url : 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/processes/SetPassword'\,\\n    success: function (data) {       \\n      if(data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML.includes(\\&quot;temporary password\\&quot;)){\\n        ///below 4lines newly added\\n        //MainPanel.visible=true;\\n        //SuccessResetMessage.visible=true;\\n        //ForgotPasswdPanel.visible=false;\\n        //SuccessResetMessage.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;        \\n        //OutputMessage.visible=false;\\n        //OutputMessage.value=\\&quot;\\&quot;;\\n        SuccessMessageRegister.visible=true;\\n        ErrorMessageRegister.visible=false;\\n        SuccessMessageRegister.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n        RedirectLogin.visible=true;\\n        RedirectConURL.visible=false;\\n      }\\n      else if(data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML.includes(\\&quot;The username does not exist\\&quot;)){\\n          ErrorMessageRegister.visible=true;//RedirectConURL\\n          ErrorMessageRegister.value = data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n          RedirectConURL.visible=true;\\n          RedirectLogin.visible=true;\\n          SuccessMessageRegister.visible=false;\\n      }\\n      else{\\n          //ErrorMessageFogot.visible=true;\\n          //ErrorMessageFogot.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n          ErrorMessageRegister.visible=true;\\n          ErrorMessageRegister.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n          RedirectLogin.visible=true;\\n          SuccessMessageRegister.visible=false;\\n          RedirectConURL.visible=false;\\n      }\\n    }\,\\n  \\terror: function(err){\\n  \\t  ErrorMessageRegister.visible=true;\\n      SuccessMessageRegister.visible=false;\\n      ErrorMessageRegister.value=\\&quot;something went wrong.\\&quot;;\\n      RedirectLogin.visible=false;\\n      RedirectConURL.visible=false;\\n}\\n});\\n}\\nelse{\\n  ErrorMessageRegister.visible=true;\\n  SuccessMessageRegister.visible=false;\\n  ErrorMessageRegister.value=\\&quot;Please enter credentials.\\&quot;;\\n  RedirectLogin.visible=false;\\n  RedirectConURL.visible=false;\\n}&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.LoginRegisterPanel.ButtonsPanelRegister.SubmitRegister&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <guidebutton_19668337
+                                        cq:cssClass="guide-1649759477488"
+                                        jcr:created="{Date}2022-03-31T10:24:43.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-09T08:27:32.526Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Back to Login"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649759477488 button:not(.af-icon-button):hover{&#xa;box-shadow:0px 1px 2px 0px #6951FF;&#xa;background:#00C3B0;&#xa;&#xa;}&#xa;.guide-1649759477488 button:not(.af-icon-button),.guide-1649759477488 input[type='button']{&#xa;height:46px;&#xa;border-color:#22C55E;&#xa;border-style:hidden;&#xa;margin-top:10px;&#xa;background:#00B1B0;&#xa;margin-left:515px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649759477488.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649759477488.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649759477488 button:not(.af-icon-button):hover .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;line-height:24px;&#xa;font-size:14px;&#xa;&#xa;}&#xa;.guide-1649759477488 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="CancelRegister"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-color:#22C55E,border-style:hidden,margin-top:10px,cssOverride:cursor: pointer;,background:#00B1B0,margin-left:515px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,backgroundColor:#00B1B0,marginPopover:10px\, —\, —\, 515px]"
+                                                default_x0023_hover="[box-shadow:0px 1px 2px 0px #6951FF,background:#00C3B0]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1649848681701&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#6951FF&quot;}]},backgroundColor:#00C3B0]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[width:54px,height:24px,line-height:24px,font-size:14px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.LoginRegisterPanel.ButtonsPanelRegister.CancelRegister&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;userNameTxtFogor.value=\\&quot;\\&quot;;\\nSuccessMessageForgot.visible=false;\\nErrorMessageFogot.visible=false;\\nMainPanel.visible = true;\\nForgotPasswdPanel.visible=false;\\nOutputMessage.value=\\&quot;\\&quot;;\\nOutputMessage.visible=false;&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false},{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.LoginRegisterPanel.ButtonsPanelRegister.CancelRegister&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;guidelib.util.GuideUtil.navigateToURL('http://'+window.location.hostname+':8080/lc/content/forms/af/caltrans-eadr/login_form.html?wcmmode=disabled'\,'SAME_TAB');\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_19668337>
+                                </items>
+                            </panel1649847583676>
+                            <guidetextdraw_1645701851
+                                cq:cssClass="guide-1649947248236"
+                                jcr:created="{Date}2022-04-14T14:40:21.174Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-09T05:24:00.772Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Note:&amp;nbsp;For username, please contact your District iEWB Administrator.&lt;/p>&#xa;"
+                                cssStyle=".guide-1649947248236 .guideTextDraw.guideStaticText{&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;text-align:center;&#xa;padding-left:30px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="NoteRegister"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF0000,font-size:14px,text-align:center,padding-left:30px]"
+                                        default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:—\, —\, —\, 30px]"/>
+                                </style>
+                            </guidetextdraw_1645701851>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_responsivepanel
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"
+                                default_x0023_default_x0023_mask="[display]"
+                                default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:Set]"/>
+                        </style>
+                    </panel_copy>
+                </items>
+            </rootPanel>
+        </guideContainer>
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+        <parsys1
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid"/>
+    </jcr:content>
+</jcr:root>

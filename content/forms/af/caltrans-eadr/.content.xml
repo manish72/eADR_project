@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <loginpage/>
+    <help-before-login/>
+    <help-screen/>
+    <eadr_dashboard/>
+    <backups/>
+    <login_form_backup/>
+    <welcome-statement/>
+    <temp/>
+    <welcome-statement1/>
+    <register-form/>
+    <login_form/>
+    <eadr_dashboard-copy1/>
+</jcr:root>

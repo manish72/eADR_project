@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[granite:FinalArea]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/fd/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2022-12-12T11:50:40.007Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/fd/af/templateForFragment/defaultFragmentTemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Meeting Details InfoSection"
+        sling:resourceType="fd/af/components/page/basePageForFragment">
+        <guideContainer
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideFragmentContainer"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="fragment1">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                    <panel_1723800572
+                        jcr:created="{Date}2022-08-20T09:00:30.242Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-08-20T09:00:48.911Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="MeetingInfoMainPanel"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="MeetingInfoMainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <panel
+                                cq:cssClass="guide-1660986675505"
+                                jcr:created="{Date}2022-08-20T08:49:31.954Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-20T08:50:12.550Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="MeetingDRBPanel"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1660986675505 .guideGridFluidLayout{&#xa;margin-left:-12px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="MeetingDRBPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw
+                                        cq:cssClass="guide-1670845759650"
+                                        jcr:created="{Date}2022-12-12T11:48:48.294Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-12-12T11:48:59.157Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>MEETING DETAILS&lt;/p>&#xa;"
+                                        cssStyle=".guide-1670845759650 .guideTextDraw.guideStaticText{&#xa;font-weight:bold;&#xa;text-decoration:underline;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1670845728365"
+                                        textIsRich="true">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[font-weight:bold,text-decoration:underline]"/>
+                                        </style>
+                                    </guidetextdraw>
+                                    <guideradiobutton_cop
+                                        jcr:created="{Date}2022-01-20T11:37:39.789Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-02T12:03:01.175Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Called by:"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideRadioButton"
+                                        name="MeetCallRecomDRB"
+                                        options="[0=Caltrans,1=Contractor]"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guideradiobutton_cop>
+                                    <guidetextbox_2128491
+                                        jcr:created="{Date}2022-01-20T11:39:14.702Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:50:18.161Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DRB Chair"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="DRBChairRecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidetextbox_2128491>
+                                    <guidetextbox_1377398
+                                        jcr:created="{Date}2022-01-20T11:40:50.068Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-02T12:03:06.747Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        autofillFieldKeyword="name"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideDatePicker"
+                                        name="MeetingDateRecomDRB"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidetextbox_1377398>
+                                    <guidetextbox_2128491_1809089872
+                                        jcr:created="{Date}2022-01-20T11:39:14.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:50:25.479Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DRB Member"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="DRBMemr1RecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidetextbox_2128491_1809089872>
+                                    <guidetextbox_1317090
+                                        jcr:created="{Date}2022-01-20T11:48:26.680Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:50:49.335Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Location"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="MeetLOCRecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_1317090>
+                                    <guidetextbox_2128491_1784687527
+                                        jcr:created="{Date}2022-01-20T11:39:14.702Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:50:34.586Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DRB Member"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="DRBMemr2RecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_2128491_1784687527>
+                                    <guidetextbox_1037003
+                                        jcr:created="{Date}2022-01-20T11:49:51.490Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:50:57.739Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Caltrans' Representative"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="CalRepRecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_1037003>
+                                    <guidetextbox_6173105
+                                        jcr:created="{Date}2022-01-20T11:50:23.564Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-20T08:55:12.515Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Attendee 1"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="attendee1RecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_6173105>
+                                    <guidetextbox_5480291
+                                        jcr:created="{Date}2022-01-20T11:50:49.352Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:51:04.598Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Contractor's Representative"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="ContractoRepRecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_5480291>
+                                    <guidetextbox_6173105_1824305519
+                                        jcr:created="{Date}2022-01-20T11:50:23.564Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-10-17T11:27:13.891Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Attendee 2"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="attendee2RecomDRB"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_6173105_1824305519>
+                                </items>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:-12px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, -12px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;MeetCallRecomDRB.enabled=false;\\nDRBChairRecomDRB.enabled=false;\\nMeetingDateRecomDRB.enabled=false;\\nDRBMemr1RecomDRB.enabled=false;\\nMeetCallRecomDRB.mandatory=true;\\nDRBChairRecomDRB.mandatory=true;\\nMeetingDateRecomDRB.mandatory=true;\\nDRBMemr1RecomDRB.mandatory=true;&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.MeetingDRBPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel>
+                            <panel_1392518202
+                                cq:cssClass="guide-1660987456072"
+                                jcr:created="{Date}2022-08-20T08:50:29.885Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-08-20T08:50:39.914Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="MeetingDRAPanel"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1660987456072 .guideGridFluidLayout{&#xa;margin-left:-12px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="MeetingDRAPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw
+                                        cq:cssClass="guide-1670845788112"
+                                        jcr:created="{Date}2022-12-12T11:49:07.490Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-12-12T11:49:12.118Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>MEETING DETAILS&lt;/p>&#xa;"
+                                        cssStyle=".guide-1670845788112 .guideTextDraw.guideStaticText{&#xa;font-weight:bold;&#xa;text-decoration:underline;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1670845747562"
+                                        textIsRich="true">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[font-weight:bold,text-decoration:underline]"/>
+                                        </style>
+                                    </guidetextdraw>
+                                    <guideradiobutton_cop
+                                        jcr:created="{Date}2022-01-20T11:37:39.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-28T14:13:17.844Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Called by:"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideRadioButton"
+                                        name="MeetCallRecomDRA"
+                                        options="[0=Caltrans,1=Contractor]"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guideradiobutton_cop>
+                                    <guidetextbox_1037003
+                                        jcr:created="{Date}2022-01-20T11:49:51.490Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:52:39.097Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Caltrans' Representative"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="CalRepRecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_1037003>
+                                    <guidetextbox_1377398
+                                        jcr:created="{Date}2022-01-20T11:40:50.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-28T14:13:25.515Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        autofillFieldKeyword="name"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideDatePicker"
+                                        name="MeetingDateRecomDRA"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidetextbox_1377398>
+                                    <guidetextbox_5480291
+                                        jcr:created="{Date}2022-01-20T11:50:49.352Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:52:46.713Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Contractor's Representative"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="ContractoRepRecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_5480291>
+                                    <guidetextbox_1317090
+                                        jcr:created="{Date}2022-01-20T11:48:26.680Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:53:40.366Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meeting Location"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="200"
+                                        name="MeetLOCRecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_1317090>
+                                    <guidetextbox_6173105
+                                        jcr:created="{Date}2022-01-20T11:50:23.564Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-20T08:57:38.525Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Attendee 1"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="attendee1RecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_6173105>
+                                    <guidetextbox_2128491
+                                        jcr:created="{Date}2022-01-20T11:39:14.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:53:20.666Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Dispute Resolution Advisor"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        maxChars="50"
+                                        name="AdvisorRecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidetextbox_2128491>
+                                    <guidetextbox_6173105_171102067
+                                        jcr:created="{Date}2022-01-20T11:50:23.564Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-20T08:57:52.389Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Attendee 2"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="attendee2RecomDRA"
+                                        textIsRich="[true,true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox_6173105_171102067>
+                                </items>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:-12px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, -12px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;MeetCallRecomDRA.enabled=false;\\nDRBChairRecomDRA.enabled=false;\\nMeetingDateRecomDRA.enabled=false;\\nDRBMemr1RecomDRA.enabled=false;\\nMeetCallRecomDRA.mandatory=true;\\nDRBChairRecomDRA.mandatory=true;\\nMeetingDateRecomDRA.mandatory=true;\\nDRBMemr1RecomDRA.mandatory=true;&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.MeetingDRAPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel_1392518202>
+                            <panel_1195317583
+                                cq:cssClass="guide-1668856235466"
+                                jcr:created="{Date}2022-11-19T10:46:05.593Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-11-19T10:46:43.935Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Section"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1668856235466 .guideGridFluidLayout{&#xa;margin-left:-3px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="AdditionalAttRecChair"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw
+                                        cq:cssClass="guide-1668856139199"
+                                        jcr:created="{Date}2022-11-19T10:45:10.278Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T10:45:36.686Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Add Additional Attendes: (Optional)&lt;/p>&#xa;"
+                                        cssStyle=".guide-1668856139199 .guideTextDraw.guideStaticText{&#xa;font-weight:bold;&#xa;margin-left:-4px;&#xa;font-size:17px;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1668854710347"
+                                        textIsRich="true">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[font-weight:bold,margin-left:-4px,font-size:17px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, -4px]"/>
+                                        </style>
+                                    </guidetextdraw>
+                                    <guidebutton_37246338
+                                        cq:cssClass="guide-1668869549714"
+                                        jcr:created="{Date}2022-08-24T07:36:43.566Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T12:07:30.975Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="+"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1668869549714 button:not(.af-icon-button),.guide-1668869549714 input[type='button']{&#xa;background:#00B1B0;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;border-color:#22C55E;&#xa;cursor: pointer;&#xa;&#xa;}&#xa;.guide-1668869549714 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#B3B3B3;&#xa;border-color:#B3B3B3;&#xa;pointer-events: none;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="AttendAddRowRecChair"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <fd:rules
+                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair.AttendAddRowRecChair&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;AttendAddRowRecChair&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;ADD_INSTANCE&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;of&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;REPEATABLE_COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair.MeetAtendPanelRecChair&quot;\,&quot;displayName&quot;:&quot;Attendes Panel&quot;\,&quot;type&quot;:&quot;PANEL&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/MeetingInfoMainPanel/Section/Attendes Panel/&quot;\,&quot;name&quot;:&quot;MeetAtendPanelRecChair&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nMeetAtendPanelRecChair.instanceManager.addInstance();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[background:#00B1B0,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,border-color:#22C55E,cssOverride:cursor: pointer;&#xa;]"
+                                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                                default_x0023_disabled="[background:#B3B3B3,border-color:#B3B3B3,cssOverride:pointer-events: none;]"
+                                                default_x0023_disabled_x0023_ui="[backgroundColor:#B3B3B3]"/>
+                                        </style>
+                                    </guidebutton_37246338>
+                                    <guidebutton_19068213
+                                        cq:cssClass="guide-1668869689434"
+                                        jcr:created="{Date}2022-08-24T07:36:55.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T12:07:42.016Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="-"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1668869689434 button:not(.af-icon-button),.guide-1668869689434 input[type='button']{&#xa;background:#00B1B0;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;border-color:#22C55E;&#xa;cursor: pointer;&#xa;&#xa;}&#xa;.guide-1668869689434 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#B3B3B3;&#xa;border-color:#B3B3B3;&#xa;pointer-events: none;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="AttendDeleteRowRecChair"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="none"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <fd:rules
+                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair.AttendDeleteRowRecChair&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;AttendDeleteRowRecChair&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;REMOVE_INSTANCE&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;of&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;REPEATABLE_COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair.MeetAtendPanelRecChair&quot;\,&quot;displayName&quot;:&quot;Attendes Panel&quot;\,&quot;type&quot;:&quot;PANEL&quot;\,&quot;displayPath&quot;:&quot;FORM/guideRootPanel/MeetingInfoMainPanel/Section/Attendes Panel/&quot;\,&quot;name&quot;:&quot;MeetAtendPanelRecChair&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel.AdditionalAttRecChair&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nMeetAtendPanelRecChair.instanceManager.removeInstance(MeetAtendPanelRecChair.instanceIndex);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[background:#00B1B0,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,border-color:#22C55E,cssOverride:cursor: pointer;&#xa;]"
+                                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                                default_x0023_disabled="[background:#B3B3B3,border-color:#B3B3B3,cssOverride:pointer-events: none;]"
+                                                default_x0023_disabled_x0023_ui="[backgroundColor:#B3B3B3]"/>
+                                        </style>
+                                    </guidebutton_19068213>
+                                    <panel_675886512_copy
+                                        jcr:created="{Date}2022-08-23T06:23:22.390Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-11-19T11:33:41.807Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Attendes Panel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        enabled="{Boolean}true"
+                                        guideNodeClass="guidePanel"
+                                        maxOccur="-1"
+                                        minOccur="1"
+                                        name="MeetAtendPanelRecChair"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                            columns="1"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                            <guidetextbox_9998979
+                                                jcr:created="{Date}2022-08-23T06:25:37.980Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-11-19T11:17:49.606Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Attendee Name"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                enabled="{Boolean}true"
+                                                guideNodeClass="guideTextBox"
+                                                maxChars="50"
+                                                name="AttendNameRecChair"
+                                                textIsRich="[true,true,true]">
+                                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        offset="0"
+                                                        width="4"/>
+                                                </cq:responsive>
+                                            </guidetextbox_9998979>
+                                            <guidetextbox
+                                                jcr:created="{Date}2022-08-23T06:24:39.399Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-11-19T11:17:55.388Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Job Title"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                enabled="{Boolean}true"
+                                                guideNodeClass="guideTextBox"
+                                                maxChars="20"
+                                                name="AttendJobTitleRecChair"
+                                                textIsRich="[true,true,true]">
+                                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        offset="0"
+                                                        width="4"/>
+                                                </cq:responsive>
+                                            </guidetextbox>
+                                            <guideradiobutton
+                                                jcr:created="{Date}2022-10-12T06:29:09.222Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-11-19T11:08:09.006Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guideradiobutton"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                guideNodeClass="guideRadioButton"
+                                                name="AttendCheckRecChair"
+                                                options="[0=Caltrans,1=Contractor]"
+                                                textIsRich="[true,true]">
+                                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        offset="0"
+                                                        width="4"/>
+                                                </cq:responsive>
+                                            </guideradiobutton>
+                                        </items>
+                                    </panel_675886512_copy>
+                                </items>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:-3px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, -3px]"/>
+                                </style>
+                            </panel_1195317583>
+                        </items>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;var params = new URLSearchParams(window.location.search);\\nvar actualData=JSON.parse(window.atob(params.get('input')));\\n//console.log(actualData);\\nvar DRtype=actualData.type;\\nif(DRtype === \\&quot;DRB\\&quot;){\\n  MeetingDRBPanel.visible=true;\\n  MeetingDRAPanel.visible=false;  \\n}\\nelse if(DRtype === \\&quot;DRA\\&quot;){\\n  MeetingDRAPanel.visible=true;\\n  MeetingDRBPanel.visible=false; \\n}\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;DRB_CHAIR\\&quot;||actualData.userRole.toString().toUpperCase()===\\&quot;DRA\\&quot;){\\n  MeetingDRBPanel.enabled=true;\\n  MeetingDRAPanel.enabled=true;\\n}\\nelse{\\n  MeetingDRBPanel.enabled=false;\\n  MeetingDRAPanel.enabled=false;\\n}&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.MeetingInfoMainPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </panel_1723800572>
+                </items>
+            </rootPanel>
+        </guideContainer>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <smallScreen
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Decimal}479"/>
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}767"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}991"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

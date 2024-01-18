@@ -1,0 +1,96 @@
+/*.ex{
+background-image:url('/content/dam/caltrans-eadr/PreviewImage.png') 10px 10px no-repeat;*/
+/*border:2px solid yellow;
+    background-color:red;
+}
+
+#guideContainer-rootPanel-guidebutton___widget{
+background:green;
+}
+
+#guideContainer-rootPanel-table___guide-item-container{
+  background:orange;
+}*/
+
+/* to disable button in eadr Dashboard screen .guide-1660818576600 .guideFieldWidget.guideFieldButtonWidget.xfaButton*/
+[data-disabled='true'] button:not(.af-icon-button){
+    box-shadow: 0px 1px 2px 0px #b3b3b3 !important;
+    background:#b3b3b3;
+    border-color:#b3b3b3;
+    pointer-events: none;
+}
+
+/*Default buttons style*/
+button:not(.af-icon-button){
+    border-right-width:1px;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-top-width:1px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    border-top-left-radius:6px;
+    border-color:#22C55E;
+    box-shadow:0px 1px 2px 0px #009DDC;
+    background:#00B1B0;
+    cursor: pointer;
+    color:#F0FDF4;
+    font-weight:bold;
+    font-size:14px;
+    margin-left:16px;
+}
+
+/*Button hover style*/
+button:not(.af-icon-button):hover{
+    background:rgb(0,195,176);
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    border-top-left-radius:6px;
+    box-shadow:0px 1px 2px 0px #20B2AA;
+    cursor:pointer;
+}
+/*Styles for Attach button*/
+button.guide-fu-attach-button:not(.af-icon-button){
+	margin-left:0px !important;
+    background:#00B1B0;
+    border-right-width:1px;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-top-width:1px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    border-top-left-radius:6px;
+    border-color:#22C55E;
+    box-shadow:0px 1px 2px 0px #009DDC;
+    color:#F0FDF4;
+    font-weight:bold;
+    font-size:14px;
+    cursor: pointer;
+}
+
+/*styles for button inner text*/
+button .iconButton-label{
+    color:#F0FDF4;
+    font-weight:bold;
+    font-size:14px;
+}
+/*styles for Attach button in disabled mode */
+[data-disabled='true'] button.guide-fu-attach-button:not(.af-icon-button){
+	background: #b3b3b3 !important;
+    border-color: #b3b3b3 !important;
+}
+
+.select2-container{
+    width:280px !important;
+}
+.select2-container--default .select2-selection--single{
+    height:32px !important;
+}
+
+/*styles forother than Attach button in disabled mode */
+[data-disabled='true'] button:not(.af-icon-button){
+    background:#b3b3b3 !important;
+    border-color:#b3b3b3 !important;
+}

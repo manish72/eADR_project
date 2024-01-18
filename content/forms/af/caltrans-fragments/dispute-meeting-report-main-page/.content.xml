@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[granite:FinalArea]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/fd/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2023-05-29T08:30:23.128Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/fd/af/templateForFragment/defaultFragmentTemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Dispute Meeting Report Main Page"
+        sling:resourceType="fd/af/components/page/basePageForFragment">
+        <guideContainer
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideFragmentContainer"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="fragment1">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                    <panel
+                        jcr:created="{Date}2022-06-22T07:43:16.527Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-07-12T19:16:18.592Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DMR Main Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="DMRMainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <panel
+                                jcr:created="{Date}2022-06-22T07:44:27.851Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-22T07:48:15.294Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dispute Meeting Panel"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="DMRDPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidedropdownlist
+                                        jcr:created="{Date}2022-06-22T07:48:30.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-07-12T19:18:43.000Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Select Dispute Meeting ID:"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        guideNodeClass="guideDropDownList"
+                                        name="SelectDisputeIDList"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="3"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;if(this.value!==\\&quot;\\&quot; &amp;&amp; this.value!==\\&quot;null\\&quot;){\\nvar jsonData = {\\n\\t\\&quot;ea\\&quot; : ea.value\,\\n\\t\\&quot;district\\&quot; : district.value\,\\n\\t\\&quot;DisputeID\\&quot; : SelectDisputeIDList.value\,\\n\\t\\&quot;RecordType\\&quot; : \\&quot;DMR\\&quot;\,\\n\\t\\&quot;DRType\\&quot; : SelectDRADRB.value\\n};            \\nvar dollarUSLocale = Intl.NumberFormat('en-US');\\n$.ajax({ \\n\\ttype: 'GET'\, \\n\\tdata: jsonData\,\\n\\turl: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetDetailsOfDispute'\,\\n\\tsuccess: function (data) {  \\n\\t\\t//console.log(data);\\n\\t\\t//console.log(JSON.parse(data.getElementsByTagName(\\&quot;PCPDetailsJson\\&quot;)[0].innerHTML));\\n\\t\\tdata1=JSON.parse(data.getElementsByTagName(\\&quot;PCPDetailsJson\\&quot;)[0].innerHTML);\\n      \\tdisputeCreatedDate=data.getElementsByTagName(\\&quot;DisputeCreatedDate\\&quot;)[0].innerHTML;\\n\\t\\tStatusValueDMRMain.value = \\&quot;&lt;p>\\&quot;+data.getElementsByTagName(\\&quot;OverallStatus\\&quot;)[0].innerHTML+\\&quot;&lt;/p>\\&quot;;\\n\\t\\tif(data.getElementsByTagName(\\&quot;PPDueDate\\&quot;)[0].innerHTML!==\\&quot;null\\&quot;||data.getElementsByTagName(\\&quot;PPDueDate\\&quot;)[0].innerHTML!==\\&quot;\\&quot;)\\n\\t\\t{\\n\\t\\t\\tMeetingTypeValueDMRMain.value =  \\&quot;&lt;p>\\&quot;+data.getElementsByTagName(\\&quot;MeetingType\\&quot;)[0].innerHTML+\\&quot;&lt;/p>\\&quot;;\\n\\t\\t}\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tMeetingTypeValueDMRMain.value =  \\&quot;&lt;p>&lt;/p>\\&quot;;\\n\\t\\t}\\n\\t\\tif(data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML!==\\&quot;null\\&quot;||data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML===\\&quot;\\&quot;)\\n\\t\\t{\\n\\t\\t\\tMeetingDateValueDMRMain.value =  \\&quot;&lt;p>\\&quot;+data.getElementsByTagName(\\&quot;MeetDate\\&quot;)[0].innerHTML+\\&quot;&lt;/p>\\&quot;;\\n\\t\\t}\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tMeetingDateValueDMRMain.value =  \\&quot;&lt;p>&lt;/p>\\&quot;;\\n\\t\\t}\\n\\t\\tvar count1;\\n\\t\\tif(typeof(data1.PCP_Details.Record.PCP_MAIN_PK)===\\&quot;undefined\\&quot;){\\n\\t\\t  count1=data1.PCP_Details.Record.length;\\n\\t\\t}\\n\\t\\telse{\\n\\t\\t  count1=1;\\n\\t\\t}\\n\\t\\tvar tCount = Row1DMRMainPage.instanceManager.instanceCount;\\n\\t\\tfor(var k=0; k&lt;tCount; k++){\\n\\t\\t\\t\\tDMRMainPageTable.Row1DMRMainPage.instanceManager.removeInstance(1);\\n\\n\\t\\t}\\n\\t\\tif(count1===1){\\n\\t\\t\\tRow1DMRMainPage.instanceManager.addInstance(1);\\n\\t\\t\\tRow1DMRMainPage.tableItem11.value=data1.PCP_Details.Record.PCP_MAIN_PK;\\n\\t\\t\\tif(data1.PCP_Details.Record.D_IPC_DESCR!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem12.value=data1.PCP_Details.Record.D_IPC_DESCR;\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record.E_EST_COST!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem13.value=\\&quot;$ \\&quot;+dollarUSLocale.format(data1.PCP_Details.Record.E_EST_COST);\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record.E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem14.value=data1.PCP_Details.Record.E_TIME_IMPACT;\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record.E_REC_DATE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem15.value=data1.PCP_Details.Record.E_REC_DATE;\\n\\t\\t\\t}\\n          \\tif(data1.PCP_Details.Record.E_COMMENT_DATE!==\\&quot;null\\&quot;){\\n              guideBridge.resolveNode(\\&quot;Row1DMRMainPage\\&quot;).tableItem16.value=data1.PCP_Details.Record.E_COMMENT_DATE;\\n            }\\n          \\tguideBridge.resolveNode(\\&quot;Row1DMRMainPage\\&quot;).tableItem17.value=disputeCreatedDate;\\n\\t\\t\\tRow1DMRMainPage.visible=true;\\n\\t\\t}\\n\\t\\telse{\\n\\t\\t  for(var i=0; i&lt;data1.PCP_Details.Record.length; i++){\\n\\t\\t  //alert(i);\\n\\t\\t\\tRow1DMRMainPage.instanceManager.addInstance(1);\\n\\t\\t\\tRow1DMRMainPage.tableItem11.value=data1.PCP_Details.Record[i].PCP_MAIN_PK;\\n\\t\\t\\tif(data1.PCP_Details.Record[i].D_IPC_DESCR!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem12.value=data1.PCP_Details.Record[i].D_IPC_DESCR;\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record[i].E_EST_COST!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem13.value=\\&quot;$ \\&quot;+dollarUSLocale.format(data1.PCP_Details.Record[i].E_EST_COST);\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record[i].E_TIME_IMPACT!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem14.value=data1.PCP_Details.Record[i].E_TIME_IMPACT;\\n\\t\\t\\t}\\n\\t\\t\\tif(data1.PCP_Details.Record[i].E_REC_DATE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\tRow1DMRMainPage.tableItem15.value=data1.PCP_Details.Record[i].E_REC_DATE;\\n\\t\\t\\t}\\n            if(data1.PCP_Details.Record[i].E_COMMENT_DATE!==\\&quot;null\\&quot;){\\n              guideBridge.resolveNode(\\&quot;Row1DMRMainPage\\&quot;).tableItem16.value=data1.PCP_Details.Record[i].E_COMMENT_DATE;\\n            }\\n          \\tguideBridge.resolveNode(\\&quot;Row1DMRMainPage\\&quot;).tableItem17.value=disputeCreatedDate;\\n\\t\\t\\tRow1DMRMainPage.visible=true;\\n\\t\\t   } \\n\\t\\t}        \\n\\t}\,\\n\\terror: function(err){\\n\\t\\t//console.log(\\&quot;something went wrong\\&quot;);\\n\\t}\\n });\\n}&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.DMRMainPanel.DMRDPanel.SelectDisputeIDList&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidedropdownlist>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2022-06-22T07:54:34.335Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T07:55:13.456Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Status :&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="StatusHeading"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="3"/>
+                                        </cq:responsive>
+                                    </guidetextdraw>
+                                    <guidetextdraw_1975503705
+                                        jcr:created="{Date}2022-06-22T07:55:29.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-10-01T11:53:47.427Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>---&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="StatusValueDMRMain"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="9"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_1975503705>
+                                    <guidetextdraw_1523003040
+                                        jcr:created="{Date}2022-06-22T07:57:09.978Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T07:58:35.015Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Type of Meeting :&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="MeetingTypeHeading"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="3"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_1523003040>
+                                    <guidetextdraw_564602217
+                                        jcr:created="{Date}2022-06-22T07:58:44.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-10-01T11:53:52.422Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>---&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="MeetingTypeValueDMRMain"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="9"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_564602217>
+                                    <guidetextdraw_579347153
+                                        jcr:created="{Date}2022-06-22T08:00:19.559Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T08:00:55.551Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Meeting Date :&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="MeetingDateHeading"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="3"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_579347153>
+                                    <guidetextdraw_911785944
+                                        jcr:created="{Date}2022-06-22T08:01:03.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-10-01T11:53:57.844Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>---&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="MeetingDateValueDMRMain"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="9"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_911785944>
+                                    <table_copy
+                                        cq:cssClass="guide-1661240336610"
+                                        jcr:created="{Date}2022-06-08T11:50:40.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-12-20T08:37:22.968Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="PCP Table"
+                                        sling:resourceType="fd/af/components/table"
+                                        css="customTableLayout"
+                                        cssStyle=".guide-1661240336610 .guideTableNode table .guideTableRowNode.guideTableHeader th{&#xa;background:#009DDC;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTable"
+                                        name="DMRMainPageTable"
+                                        sortingEnabled="false"
+                                        textIsRich="true">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/tableLayout"
+                                            columns="2"
+                                            mobileLayout="headersLeft"
+                                            rows="2"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/tableLayout">
+                                            <HeaderRow
+                                                jcr:lastModified="{Date}2022-07-06T15:22:54.468Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Header Row"
+                                                sling:resourceType="fd/af/components/tableHeader"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTableRow"
+                                                name="headerRowPPCon"
+                                                visible="{Boolean}true">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/table/headerLayout"
+                                                    nonNavigable="{Boolean}true"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/table/headerLayout">
+                                                    <tableItem
+                                                        cq:cssClass="guide-1661240363934"
+                                                        jcr:lastModified="{Date}2022-06-08T11:51:53.447Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Potential Claim Record (PCR)#&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240363934 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </tableItem>
+                                                    <headerItem1654689058241
+                                                        cq:cssClass="guide-1661240399431"
+                                                        jcr:lastModified="{Date}2022-08-06T11:53:03.315Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>PCR Description&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240399431 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem16546890582411654689058635"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689058241>
+                                                    <headerItem1654689055291
+                                                        cq:cssClass="guide-1661240400922"
+                                                        jcr:lastModified="{Date}2022-08-03T14:56:12.005Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Dollar Value of the Potential Claim(per contractor)&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240400922 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem16546890552911654689055675"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689055291>
+                                                    <headerItem1654689050674
+                                                        cq:cssClass="guide-1661240402197"
+                                                        jcr:lastModified="{Date}2022-08-03T14:56:26.974Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Delay Days on Controlling Item of Work (per contractor)&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240402197 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem16546890506741654689051054"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689050674>
+                                                    <headerItem1654689047921
+                                                        cq:cssClass="guide-1661240403461"
+                                                        jcr:lastModified="{Date}2022-08-22T10:32:42.392Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Date Supplemental Potential Claim Record (SPCR) Submitted&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240403461 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem16546890479211654689048324"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689047921>
+                                                    <headerItem1654689045019
+                                                        cq:cssClass="guide-1661240404700"
+                                                        jcr:lastModified="{Date}2022-08-03T14:56:56.465Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Date Resident Engineer Responded to SPCR&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240404700 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem16546890450191654689045401"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689045019>
+                                                    <tableItem1
+                                                        cq:cssClass="guide-1661240405928"
+                                                        jcr:lastModified="{Date}2022-08-22T14:32:15.497Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                                        _value="&lt;p>Date DRB/DRA Referred&lt;/p>&#xa;"
+                                                        cssStyle=".guide-1661240405928 .guideTextDraw.guideStaticText{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="headerItem1"
+                                                        textIsRich="true">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textdraw
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,text-align:center]"/>
+                                                        </style>
+                                                    </tableItem1>
+                                                </items>
+                                            </HeaderRow>
+                                            <Row1
+                                                jcr:lastModified="{Date}2022-08-03T14:48:05.225Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Row 1"
+                                                sling:resourceType="fd/af/components/tableRow"
+                                                enabled="{Boolean}true"
+                                                guideComponentType="true"
+                                                guideNodeClass="guideTableRow"
+                                                maxOccur="-1"
+                                                minOccur="0"
+                                                name="Row1DMRMainPage"
+                                                visible="{Boolean}false">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/table/rowLayout"
+                                                    nonNavigable="{Boolean}true"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/table/rowLayout">
+                                                    <tableItem
+                                                        cq:cssClass="guide-1661240412997"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:04.376Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text Box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240412997 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240412997 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem11"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </tableItem>
+                                                    <headerItem1654689058350
+                                                        cq:cssClass="guide-1661240431029"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:09.415Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240431029 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240431029 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem12"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689058350>
+                                                    <headerItem1654689055425
+                                                        cq:cssClass="guide-1661240433031"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:16.684Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240433031 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240433031 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem13"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689055425>
+                                                    <headerItem1654689050780
+                                                        cq:cssClass="guide-1661240434878"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:35.163Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240434878 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240434878 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem14"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689050780>
+                                                    <headerItem1654689048074
+                                                        cq:cssClass="guide-1661240443369"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:42.398Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240443369 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240443369 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem15"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689048074>
+                                                    <headerItem1654689045151
+                                                        cq:cssClass="guide-1661240445124"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:48.732Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240445124 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240445124 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem16"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </headerItem1654689045151>
+                                                    <tableItem1
+                                                        cq:cssClass="guide-1661240447800"
+                                                        jcr:lastModified="{Date}2022-08-20T06:06:54.837Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text Box"
+                                                        sling:resourceType="fd/af/components/guidetextbox"
+                                                        autofillFieldKeyword="name"
+                                                        cssStyle=".guide-1661240447800 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;text-align:center;&#xa;&#xa;}&#xa;.guide-1661240447800 .textField input[type='text']{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                                        enabled="{Boolean}false"
+                                                        guideComponentType="true"
+                                                        guideNodeClass="guideTextBox"
+                                                        hideTitle="true"
+                                                        name="tableItem17"
+                                                        textIsRich="[true,true,true]">
+                                                        <style jcr:primaryType="nt:unstructured">
+                                                            <af_textbox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                            <af_textboxwidgetandtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                default_x0023_default="[text-align:center]"/>
+                                                        </style>
+                                                    </tableItem1>
+                                                </items>
+                                            </Row1>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_tableheadercell
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[background:#009DDC]"
+                                                default_x0023_default_x0023_ui="[backgroundColor:#009DDC]"/>
+                                        </style>
+                                    </table_copy>
+                                    <guidetextdraw_1916302355
+                                        jcr:created="{Date}2022-06-22T08:02:30.130Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T08:03:24.212Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Click next to submit Dispute Meeting Report&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="ClickNote"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="5"/>
+                                        </cq:responsive>
+                                    </guidetextdraw_1916302355>
+                                    <guidebutton
+                                        cq:cssClass="guide-1660910246912"
+                                        jcr:created="{Date}2022-06-22T08:03:34.189Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T08:04:07.488Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Next"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1660910246912 button:not(.af-icon-button):hover{&#xa;background:rgb(0,195,176);&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;box-shadow:0px 1px 2px 0px #20B2AA;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1660910246912 button:not(.af-icon-button),.guide-1660910246912 input[type='button']{&#xa;background:#00B1B0;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;border-color:#22C55E;&#xa;box-shadow:0px 1px 2px 0px #009DDC;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1660910246912 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#b3b3b3;&#xa;border-color:#b3b3b3;&#xa;pointer-events: none&#xa;}&#xa;.guide-1660910246912 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;.guide-1660910246912 button .iconButton-label{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="Next"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="2"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[background:#00B1B0,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,border-color:#22C55E,box-shadow:0px 1px 2px 0px #009DDC,cssOverride:cursor: pointer;]"
+                                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1660910348183&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#009DDC&quot;}]}]"
+                                                default_x0023_disabled="[cssOverride:pointer-events: none,background:#b3b3b3,border-color:#b3b3b3]"
+                                                default_x0023_disabled_x0023_ui="[backgroundColor:#b3b3b3]"
+                                                default_x0023_hover="[cssOverride:cursor: pointer;,background:rgb(0\,195\,176),border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,box-shadow:0px 1px 2px 0px #20B2AA]"
+                                                default_x0023_hover_x0023_ui="[backgroundColor:rgb(0\,195\,176),borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1660910437782&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#20B2AA&quot;}]}]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#F0FDF4,font-weight:bold,font-size:14px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.DMRMainPanel.DMRDPanel.Next&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if(SelectDisputeIDList.value !== \\&quot;\\&quot;  &amp;&amp; SelectDisputeIDList.value !== null){\\n  \\tDMRDPanel.visible = false;\\n\\tDisputeReportPanel.visible = true;\\n    if(SelectDRADRB.value===\\&quot;DRB\\&quot;){\\n      DisputeIDDMRDRB.value=\\&quot;Dispute Meeting ID : \\&quot;+SelectDisputeIDList.value.replace(\\&quot;&lt;p>\\&quot;\,\\&quot;\\&quot;).replace(\\&quot;&lt;/p>\\&quot;\,\\&quot;\\&quot;);\\n      MeetingType1DMRDRB.value=\\&quot;Traditional/Informal : \\&quot;+MeetingTypeValueDMRMain.value.replace(\\&quot;&lt;p>\\&quot;\,\\&quot;\\&quot;).replace(\\&quot;&lt;/p>\\&quot;\,\\&quot;\\&quot;);\\n      //MeetingType1DMRDRB.value=\\&quot;&lt;p>Traditional/Informal : \\&quot;+MeetingTypeValueDMRMain.value+\\&quot;&lt;/p>\\&quot;;\\n      DMRDRBPanel.visible=true;\\n      DMRDRAPanel.visible=false;\\n      ContractorNoDMRDRB.value=ContractNumberDRB.value; \\n      //DateDMRDRB1.value=new Date(DateDRB.value).toISOString();\\n      REDMRDRB.value=ResidentEngineerDRB.value;\\n      REPhoneNumberDMRDRB.value=PhoneNumberDRB.value;\\n      ContractorDMRDRB.value=ContractorDRB.value;\\n      var tCount = Row1DMRDRB.instanceManager.instanceCount;\\n      for(var k=0; k&lt;tCount; k++){\\n              DMRDRBTable.Row1DMRDRB.instanceManager.removeInstance(1);\\n      }\\n      var count = DMRMainPageTable.Row1DMRMainPage.instanceManager.instanceCount-1;\\n      var disList =  DMRMainPageTable.Row1DMRMainPage.instanceManager.instances;\\n      //console.log(count);\\n      //console.log(disList);\\n      for(var i=1;i &lt;= count;i++){\\n          Row1DMRDRB.instanceManager.addInstance(1);\\n          Row1DMRDRB.tableItem11.value = disList[i].tableItem11.value;\\n          Row1DMRDRB.tableItem12.value = disList[i].tableItem12.value;\\n          Row1DMRDRB.tableItem13.value = disList[i].tableItem13.value;\\n          Row1DMRDRB.tableItem14.value = disList[i].tableItem14.value;\\n          Row1DMRDRB.tableItem15.value = disList[i].tableItem15.value;\\n          Row1DMRDRB.tableItem16.value = disList[i].tableItem16.value;\\n          Row1DMRDRB.tableItem17.value = disList[i].tableItem17.value;\\n        Row1DMRDRB.visible=true;\\n      }\\n      var jsonData={\\n      'ea' : ea.value\,\\n      'district' : district.value\,\\n      'DRType' : SelectDRADRB.value\,\\n      'DisputeID' : SelectDisputeIDList.value\\n      };\\n      //console.log(jsonData);\\n      xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n      url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetEntireDisputeDetails';  \\n      $.ajax({ \\n            type: 'POST'\,\\n            headers: {\\n              'Content-Type' : 'application/xml'\,\\n              'Accept' : '*/*'\\n            }\,\\n            url: url\,\\n           data: xmlData\,\\n          //data: data1\,\\n            success: function (data) {\\n                  //console.log(data);\\n                  var parsedData = JSON.parse(data.getElementsByTagName('RecomDetailsJson')[0].innerHTML);\\n                  var parsedData1 = JSON.parse(data.getElementsByTagName('MeetDetailsJson')[0].innerHTML);\\n              \\t  var attenddetails = JSON.parse(data.getElementsByTagName('DMAttendDetailsJson')[0].innerHTML);\\n                  //console.log(parsedData1);\\n              \\t  parsedData1 = parsedData1.MeetingDetails.Details;\\n                  MeetCallDMRDRB.value = parsedData1.MEETING_CALLED_BY;\\n                  DRBChairDMRDRB.value = parsedData1.DRB_CHAIR;\\n                  MeetingDateDMRDRB.value = parsedData1.MEETING_DATE;\\n                  DRBMemr1DMRDRB.value = parsedData1.DRB_MEMEBER;                  \\n                  //DRBMemr2DMRDRB.value = parsedData1.;\\n                  if(parsedData1.MEETING_LOCATION !== \\&quot;null\\&quot;){\\n                    MeetLOCDMRDRB.value = parsedData1.MEETING_LOCATION;\\n                  }\\n                  if(parsedData1.CALTRANS_REPRESENTATIVE !== \\&quot;null\\&quot;){\\n                    CalRepDMRDRB.value = parsedData1.CALTRANS_REPRESENTATIVE;\\n                  }\\n              \\t  if(parsedData1.ATTENDEE_1 !== \\&quot;null\\&quot;){\\n                    attendee1DMRDRB.value = parsedData1.ATTENDEE_1;\\n                  }\\n              \\t  if(parsedData1.CONTRACTORS_REPRESENTATIVE !== \\&quot;null\\&quot;){\\n                    ContractoRepDMRDRB.value = parsedData1.CONTRACTORS_REPRESENTATIVE;\\n                  }\\n              \\t  if(parsedData1.ATTENDEE_2 !== \\&quot;null\\&quot;){\\n                    attendee2DMRDRB.value = parsedData1.ATTENDEE_2;\\n                  }\\n              \\t  //Add Attendee Details\\n              \\t  var count_check;\\n                  if(Object.values(attenddetails.AttendDet).length>0){\\n                    count_check = typeof(attenddetails.AttendDet.Record.DISPUTE_MEETING_ID)===\\&quot;undefined\\&quot;?attenddetails.AttendDet.Record.length:1;\\n                  }\\n                  var tCount = guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRB\\&quot;).instanceManager.instanceCount;\\n                  for(var i=0;i&lt;tCount;i++){\\n                    guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRB\\&quot;).enabled=false;\\n                    guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRB\\&quot;).instanceManager.removeInstance(1);\\n                  }\\n              \\t  MeetAtendPanelDMRDRB.resetData();\\n                  if(count_check===1){\\n                    //MeetAtendPanelDMRDRB.instanceManager.addInstance(1);\\n                    if(attenddetails.AttendDet.Record.ATTENDEE_NAME!==\\&quot;null\\&quot;){\\n                      MeetAtendPanelDMRDRB.AttendNameDMRDRB.value = attenddetails.AttendDet.Record.ATTENDEE_NAME;\\n                    }\\n                    if(attenddetails.AttendDet.Record.JOB_TITLE!==\\&quot;null\\&quot;){\\n                      MeetAtendPanelDMRDRB.AttendJobTitleDMRDRB.value = attenddetails.AttendDet.Record.JOB_TITLE;\\n                    }\\n                    if(attenddetails.AttendDet.Record.ATTENDEE_CHECK!==\\&quot;null\\&quot;){\\n                      MeetAtendPanelDMRDRB.AttendCheckDMRDRB.value = attenddetails.AttendDet.Record.ATTENDEE_CHECK;\\n                    }\\n                    MeetAtendPanelDMRDRB.enabled=false;\\n                    MeetAtendPanelDMRDRB.visible=true;\\n                  }\\n                  else if(count_check>1){\\n                    for(var k=0; k&lt;attenddetails.AttendDet.Record.length; k++){\\n                      if(k>0){\\n                        MeetAtendPanelDMRDRB.instanceManager.addInstance(1);\\n                      }\\n                      if(attenddetails.AttendDet.Record[k].ATTENDEE_NAME!==\\&quot;null\\&quot;){\\n                        MeetAtendPanelDMRDRB.AttendNameDMRDRB.value = attenddetails.AttendDet.Record[k].ATTENDEE_NAME;\\n                      }\\n                      if(attenddetails.AttendDet.Record[k].JOB_TITLE!==\\&quot;null\\&quot;){\\n                        MeetAtendPanelDMRDRB.AttendJobTitleDMRDRB.value = attenddetails.AttendDet.Record[k].JOB_TITLE;\\n                      }\\n                      if(attenddetails.AttendDet.Record[k].ATTENDEE_CHECK!==\\&quot;null\\&quot;){\\n                        MeetAtendPanelDMRDRB.AttendCheckDMRDRB.value = attenddetails.AttendDet.Record[k].ATTENDEE_CHECK;\\n                      }\\n                      MeetAtendPanelDMRDRB.enabled=false;\\n                      MeetAtendPanelDMRDRB.visible=true;\\n                    }\\n                  }\\n                  if(Object.values(parsedData.RecomDetails).length>0){\\n                      if(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE!==\\&quot;null\\&quot;){\\n                        DRBRequestDMRDRB.value=0;\\n                        if(parsedData.RecomDetails.Details.ADD_INFO_RE!==\\&quot;null\\&quot;){\\n                            CalDMRDRB.value=0;\\n                            CalDateDMRDRB.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();\\n                        }\\n                        if(parsedData.RecomDetails.Details.ADD_INFO_CONTRACTOR!==\\&quot;null\\&quot;){\\n                            CONDMRDRB.value=1;\\n                            CONDateDMRDRB.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();\\n                        }\\n                      }\\n                      if(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML!==\\&quot;\\&quot;){\\n                          DateAddInfoProvDMRDRB.value=new Date(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML).toISOString();\\n                      }\\n                      if(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML!==\\&quot;\\&quot;){\\n                          DateAddInfoProvDMRDRB.value=new Date(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML).toISOString();\\n                      }\\n                      if(parsedData.RecomDetails.Details.CREATED_DATE!==\\&quot;null\\&quot;){\\n                        \\tDateDMRDRB1.value=new Date(parsedData.RecomDetails.Details.CREATED_DATE).toISOString();\\n                        \\tif(parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE!==\\&quot;null\\&quot;){\\n                              DRBRecomDateDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;\\n                              SignDateDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;\\n                          \\t}\\n                        \\telse{\\n                          \\t\\tDRBRecomDateDMRDRB.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n                              \\tSignDateDMRDRB.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n                        \\t}\\n                      }\\n                      if(parsedData.RecomDetails.Details.FAVOR_PARTY!==\\&quot;null\\&quot;){\\n                        \\tif(parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY!==\\&quot;null\\&quot;){\\n                              DRBDateFavPartyDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY;\\n                          \\t}\\n                            else{\\n                              DRBDateFavPartyDMRDRB.value=parsedData.RecomDetails.Details.FAVOR_PARTY;\\n                            }\\n                      }\\n                      /*if(parsedData.RecomDetails.Details.SIGN_NAME!==\\&quot;null\\&quot;){\\n                            NameSignDMRDRB.value=parsedData.RecomDetails.Details.SIGN_NAME;\\n                      }\\n                      if(parsedData.RecomDetails.Details.SIGN_DATE!==\\&quot;null\\&quot;){\\n                            SignDateDMRDRB.value=new Date(parsedData.RecomDetails.Details.SIGN_DATE).toISOString();\\n                      }\\n                      if(parsedData.RecomDetails.Details.CREATED_DATE!==\\&quot;null\\&quot;){\\n                            DateDMRDRB1.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n                      }*/\\n                      if(data.getElementsByTagName('RE_Response')[0].innerHTML!==\\&quot;\\&quot;){\\n                            CalTransResponseDMRDRB.value=data.getElementsByTagName('RE_Response')[0].innerHTML;\\n                      }\\n                      if(data.getElementsByTagName('RE_ResDate')[0].innerHTML!==\\&quot;\\&quot;){\\n                            CalTransResDateDMRDRB.value=data.getElementsByTagName('RE_ResDate')[0].innerHTML;\\n                      }\\n                      if(data.getElementsByTagName('Con_Response')[0].innerHTML!==\\&quot;\\&quot;){\\n                            ContractorResponseDMRDRB.value=data.getElementsByTagName('Con_Response')[0].innerHTML;\\n                      }\\n                      if(data.getElementsByTagName('Con_ResDate')[0].innerHTML!==\\&quot;\\&quot;){\\n                            ContractorResDateDMRDRB.value=data.getElementsByTagName('Con_ResDate')[0].innerHTML;\\n                      }\\n               \\t\\t}\\n            }\,\\n            error: function(err){\\n              //this block is executed when server encounters any problem\\n            }\\n      });\\n    }\\n    else if(SelectDRADRB.value===\\&quot;DRA\\&quot;){\\n      DMRDRBPanel.visible=false;\\n      DMRDRAPanel.visible=true;\\n      DisputeIDDMRDRA.value=\\&quot;Dispute Meeting ID : \\&quot;+SelectDisputeIDList.value.replace(\\&quot;&lt;p>\\&quot;\,\\&quot;\\&quot;).replace(\\&quot;&lt;/p>\\&quot;\,\\&quot;\\&quot;);\\n      MeetingType1DMRDRA.value=\\&quot;Traditional/Informal : \\&quot;+MeetingTypeValueDMRMain.value.replace(\\&quot;&lt;p>\\&quot;\,\\&quot;\\&quot;).replace(\\&quot;&lt;/p>\\&quot;\,\\&quot;\\&quot;);\\n      ContractorNoDMRDRA.value=ContractNumberDRA.value;\\n      //DateDMRDRA1.value=new Date(DateDRA.value).toISOString();\\n      REDMRDRA.value=ResidentEngineerDRA.value;\\n      REPhoneNumberDMRDRA.value=PhoneNumberDRA.value;\\n      ContractorDMRDRA.value=ContractorDRA.value;\\n      var tCount = Row1DMRDRA.instanceManager.instanceCount;\\n      for(var k=0; k&lt;tCount; k++){\\n        DMRDRATable.Row1DMRDRA.instanceManager.removeInstance(1);\\n      }\\n      var count = DMRMainPageTable.Row1DMRMainPage.instanceManager.instanceCount-1;\\n      var disList =  DMRMainPageTable.Row1DMRMainPage.instanceManager.instances;\\n      //console.log(count);\\n      //console.log(disList);\\n      for(var i=1;i &lt;= count;i++){\\n          Row1DMRDRA.instanceManager.addInstance(1);\\n          Row1DMRDRA.tableItem11.value = disList[i].tableItem11.value;\\n          Row1DMRDRA.tableItem12.value = disList[i].tableItem12.value;\\n          Row1DMRDRA.tableItem13.value = disList[i].tableItem13.value;\\n          Row1DMRDRA.tableItem14.value = disList[i].tableItem14.value;\\n          Row1DMRDRA.tableItem15.value = disList[i].tableItem15.value;\\n          Row1DMRDRA.tableItem16.value = disList[i].tableItem16.value;\\n          Row1DMRDRA.tableItem17.value = disList[i].tableItem17.value;\\n        Row1DMRDRA.visible=true;\\n      }\\n      var jsonData={\\n      'ea' : ea.value\,\\n      'district' : district.value\,\\n      'DRType' : SelectDRADRB.value\,\\n      'DisputeID' : SelectDisputeIDList.value\\n      };\\n      //console.log(jsonData);\\n      xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n      //console.log(xmlData);\\n      url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetEntireDisputeDetails';  \\n      $.ajax({ \\n            type: 'POST'\,\\n            headers: {\\n              'Content-Type' : 'application/xml'\,\\n              'Accept' : '*/*'\\n            }\,\\n            url: url\,\\n           data: xmlData\,\\n          //data: data1\,\\n            success: function (data) {\\n              //console.log(data);\\n              var parsedData = JSON.parse(data.getElementsByTagName('RecomDetailsJson')[0].innerHTML);\\n              var parsedData1 = JSON.parse(data.getElementsByTagName('MeetDetailsJson')[0].innerHTML);\\n              var attenddetails = JSON.parse(data.getElementsByTagName('DMAttendDetailsJson')[0].innerHTML);\\n              parsedData1 = parsedData1.MeetingDetails.Details;\\n              MeetCallDMRDRA.value = parsedData1.MEETING_CALLED_BY;\\n              MeetingDateDMRDRA.value = parsedData1.MEETING_DATE;\\n              AdvisorDMRDRA.value = parsedData1.DRA_MEMBER;\\n              if(parsedData1.MEETING_LOCATION !== \\&quot;null\\&quot;){\\n                  MeetLOCDMRDRA.value = parsedData1.MEETING_LOCATION;\\n              }\\n              if(parsedData1.CALTRANS_REPRESENTATIVE !== \\&quot;null\\&quot;){\\n                  CalRepDMRDRA.value = parsedData1.CALTRANS_REPRESENTATIVE;\\n              }\\n              if(parsedData1.ATTENDEE_1 !== \\&quot;null\\&quot;){\\n                  attendee1DMRDRA.value = parsedData1.ATTENDEE_1;\\n              }\\n              if(parsedData1.CONTRACTORS_REPRESENTATIVE !== \\&quot;null\\&quot;){\\n                  ContractoRepDMRDRA.value = parsedData1.CONTRACTORS_REPRESENTATIVE;\\n              }\\n              if(parsedData1.ATTENDEE_2 !== \\&quot;null\\&quot;){\\n                  attendee2DMRDRA.value = parsedData1.ATTENDEE_2;\\n              } \\n              //add attendee details\\n              var count_check;\\n              if(Object.values(attenddetails.AttendDet).length>0){\\n                count_check = typeof(attenddetails.AttendDet.Record.DISPUTE_MEETING_ID)===\\&quot;undefined\\&quot; ? attenddetails.AttendDet.Record.length : 1;\\n              }\\n              var tCount = guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRA\\&quot;).instanceManager.instanceCount;\\n              for(var i=0;i&lt;tCount;i++){\\n                guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRA\\&quot;).enabled=false;\\n                guideBridge.resolveNode(\\&quot;MeetAtendPanelDMRDRA\\&quot;).instanceManager.removeInstance(1);\\n              }\\n              MeetAtendPanelDMRDRA.resetData();\\n              if(count_check===1){\\n                //MeetAtendPanelDMRDRA.instanceManager.addInstance(1);\\n                if(attenddetails.AttendDet.Record.ATTENDEE_NAME!==\\&quot;null\\&quot;){\\n                  MeetAtendPanelDMRDRA.AttendNameDMRDRA.value = attenddetails.AttendDet.Record.ATTENDEE_NAME;\\n                }\\n                if(attenddetails.AttendDet.Record.JOB_TITLE!==\\&quot;null\\&quot;){\\n                  MeetAtendPanelDMRDRA.AttendJobTitleDMRDRA.value = attenddetails.AttendDet.Record.JOB_TITLE;\\n                }\\n                if(attenddetails.AttendDet.Record.ATTENDEE_CHECK!==\\&quot;null\\&quot;){\\n                  MeetAtendPanelDMRDRA.AttendCheckDMRDRA.value = attenddetails.AttendDet.Record.ATTENDEE_CHECK;\\n                }\\n                MeetAtendPanelDMRDRA.enabled=false;\\n                MeetAtendPanelDMRDRA.visible=true;\\n              }\\n              else if(count_check>1){\\n                for(var k=0; k&lt;attenddetails.AttendDet.Record.length; k++){\\n                  if(k>0){\\n                    MeetAtendPanelDMRDRA.instanceManager.addInstance(1);\\n                  }\\n                  if(attenddetails.AttendDet.Record[k].ATTENDEE_NAME!==\\&quot;null\\&quot;){\\n                    MeetAtendPanelDMRDRA.AttendNameDMRDRA.value = attenddetails.AttendDet.Record[k].ATTENDEE_NAME;\\n                  }\\n                  if(attenddetails.AttendDet.Record[k].JOB_TITLE!==\\&quot;null\\&quot;){\\n                    MeetAtendPanelDMRDRA.AttendJobTitleDMRDRA.value = attenddetails.AttendDet.Record[k].JOB_TITLE;\\n                  }\\n                  if(attenddetails.AttendDet.Record[k].ATTENDEE_CHECK!==\\&quot;null\\&quot;){\\n                    MeetAtendPanelDMRDRA.AttendCheckDMRDRA.value = attenddetails.AttendDet.Record[k].ATTENDEE_CHECK;\\n                  }\\n                  MeetAtendPanelDMRDRA.enabled=false;\\n                  MeetAtendPanelDMRDRA.visible=true;\\n                }\\n              }\\n\\t\\t\\t  if(Object.values(parsedData.RecomDetails).length>0){\\n\\t\\t\\t\\tif(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tDRARequestDMRDRA.value=0;\\n\\t\\t\\t\\t\\tif(parsedData.RecomDetails.Details.ADD_INFO_RE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\t\\tCalDMRDRA.value=0;\\n\\t\\t\\t\\t\\t\\tCalDateDMRDRA.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\tif(parsedData.RecomDetails.Details.ADD_INFO_CONTRACTOR!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\t\\tCONDMRDRA.value=1;\\n\\t\\t\\t\\t\\t\\tCONDateDMRDRA.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML!==\\&quot;\\&quot;){\\n\\t\\t\\t\\t\\tDateAddInfoProvDMRDRA.value=new Date(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML).toISOString();\\n\\t\\t\\t\\t}\\n                if(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML!==\\&quot;\\&quot;){\\n\\t\\t\\t\\t\\tDateAddInfoProvDMRDRA.value=new Date(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML).toISOString();\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(parsedData.RecomDetails.Details.CREATED_DATE!==\\&quot;null\\&quot;){\\n                  DateDMRDRA1.value=new Date(parsedData.RecomDetails.Details.CREATED_DATE).toISOString();\\n                  if(parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE!==\\&quot;null\\&quot;){\\n                    DRARecomDateDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;\\n                    SignDateDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;\\n                  }\\n                  else{\\n                    DRARecomDateDMRDRA.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n                    SignDateDMRDRA.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n                  }\\n                }\\n                if(parsedData.RecomDetails.Details.FAVOR_PARTY!==\\&quot;null\\&quot;){\\n                  if(parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY!==\\&quot;null\\&quot;){\\n                    DRADateFavPartyDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY;\\n                  }\\n                  else{\\n                    DRADateFavPartyDMRDRA.value=parsedData.RecomDetails.Details.FAVOR_PARTY;\\n                  }\\n                }\\n\\t\\t\\t\\t/*if(parsedData.RecomDetails.Details.SIGN_NAME!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tNameSignDMRDRA.value=parsedData.RecomDetails.Details.SIGN_NAME;\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(parsedData.RecomDetails.Details.SIGN_DATE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tSignDateDMRDRA.value=new Date(parsedData.RecomDetails.Details.SIGN_DATE).toISOString();\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(parsedData.RecomDetails.Details.CREATED_DATE!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tDateDMRDRA1.value=parsedData.RecomDetails.Details.CREATED_DATE;\\n\\t\\t\\t\\t}*/\\n\\t\\t\\t\\tif(data.getElementsByTagName('RE_Response')[0].innerHTML!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tCalTransResponseDMRDRA.value=data.getElementsByTagName('RE_Response')[0].innerHTML;\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(data.getElementsByTagName('RE_ResDate')[0].innerHTML!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tCalTransResDateDMRDRA.value=data.getElementsByTagName('RE_ResDate')[0].innerHTML;\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(data.getElementsByTagName('Con_Response')[0].innerHTML!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tContractorResponseDMRDRA.value=data.getElementsByTagName('Con_Response')[0].innerHTML;\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tif(data.getElementsByTagName('Con_ResDate')[0].innerHTML!==\\&quot;null\\&quot;){\\n\\t\\t\\t\\t\\tContractorResDateDMRDRA.value=data.getElementsByTagName('Con_ResDate')[0].innerHTML;\\n\\t\\t\\t\\t}\\n              }\\n            }\,\\n            error: function(err){\\n              //this block is executed when server encounters any problem\\n            }\\n      });\\n    }\\n}\\nelse{\\n  alert(\\&quot;Please select dispute ID and click on on next buttton\\&quot;);\\n  DMRDPanel.visible = true;\\n  DisputeReportPanel.visible = false;\\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <guidetextdraw_copy_c
+                                        jcr:lastModified="{Date}2023-05-29T08:29:15.388Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        name="disputeLabelDMRMainPage"/>
+                                </items>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;//fetch dispute details from ea and district\\nvar params = new URLSearchParams(window.location.search);\\nvar actualData=JSON.parse(window.atob(params.get('input')));\\n//console.log(actualData);\\nea.value=actualData.ea;\\ndistrict.value=actualData.district;\\nif(actualData.userRole.toString().toUpperCase()===\\&quot;DRB_CHAIR\\&quot; || actualData.userRole.toString().toUpperCase()===\\&quot;DRA\\&quot;){\\n  Next.enabled=true;\\n}\\nelse{\\n  Next.enabled=false;\\n}\\nvar jsonData={'ea':ea.value\,'district':district.value\,'InfoType':'Complete'};\\n//console.log(jsonData);\\n$.ajax({ \\n          type: 'GET'\, \\n          contentType: 'application/xml'\,        \\n          url: 'http://'+window.location.hostname+':8080'+'/rest/services/Caltrans-eADR/Processes/GetDisputeMeetings'\,\\n          data: jsonData\,\\n          success: function (data) {        \\n            //console.log(data.getElementsByTagName(\\&quot;GetRowCount\\&quot;)[0].innerHTML);\\n            count=parseInt(data.getElementsByTagName(\\&quot;GetRowCount\\&quot;)[0].innerHTML);\\n            listIDs=[];\\n            if(count>0){\\n                jsonResponse = JSON.parse(data.getElementsByTagName(\\&quot;DRBMembersDetailsJson\\&quot;)[0].innerHTML);\\n               // console.log(jsonResponse.Dispute_Meetings);\\n                //console.log(data.Dispute_Meetings.Meeting.length);\\n              if(count===1){\\n                listIDs.push(jsonResponse.Dispute_Meetings.Meeting.DISPUTE_MEETING_ID);\\n              }\\n              else{\\n                for(var i=0; i&lt;count; i++){ \\n                  listIDs.push(jsonResponse.Dispute_Meetings.Meeting[i].DISPUTE_MEETING_ID);\\n                }\\n              }\\n              SelectDisputeIDList.items=listIDs;\\n            }\\n          }\,\\n          error: function(err){\\n            alert(\\&quot;something went wrong\\&quot;);\\n          }\\n});&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.DMRMainPanel.DMRDPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel>
+                            <panel_1740173353
+                                jcr:created="{Date}2022-06-22T11:01:05.266Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-12T19:16:37.787Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="DisputeReportPanel"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="DisputeReportPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false"
+                                visible="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <panel_18409639
+                                        jcr:created="{Date}2022-06-22T11:00:23.022Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T11:03:01.994Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DMRDRBPanel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        fragRef="/content/dam/formsanddocuments/caltrans-fragments/dispute-meeting-report-drb"
+                                        guideNodeClass="guidePanel"
+                                        name="DMRDRBPanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                            columns="1"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items jcr:primaryType="nt:unstructured"/>
+                                    </panel_18409639>
+                                    <panel
+                                        jcr:created="{Date}2022-06-22T11:02:02.745Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-22T11:03:21.053Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DMRDRAPanel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        fragRef="/content/dam/formsanddocuments/caltrans-fragments/dispute-meeting-report-dra"
+                                        guideNodeClass="guidePanel"
+                                        name="DMRDRAPanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                            columns="1"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items jcr:primaryType="nt:unstructured"/>
+                                    </panel>
+                                </items>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;debugger;\\nif(SelectDRADRB.value===\\&quot;DRB\\&quot;){\\n  DMRDRBPanel.visible=true;\\n  DMRDRAPanel.visible=false;\\n}\\nelse if(SelectDRADRB.value===\\&quot;DRA\\&quot;){\\n  DMRDRBPanel.visible=false;\\n  DMRDRAPanel.visible=true;\\n}&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.DMRMainPanel.DisputeReportPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel_1740173353>
+                        </items>
+                    </panel>
+                </items>
+            </rootPanel>
+        </guideContainer>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <smallScreen
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Decimal}479"/>
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}767"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}991"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

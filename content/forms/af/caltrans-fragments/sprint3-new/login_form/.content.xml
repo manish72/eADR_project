@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2023-04-20T07:39:22.674Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/TestEditTemplate/settings/wcm/templates/testtemplate"
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="login_form"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2022-12-03T10:32:10.305Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/af/components/guidesubmittype/restendpoint"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="caltransLoginPage"
+            disableSwipeGesture="{Boolean}false"
+            dorType="none"
+            enableLayoutLayer="false"
+            fieldParameterMapping="[userNameTxtBx = param1]"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            processName="TestApp/processes/SampleProcess"
+            redirect="/content/forms/af/caltrans-eadr/welcome-statement"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="Thank you for submitting the form."
+            thankYouOption="page"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/caltrans/caltrans-theme"
+            useExistingAF="false"
+            xsdRef="/assets/xsdRef.xsd"
+            xsdRootElement="afData">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                cq:cssClass="guide-1649657574402"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                cssStyle=".guide-1649657574402 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                    <guideseparator
+                        jcr:created="{Date}2022-04-11T05:45:53.205Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-11T05:48:50.334Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Separator"
+                        sling:resourceType="fd/af/components/guideseparator"
+                        guideNodeClass="guideSeparator"
+                        name="separator1649655953561"
+                        thickness="3"/>
+                    <panel1648725345573
+                        cq:cssClass="guide-1649741966618"
+                        jcr:lastModified="{Date}2022-03-31T11:15:57.417Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1649741966618 .guideGridFluidLayout{&#xa;position: relative;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="MainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextdraw_1541132731
+                                cq:cssClass="guide-1650014546032"
+                                jcr:created="{Date}2022-04-11T17:24:25.067Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-15T09:20:04.670Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Sign in to your account&lt;/p>&#xa;"
+                                cssStyle=".guide-1650014546032 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;color:#2A3342;&#xa;font-size:20px;&#xa;font-weight:bold;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="SignInText"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="12"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center,color:#2A3342,font-size:20px,font-weight:bold]"
+                                        default_x0023_default_x0023_ui="[marginPopover:Set,marginLock:linkOff]"/>
+                                </style>
+                            </guidetextdraw_1541132731>
+                            <guidetextdraw_188128
+                                cq:cssClass="guide-1649752724770"
+                                jcr:created="{Date}2022-04-07T10:19:36.874Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-12T08:43:33.389Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Text will appear here&lt;/p>&#xa;"
+                                cssStyle=".guide-1649752724770 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="OutputMessage"
+                                textIsRich="true"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#FF0000,font-size:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_188128>
+                            <guidetextdraw_164933
+                                cq:cssClass="guide-1649919093578"
+                                jcr:created="{Date}2022-04-14T06:51:23.154Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-14T06:54:52.914Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>&#xa;"
+                                cssStyle=".guide-1649919093578 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;font-size:14px;&#xa;color:#2E8B57;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="SuccessResetMessage"
+                                textIsRich="true"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,font-size:14px,color:#2E8B57]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_164933>
+                            <panel1649774654757
+                                jcr:lastModified="{Date}2022-04-12T14:44:23.531Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="UsernamePanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw
+                                        cq:cssClass="guide-1649763215665"
+                                        jcr:created="{Date}2022-03-03T09:12:16.567Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-22T06:58:54.977Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Username&lt;/p>&#xa;"
+                                        cssStyle=".guide-1649763215665 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;width:160px;&#xa;height:24px;&#xa;color:#333F51;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="userNameMainTxt"
+                                        text="&lt;p>User Name&lt;/p>&#xa;"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="none"
+                                                offset="0"
+                                                width="12"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[margin-left:410px,width:160px,height:24px,color:#333F51]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                        </style>
+                                    </guidetextdraw>
+                                    <guidetextbox
+                                        cq:cssClass="guide-1649774863096"
+                                        jcr:created="{Date}2022-04-12T14:46:04.841Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-12T14:46:25.167Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="userNameTxtBx"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        cssStyle=".guide-1649774863096 .textField input[type='text']{&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;box-shadow:0px 1px 10px 0px rgba(0,0,0,0.01) inset;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;height:46px;&#xa;&#xa;}&#xa;.guide-1649774863096 .guideFieldWidget.textField {&#xa;width:358px;&#xa;}&#xa;.guide-1649774863096 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        hideTitle="true"
+                                        name="userNameTxtBx"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textboxwidgetandtext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px,box-shadow:0px 1px 10px 0px rgba(0\,0\,0\,0.01) inset,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px,addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.textField&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},height:46px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,borderRadiusPopover:8px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1649775129597&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;10px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;rgba(0\,0\,0\,0.01)&quot;\,&quot;shadowPosition&quot;:&quot;inset&quot;}]},borderWidthPopover:2px,marginPopover:Set,width:358px]"/>
+                                            <af_textbox
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;OutputMessage.visible=false;\\nSuccessResetMessage.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.MainPanel.UsernamePanel.userNameTxtBx&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidetextbox>
+                                </items>
+                            </panel1649774654757>
+                            <panel1649775675909
+                                jcr:lastModified="{Date}2022-04-12T15:01:36.538Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="PasswdPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw_1596411319
+                                        cq:cssClass="guide-1649763325118"
+                                        jcr:created="{Date}2022-03-03T09:12:53.865Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-12T06:14:12.613Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Password&lt;/p>&#xa;"
+                                        cssStyle=".guide-1649763325118 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;width:160px;&#xa;height:24px;&#xa;color:#333F51;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="pwdTxt"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="12"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[margin-left:410px,width:160px,height:24px,color:#333F51]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                        </style>
+                                    </guidetextdraw_1596411319>
+                                    <guidepasswordbox
+                                        cq:cssClass="guide-1649775823988"
+                                        jcr:created="{Date}2022-04-12T15:01:46.639Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-14T10:26:14.263Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidepasswordbox"
+                                        cssStyle=".guide-1649775823988 .defaultWidget input[type='password']{&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;box-shadow:0px 1px 10px 0px rgba(0,0,0,0.01);&#xa;&#xa;}&#xa;.guide-1649775823988 .guideFieldWidget.defaultWidget {&#xa;width:358px;&#xa;}&#xa;.guide-1649775823988 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;margin-left:410px;&#xa;width:358px;&#xa;height:46px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guidePasswordBox"
+                                        hideTitle="true"
+                                        name="passwordTxtBx"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_passwordboxwidgetandtext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px,box-shadow:0px 1px 10px 0px rgba(0\,0\,0\,0.01),addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.defaultWidget&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}}]"
+                                                default_x0023_default_x0023_ui="[borderWidthPopover:2px,borderRadiusPopover:8px,marginLock:linkOff,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1649775913838&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;10px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;rgba(0\,0\,0\,0.01)&quot;}]},marginPopover:Set,width:358px]"/>
+                                            <af_passwordbox
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[margin-left:410px,width:358px,height:46px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;OutputMessage.visible=false;\\nSuccessResetMessage.visible=false;\\nPWDCAL.value=this.value;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.MainPanel.PasswdPanel.passwordTxtBx&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidepasswordbox>
+                                </items>
+                            </panel1649775675909>
+                            <panel1649753028214
+                                jcr:lastModified="{Date}2022-04-12T08:44:01.549Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Buttons Panel"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="ButtonsPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidebutton_60261601
+                                        cq:cssClass="guide-1649749588100"
+                                        jcr:created="{Date}2022-04-12T07:40:44.565Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-13T06:50:07.925Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Login"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649749588100 button:not(.af-icon-button):hover{&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;box-shadow:0px 1px 2px 0px #20B2AA;&#xa;background:rgb(0,195,176);&#xa;cursor:pointer;&#xa;}&#xa;.guide-1649749588100 button:not(.af-icon-button),.guide-1649749588100 input[type='button']{&#xa;height:46px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;margin-left:410px;&#xa;margin-top:15px;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;background:#00B1B0;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649749588100.guidebutton {&#xa;width:358px;&#xa;}&#xa;.guide-1649749588100.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649749588100 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#FFFFFF;&#xa;&#xa;}&#xa;.guide-1649749588100 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="Login"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="12"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,margin-left:410px,margin-top:15px,cssOverride:cursor: pointer;,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,background:#00B1B0]"
+                                                default_x0023_default_x0023_ui="[width:358px,borderRadiusLock:link,borderRadiusPopover:6px,marginLock:linkOff,marginPopover:15px\, —\, —\, 410px,borderWidthPopover:1px,backgroundColor:#00B1B0]"
+                                                default_x0023_hover="[border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor:pointer;,box-shadow:0px 1px 2px 0px #20B2AA,background:rgb(0\,195\,176)]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusLock:link,borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1650018295737&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#20B2AA&quot;}]},backgroundColor:rgb(0\,195\,176)]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#FFFFFF]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.MainPanel.ButtonsPanel.Login&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//this condition will be executed when username and password are not empty or not null\\n//console.log(passwordTxtBx.value);\\n//var pwd = passwordTxtBx.value;\\n//var data = {'UserLoginID':userNameTxtBx.value.toUpperCase()\,'PasswordIn':passwordTxtBx.value\,'FormType':'Submit'};\\nvar xmldata = \\&quot;&lt;data>&lt;UserLoginID>\\&quot;+userNameTxtBx.value.toUpperCase()+\\&quot;&lt;/UserLoginID>&lt;PasswordIn>\\&quot;+passwordTxtBx.value+\\&quot;&lt;/PasswordIn>&lt;FormType>Submit&lt;/FormType>&lt;/data>\\&quot;;\\nvar URL = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/CheckEWBUserID';\\nif(userNameTxtBx.value!==null &amp;&amp; userNameTxtBx.value!==\\&quot;\\&quot; &amp;&amp; passwordTxtBx.value!==null &amp;&amp; passwordTxtBx.value!==\\&quot;\\&quot;){\\n //console.log(passwordTxtBx.value);\\n$.ajax({ \\n    type: 'POST'\,\\n    headers: {\\n      'Content-type' : 'application/xml'\,\\n      'Accept' : '*/*'\\n    }\, \\n    data: xmldata\,\\n    url: URL\,\\n    success: function (data) {   \\n     // console.log(data);\\n      //if given user credentials are valid\, then below if condition is executed\\n      if(data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML==\\&quot;Valid\\&quot;){\\n        var input={'UserLoginID': userNameTxtBx.value};\\n        var b = window.btoa(JSON.stringify(input));\\n       guidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-fragments/sprint3-new/welcome-statement.html?wcmmode=disabled&amp;input='+b\,'SAME_TAB');   \\n       //guidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-eadr/welcome-statement.html?input='+b\,'SAME_TAB');  \\n      }\\n      //in else block\, error message will be shown on the screen if user credentials are incorrect\\n      else{\\n        OutputMessage.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n        OutputMessage.visible=true;        \\n      }\\n    }\,\\n  \\terror: function(err){\\n      //this block is executed when server encounters any problem\\n  \\t\\talert(\\&quot;something went wrong\\&quot;);\\n}\\n});\\n}\\n//this else will be executed when username and password are empty or null\\nelse{\\n  OutputMessage.visible=true; \\n  OutputMessage.value=\\&quot;Please enter login credentials\\&quot;;\\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_60261601>
+                                    <guidebutton_11486519
+                                        cq:cssClass="guide-1649751095759"
+                                        jcr:created="{Date}2022-02-24T23:19:45.960Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-07T18:01:01.146Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Help"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649751095759 button:not(.af-icon-button):hover{&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;background:rgb(0,195,176);&#xa;cursor:pointer;&#xa;}&#xa;.guide-1649751095759 button:not(.af-icon-button),.guide-1649751095759 input[type='button']{&#xa;height:46px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;margin-left:410px;&#xa;margin-top:15px;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;background:#00B1B0;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649751095759.guidebutton {&#xa;width:358px;&#xa;}&#xa;.guide-1649751095759.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649751095759 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#FFFFFF;&#xa;&#xa;}&#xa;.guide-1649751095759 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="helpBtn"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,margin-left:410px,margin-top:15px,cssOverride:cursor: pointer;,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,background:#00B1B0]"
+                                                default_x0023_default_x0023_ui="[width:358px,borderRadiusLock:link,borderRadiusPopover:6px,marginLock:linkOff,marginPopover:15px\, —\, —\, 410px,borderWidthPopover:1px,backgroundColor:#00B1B0]"
+                                                default_x0023_hover="[border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor:pointer;,background:rgb(0\,195\,176)]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusLock:link,borderRadiusPopover:6px,backgroundColor:rgb(0\,195\,176)]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#FFFFFF]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.MainPanel.ButtonsPanel.helpBtn&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;guidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-fragments/sprint3-new/help-before-login.html?wcmmode=disabled'\,'SAME_TAB');\\n//guidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-eadr/help-before-login.html'\,'SAME_TAB');\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_11486519>
+                                    <guidebutton
+                                        cq:cssClass="guide-1660032877827"
+                                        jcr:created="{Date}2022-08-09T08:12:46.715Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-08-09T08:21:58.628Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Reset Password"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1660032877827 button:not(.af-icon-button):hover{&#xa;border-color:#FFFFFF;&#xa;border-style:hidden;&#xa;background:#FFFFFF;&#xa;&#xa;}&#xa;.guide-1660032877827 button:not(.af-icon-button),.guide-1660032877827 input[type='button']{&#xa;font-size:16px;&#xa;background:#FFFFFF;&#xa;border-color:#ffffff;&#xa;border-style:hidden;&#xa;margin-left:390px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1660032877827.guidebutton {&#xa;width:170px;&#xa;}&#xa;.guide-1660032877827.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1660032877827 button .iconButton-label{&#xa;color:#009DDC;&#xa;font-size:16px;&#xa;text-decoration:underline;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="forgotPwd"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="2"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[font-size:16px,background:#FFFFFF,border-color:#ffffff,border-style:hidden,addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;170px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},margin-left:390px,cssOverride:cursor: pointer;]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,backgroundColor:#FFFFFF,width:170px,marginPopover:—\, —\, —\, 390px]"
+                                                default_x0023_hover="[border-color:#FFFFFF,border-style:hidden,background:#FFFFFF]"
+                                                default_x0023_hover_x0023_mask="[border-top-left-radius,border-top-right-radius,border-bottom-left-radius,border-bottom-right-radius,borderRadiusPopover,borderRadiusLock]"
+                                                default_x0023_hover_x0023_ui="[backgroundColor:#FFFFFF,marginLock:linkOff,marginPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#009DDC,font-size:16px,text-decoration:underline]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.ButtonsPanel.forgotPwd&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;forgotPwd&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HIDE_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel&quot;\,&quot;displayName&quot;:&quot;MainPanel&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/Root Panel/MainPanel/&quot;\,&quot;name&quot;:&quot;MainPanel&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SHOW_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.ForgotPasswdPanel&quot;\,&quot;displayName&quot;:&quot;Forgot Password Panel&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/Root Panel/Forgot Password Panel/&quot;\,&quot;name&quot;:&quot;ForgotPasswdPanel&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nMainPanel.visible = false;\\nForgotPasswdPanel.visible = true;\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <guidebutton_233174630
+                                        cq:cssClass="guide-1681975741434"
+                                        jcr:created="{Date}2022-08-09T08:13:00.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-10-01T09:12:35.338Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Register User"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1681975741434 button:not(.af-icon-button):hover{&#xa;background:#FFFFFF;&#xa;border-style:hidden;&#xa;&#xa;}&#xa;.guide-1681975741434 button:not(.af-icon-button),.guide-1681975741434 input[type='button']{&#xa;border-style:hidden;&#xa;margin-left:423px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1681975741434.guidebutton {&#xa;width:180px;&#xa;}&#xa;.guide-1681975741434.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1681975741434 button .iconButton-label{&#xa;color:#009DDC;&#xa;font-size:16px;&#xa;text-decoration:underline;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="RegisterUser"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="3"/>
+                                        </cq:responsive>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.MainPanel.ButtonsPanel.RegisterUser&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;//guidelib.util.GuideUtil.navigateToURL('http://'+window.location.hostname+':8080/lc/content/forms/af/caltrans-eadr/register-form.html?wcmmode=disabled'\,'SAME_TAB');\\nguidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-eadr/register-form.html?wcmmode=disabled'\,'SAME_TAB');&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-style:hidden,cssOverride:cursor: pointer;,addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;180px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},margin-left:423px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:180px,marginPopover:—\, —\, —\, 423px]"
+                                                default_x0023_hover="[background:#FFFFFF,border-style:hidden]"
+                                                default_x0023_hover_x0023_ui="[backgroundColor:#FFFFFF,marginLock:linkOff,marginPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#009DDC,font-size:16px,text-decoration:underline]"/>
+                                        </style>
+                                    </guidebutton_233174630>
+                                </items>
+                            </panel1649753028214>
+                            <guidetextdraw
+                                cq:cssClass="guide-1649946691029"
+                                jcr:created="{Date}2022-04-14T14:30:45.243Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-28T07:52:39.543Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Note:&amp;nbsp;For username, please contact your District iEWB Administrator.&lt;/p>&#xa;"
+                                cssStyle=".guide-1649946691029 .guideTextDraw.guideStaticText{&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;text-align:center;&#xa;padding-left:30px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="Note"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF0000,font-size:14px,text-align:center,padding-left:30px]"
+                                        default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:—\, —\, —\, 30px]"/>
+                                </style>
+                            </guidetextdraw>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_responsivepanel
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[cssOverride:position: relative;&#xa;]"/>
+                        </style>
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                behavior="none"/>
+                        </cq:responsive>
+                    </panel1648725345573>
+                    <panel
+                        cq:cssClass="guide-1649756377057"
+                        jcr:created="{Date}2022-03-31T10:17:31.320Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-13T11:58:43.027Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Forgot Password Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1649756377057 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="ForgotPasswdPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextdraw
+                                cq:cssClass="guide-1649756804252"
+                                jcr:created="{Date}2022-03-31T11:17:35.864Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-13T11:39:56.594Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Reset Password&lt;/p>&#xa;"
+                                cssStyle=".guide-1649756804252 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;color:#2A3342;&#xa;font-size:20px;&#xa;font-weight:bold;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ForgotPasswdLabel"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center,color:#2A3342,font-size:20px,font-weight:bold]"
+                                        default_x0023_default_x0023_ui="[marginPopover:Set,marginLock:linkOff]"/>
+                                </style>
+                            </guidetextdraw>
+                            <guidetextdraw_2129028731
+                                cq:cssClass="guide-1649835955122"
+                                jcr:created="{Date}2022-04-13T06:05:50.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T13:12:51.577Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                cssStyle=".guide-1649835955122 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ErrorMessageFogot"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#FF0000,font-size:14px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_2129028731>
+                            <guidetextdraw_1154208666
+                                cq:cssClass="guide-1649855075839"
+                                jcr:created="{Date}2022-04-13T13:03:56.568Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T13:06:41.654Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                cssStyle=".guide-1649855075839 .guideTextDraw.guideStaticText{&#xa;color:#2E8B57;&#xa;font-size:14px;&#xa;margin-left:410px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="SuccessMessageForgot"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#2E8B57,font-size:14px,margin-left:410px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_1154208666>
+                            <guidetextdraw_1892335893
+                                cq:cssClass="guide-1649833958781"
+                                jcr:created="{Date}2022-04-13T07:08:22.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-22T07:54:28.536Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Username&lt;/p>&#xa;"
+                                cssStyle=".guide-1649833958781 .guideTextDraw.guideStaticText{&#xa;width:160px;&#xa;height:24px;&#xa;margin-left:410px;&#xa;color:#333F51;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="userNameFortxt"
+                                text="&lt;p>The text will appear here&lt;/p>"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:160px,height:24px,margin-left:410px,color:#333F51]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_1892335893>
+                            <guidetextbox
+                                cq:cssClass="guide-1649833984324"
+                                jcr:created="{Date}2022-04-13T07:08:29.928Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T07:08:59.760Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                cssStyle=".guide-1649833984324 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;&#xa;}&#xa;.guide-1649833984324 .textField input[type='text']{&#xa;height:46px;&#xa;background:#FFFFFF;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;&#xa;}&#xa;.guide-1649833984324 .guideFieldWidget.textField {&#xa;width:358px;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                hideTitle="true"
+                                name="userNameTxtFogor"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                    <af_textboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.textField&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},height:46px,background:#FFFFFF,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px]"
+                                        default_x0023_default_x0023_ui="[width:358px,backgroundColor:#FFFFFF,borderRadiusPopover:8px,borderWidthPopover:2px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;ErrorMessageFogot.visible=false;\\nSuccessMessageForgot.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ForgotPasswdPanel.userNameTxtFogor&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox>
+                            <panel1649847583676
+                                jcr:lastModified="{Date}2022-04-13T10:59:55.111Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="ButtonsPanelForgot"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <guidebutton
+                                        cq:cssClass="guide-1649758232219"
+                                        jcr:created="{Date}2022-03-31T10:22:18.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-03-31T10:23:59.838Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Submit"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649758232219 button:not(.af-icon-button):hover{&#xa;&#xa;}&#xa;.guide-1649758232219 button:not(.af-icon-button),.guide-1649758232219 input[type='button']{&#xa;margin-left:410px;&#xa;height:46px;&#xa;border-style:hidden;&#xa;margin-top:10px;&#xa;background:#00B1B0;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649758232219.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649758232219.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649758232219 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#FFFFFF;&#xa;&#xa;}&#xa;.guide-1649758232219 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="Submit"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[margin-left:410px,addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-style:hidden,margin-top:10px,cssOverride:cursor: pointer;,background:#00B1B0]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,marginPopover:10px\, —\, —\, 410px,backgroundColor:#00B1B0]"
+                                                default_x0023_hover="[]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#FFFFFF]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;if(userNameTxtFogor.value!==null &amp;&amp; userNameTxtFogor.value!==\\&quot;\\&quot;){\\nvar xmlData = \\&quot;&lt;data>&lt;UserLoginID>\\&quot;+userNameTxtFogor.value.toUpperCase()+\\&quot;&lt;/UserLoginID>&lt;ProcessType>Reset&lt;/ProcessType>&lt;/data>\\&quot;;\\n$.ajax({ \\n    type: 'POST'\, \\n    //data: {'UserLoginID':userNameTxtFogor.value.toUpperCase()\,'ProcessType':\\&quot;Reset\\&quot;}\,\\n    headers: {\\n      'Content-type' : 'application/xml'\,\\n      'Accept' : '*/*'\\n    }\, \\n    data : xmlData\,\\n    //url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/SetPassword:1.0'\,\\n    url : 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/processes/SetPassword'\,\\n    success: function (data) {  \\n      if(data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML.includes(\\&quot;The username does not exist.\\&quot;)){\\n          ErrorMessageFogot.visible=true;\\n          ErrorMessageFogot.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n      }\\n      if(data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML.includes(\\&quot;temporary password\\&quot;)){\\n        //SuccessMessageForgot.visible=true;\\n        //SuccessMessageForgot.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n        ///below 4lines newly added\\n        MainPanel.visible=true;\\n        SuccessResetMessage.visible=true;\\n        ForgotPasswdPanel.visible=false;\\n        SuccessResetMessage.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;        \\n        OutputMessage.visible=false;\\n        OutputMessage.value=\\&quot;\\&quot;;\\n      }\\n    }\,\\n  \\terror: function(err){\\n  \\t  ErrorMessageFogot.visible=true;\\n      ErrorMessageFogot.value=\\&quot;something went wrong.\\&quot;;\\n}\\n});\\n}\\nelse{\\n  ErrorMessageFogot.visible=true;\\n  ErrorMessageFogot.value=\\&quot;Please enter credentials.\\&quot;;\\n}&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ForgotPasswdPanel.ButtonsPanelForgot.Submit&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <guidebutton_19668337
+                                        cq:cssClass="guide-1649759477488"
+                                        jcr:created="{Date}2022-03-31T10:24:43.641Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-03-31T10:25:02.742Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Cancel"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649759477488 button:not(.af-icon-button):hover{&#xa;&#xa;}&#xa;.guide-1649759477488 button:not(.af-icon-button),.guide-1649759477488 input[type='button']{&#xa;height:46px;&#xa;border-style:hidden;&#xa;margin-top:10px;&#xa;background:#00B1B0;&#xa;margin-left:515px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649759477488.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649759477488.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649759477488 button:not(.af-icon-button):hover .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;line-height:24px;&#xa;font-size:14px;&#xa;&#xa;}&#xa;.guide-1649759477488 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="Cancel"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-style:hidden,margin-top:10px,cssOverride:cursor: pointer;,background:#00B1B0,margin-left:515px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,backgroundColor:#00B1B0,marginPopover:10px\, —\, —\, 515px]"
+                                                default_x0023_hover="[]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[width:54px,height:24px,line-height:24px,font-size:14px]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.ForgotPasswdPanel.ButtonsPanelForgot.Cancel&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;userNameTxtFogor.value=\\&quot;\\&quot;;\\nSuccessMessageForgot.visible=false;\\nErrorMessageFogot.visible=false;\\nMainPanel.visible = true;\\nForgotPasswdPanel.visible=false;\\nOutputMessage.value=\\&quot;\\&quot;;\\nOutputMessage.visible=false;&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_19668337>
+                                </items>
+                            </panel1649847583676>
+                            <guidetextdraw_1645701851
+                                cq:cssClass="guide-1649947248236"
+                                jcr:created="{Date}2022-04-14T14:40:21.174Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-28T07:52:57.270Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Note:&amp;nbsp;For username, please contact your District iEWB Administrator.&lt;/p>&#xa;"
+                                cssStyle=".guide-1649947248236 .guideTextDraw.guideStaticText{&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;text-align:center;&#xa;padding-left:30px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="NoteForgot"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF0000,font-size:14px,text-align:center,padding-left:30px]"
+                                        default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:—\, —\, —\, 30px]"/>
+                                </style>
+                            </guidetextdraw_1645701851>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_responsivepanel
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"
+                                default_x0023_default_x0023_mask="[display]"
+                                default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:Set]"/>
+                        </style>
+                    </panel>
+                    <panel_412165722
+                        cq:cssClass="guide-1649761714760"
+                        jcr:created="{Date}2022-03-31T11:20:08.000Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-25T08:50:46.264Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="ResetPasswdPanel"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1649761714760 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="ResetPasswdPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextdraw_copy
+                                cq:cssClass="guide-1649761882394"
+                                jcr:created="{Date}2022-03-31T11:17:35.864Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-18T09:52:55.065Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Change Password&lt;/p>&#xa;"
+                                cssStyle=".guide-1649761882394 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;color:#2A3342;&#xa;font-size:20px;&#xa;font-weight:bold;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ChangePasswdLabel"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center,color:#2A3342,font-size:20px,font-weight:bold]"
+                                        default_x0023_default_x0023_ui="[marginPopover:Set,marginLock:linkOff]"/>
+                                </style>
+                            </guidetextdraw_copy>
+                            <guidetextdraw_223967
+                                cq:cssClass="guide-1649764625547"
+                                jcr:created="{Date}2022-04-08T11:00:00.243Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T10:52:34.025Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>&#xa;"
+                                cssStyle=".guide-1649764625547 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#2E8B57;&#xa;font-size:14px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="SuccessMessage"
+                                textIsRich="true"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#2E8B57,font-size:14px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_223967>
+                            <guidetextdraw_93222869
+                                cq:cssClass="guide-1649847437582"
+                                jcr:created="{Date}2022-04-13T10:52:47.675Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T12:25:33.979Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>The text will appear here&lt;/p>"
+                                cssStyle=".guide-1649847437582 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#FF0000;&#xa;font-size:14px;&#xa;padding-top:14px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ErrorMessage"
+                                visible="{Boolean}false">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#FF0000,font-size:14px,padding-top:14px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,paddingLock:linkOff,paddingPopover:14px\, —\, —\, —]"/>
+                                </style>
+                            </guidetextdraw_93222869>
+                            <guidetextdraw_copy_1823205256
+                                cq:cssClass="guide-1646299184811"
+                                jcr:created="{Date}2022-03-03T09:12:16.567Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T08:49:21.402Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Existing Password&lt;/p>&#xa;"
+                                cssStyle=".guide-1646299184811 .guideTextDraw.guideStaticText{&#xa;width:160px;&#xa;height:24px;&#xa;color:#333F51;&#xa;margin-left:410px;&#xa;font-weight:normal;&#xa;line-height:24px;&#xa;font-size:16px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="existingPassTxtReset"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="1"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:160px,height:24px,color:#333F51,margin-left:410px,font-weight:normal,line-height:24px,font-size:16px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_copy_1823205256>
+                            <guidepasswordbox
+                                cq:cssClass="guide-1649840705841"
+                                jcr:created="{Date}2022-04-13T09:04:14.430Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T10:59:08.535Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidepasswordbox"
+                                cssStyle=".guide-1649840705841 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;&#xa;}&#xa;.guide-1649840705841 .defaultWidget input[type='password']{&#xa;background:#FFFFFF;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;&#xa;}&#xa;.guide-1649840705841 .guideFieldWidget.defaultWidget {&#xa;width:358px;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guidePasswordBox"
+                                hideTitle="true"
+                                name="existingPassBox"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_passwordbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                        default_x0023_default_x0023_mask="[border-style]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,borderWidthPopover:Set,borderRadiusPopover:Set]"/>
+                                    <af_passwordboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.defaultWidget&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},background:#FFFFFF,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px]"
+                                        default_x0023_default_x0023_ui="[width:358px,backgroundColor:#FFFFFF,borderWidthPopover:2px,borderRadiusPopover:8px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;ErrorMessage.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ResetPasswdPanel.existingPassBox&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidepasswordbox>
+                            <guidetextdraw
+                                cq:cssClass="guide-1649846075888"
+                                jcr:created="{Date}2022-04-13T08:49:56.367Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-22T07:56:27.504Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>New password:&lt;/p>&#xa;"
+                                cssStyle=".guide-1649846075888 .guideTextDraw.guideStaticText{&#xa;width:160px;&#xa;height:24px;&#xa;margin-left:410px;&#xa;color:#333F51;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="newPassTxt"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:160px,height:24px,margin-left:410px,color:#333F51]"
+                                        default_x0023_default_x0023_mask="[z-index]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw>
+                            <guidetextbox
+                                cq:cssClass="guide-1649846381587"
+                                jcr:created="{Date}2022-04-13T10:38:07.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T10:39:00.000Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Password Box"
+                                sling:resourceType="fd/af/components/guidepasswordbox"
+                                autofillFieldKeyword="name"
+                                cssStyle=".guide-1649846381587 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;&#xa;}&#xa;.guide-1649846381587 .defaultWidget input[type='password']{&#xa;background:#FFFFFF;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;&#xa;}&#xa;.guide-1649846381587 .guideFieldWidget.defaultWidget {&#xa;width:358px;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guidePasswordBox"
+                                hideTitle="true"
+                                name="NewPassBox"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                    <af_textboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.textField&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},height:46px,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px]"
+                                        default_x0023_default_x0023_ui="[width:358px,borderWidthPopover:2px,borderRadiusPopover:8px]"/>
+                                    <af_passwordbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px]"
+                                        default_x0023_default_x0023_mask="[border-style]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,borderWidthPopover:Set,borderRadiusPopover:Set]"/>
+                                    <af_passwordboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.defaultWidget&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},background:#FFFFFF,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px]"
+                                        default_x0023_default_x0023_ui="[width:358px,backgroundColor:#FFFFFF,borderWidthPopover:2px,borderRadiusPopover:8px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;ErrorMessage.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ResetPasswdPanel.NewPassBox&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox>
+                            <guidetextdraw_1849885834
+                                cq:cssClass="guide-1650614143193"
+                                jcr:created="{Date}2022-04-13T08:50:10.905Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-22T07:56:18.294Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Confirm New Password:&lt;/p>&#xa;"
+                                cssStyle=".guide-1650614143193 .guideTextDraw.guideStaticText{&#xa;margin-left:410px;&#xa;color:#333F51;&#xa;height:24px;&#xa;width:200px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="ConfirmNewPwdtxt"
+                                textIsRich="true">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px,color:#333F51,height:24px,width:200px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                            </guidetextdraw_1849885834>
+                            <guidepasswordbox_2020364111
+                                cq:cssClass="guide-1649846730895"
+                                jcr:created="{Date}2022-04-13T10:43:20.136Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-04-13T10:43:41.737Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidepasswordbox"
+                                cssStyle=".guide-1649846730895 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;width:358px;&#xa;height:46px;&#xa;margin-left:410px;&#xa;background:#FFFFFF;&#xa;&#xa;}&#xa;.guide-1649846730895 .defaultWidget input[type='password']{&#xa;height:46px;&#xa;border-style:solid;&#xa;border-color:#D5DAE1;&#xa;border-top-right-radius:8px;&#xa;border-bottom-left-radius:8px;&#xa;border-bottom-right-radius:8px;&#xa;border-top-left-radius:8px;&#xa;border-right-width:2px;&#xa;border-bottom-width:2px;&#xa;border-left-width:2px;&#xa;border-top-width:2px;&#xa;&#xa;}&#xa;.guide-1649846730895 .guideFieldWidget.defaultWidget {&#xa;width:358px;&#xa;}&#xa;"
+                                dorExclusion="true"
+                                guideNodeClass="guidePasswordBox"
+                                hideTitle="true"
+                                name="ConfirmNewPassBox"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_passwordbox
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[width:358px,height:46px,margin-left:410px,background:#FFFFFF]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px,backgroundColor:#FFFFFF]"/>
+                                    <af_passwordboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot; .guideFieldWidget.defaultWidget&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;358px&quot;}}}},height:46px,border-style:solid,border-color:#D5DAE1,border-top-right-radius:8px,border-bottom-left-radius:8px,border-bottom-right-radius:8px,border-top-left-radius:8px,border-right-width:2px,border-bottom-width:2px,border-left-width:2px,border-top-width:2px]"
+                                        default_x0023_default_x0023_ui="[width:358px,borderRadiusPopover:8px,borderWidthPopover:2px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts
+                                    fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;ErrorMessage.visible=false;&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ResetPasswdPanel.ConfirmNewPassBox&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidepasswordbox_2020364111>
+                            <panel1648722253317_c
+                                cq:cssClass="guide-1649846889157"
+                                jcr:lastModified="{Date}2022-04-25T08:53:32.956Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="ButtonsPanelReset"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1649846889157 .guideGridFluidLayout{&#xa;margin-left:410px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="ButtonsPanelReset"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false"
+                                visible="{Boolean}true">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidebutton
+                                        cq:cssClass="guide-1649852276107"
+                                        jcr:created="{Date}2022-03-31T10:22:18.000Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-25T08:54:28.617Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Submit"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649852276107 button:not(.af-icon-button):hover{&#xa;&#xa;}&#xa;.guide-1649852276107 button:not(.af-icon-button),.guide-1649852276107 input[type='button']{&#xa;height:46px;&#xa;border-style:hidden;&#xa;margin-top:10px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649852276107.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649852276107.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649852276107 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#F0FDF4;&#xa;&#xa;}&#xa;.guide-1649852276107 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="SubmitReset"
+                                        textIsRich="[true,true]"
+                                        type="Button"
+                                        visible="{Boolean}true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="1"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-style:hidden,cssOverride:cursor: pointer;,margin-top:10px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,marginPopover:10px\, —\, —\, —]"
+                                                default_x0023_hover="[]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#F0FDF4]"
+                                                default_x0023_hover_x0023_ui="[]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;if(existingPassBox.value!==null &amp;&amp; existingPassBox.value!==\\&quot;\\&quot; &amp;&amp; NewPassBox.value!==null &amp;&amp; NewPassBox.value!==\\&quot;\\&quot; &amp;&amp; ConfirmNewPassBox.value!==null &amp;&amp; ConfirmNewPassBox.value!==\\&quot;\\&quot; ){\\n    if(NewPassBox.value===ConfirmNewPassBox.value)\\n    {\\n        var params = new URLSearchParams(window.location.search);\\n        var actualData=JSON.parse(window.atob(params.get('input')));\\n      \\tvar xmlData = \\&quot;&lt;data>&lt;UserLoginID>\\&quot;+actualData.UserLoginID.toUpperCase()+\\&quot;&lt;/UserLoginID>&lt;OldPassword>\\&quot;+existingPassBox.value+\\&quot;&lt;/OldPassword>&lt;NewPassword>\\&quot;+ConfirmNewPassBox.value+\\&quot;&lt;/NewPassword>&lt;ProcessType>Change&lt;/ProcessType>&lt;/data>\\&quot;;\\n        $.ajax({ \\n          type: 'POST'\,\\n           headers: {\\n            'Content-type' : 'application/xml'\,\\n            'Accept' : '*/*'\\n          }\,\\n          url : 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/processes/SetPassword'\,\\n          /*data: {\\n            'UserLoginID':actualData.UserLoginID.toUpperCase()\,\\n            'OldPassword':existingPassBox.value\,\\n            'NewPassword':ConfirmNewPassBox.value\,\\n            'ProcessType':\\&quot;Change\\&quot;\\n          }\,*/\\n          //url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/SetPassword:1.0'\,\\n          data : xmlData\,\\n          success: function (data) {  \\n            if(data.getElementsByTagName(\\&quot;ChangeResult\\&quot;)[0].innerHTML==1){\\n              ForgotPasswdPanel.visible=false;\\n              ResetPasswdPanel.visible=false;\\n              MainPanel.visible=true;\\n              SuccessResetMessage.visible=true;\\n              SuccessResetMessage.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n              params.delete('old');\\n              params.delete('input');\\n            }\\n            else{\\n              if(data.getElementsByTagName(\\&quot;ChangeResult\\&quot;)[0].innerHTML!=1){\\n                ErrorMessage.visible=true;\\n                ErrorMessage.value=data.getElementsByTagName(\\&quot;OutputMessage\\&quot;)[0].innerHTML;\\n              }\\n            }\\n          }\,\\n          error: function(err){\\n            alert(\\&quot;something went wrong\\&quot;);\\n          }\\n        });\\n    }\\n    else\\n    {\\n      ErrorMessage.visible=true;\\n      ErrorMessage.value=\\&quot;New Password and Confirm New Password field values do not match.\\&quot;;\\n    }\\n}\\nelse{\\n  ErrorMessage.visible=true;\\n  ErrorMessage.value=\\&quot;Please enter credentials.\\&quot;;\\n}&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ResetPasswdPanel.ButtonsPanelReset.SubmitReset&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <guidebutton_868276032
+                                        cq:cssClass="guide-1649852334432"
+                                        jcr:created="{Date}2022-04-13T12:18:18.432Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-04-25T08:04:17.707Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Cancel"
+                                        sling:resourceType="fd/af/components/guidebutton"
+                                        cssStyle=".guide-1649852334432 button:not(.af-icon-button):hover{&#xa;&#xa;}&#xa;.guide-1649852334432 button:not(.af-icon-button),.guide-1649852334432 input[type='button']{&#xa;height:46px;&#xa;border-style:hidden;&#xa;background:#00B1B0;&#xa;margin-top:10px;&#xa;margin-left:-50px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1649852334432.guidebutton {&#xa;width:159px;&#xa;}&#xa;.guide-1649852334432.guidebutton button {&#xa;width:100%;&#xa;}&#xa;.guide-1649852334432 button:not(.af-icon-button):hover .iconButton-label{&#xa;color:#F0FDF4;&#xa;&#xa;}&#xa;.guide-1649852334432 button .iconButton-label{&#xa;width:54px;&#xa;height:24px;&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideButton"
+                                        name="CancelReset"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="3"
+                                                width="2"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_button
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[addonCss:{&quot;selectors&quot;:{&quot;parent&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;159px&quot;}}\,&quot;button&quot;:{&quot;cssSelector&quot;:&quot;.guidebutton button&quot;\,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}}},height:46px,border-style:hidden,cssOverride:cursor: pointer;,background:#00B1B0,margin-top:10px,margin-left:-50px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,width:159px,backgroundColor:#00B1B0,marginPopover:10px\, —\, —\, -50px]"
+                                                default_x0023_hover="[]"
+                                                default_x0023_hover_x0023_ui="[borderRadiusPopover:Set]"/>
+                                            <af_buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[width:54px,height:24px,color:#F0FDF4,font-weight:bold,font-size:14px]"
+                                                default_x0023_hover="[color:#F0FDF4]"
+                                                default_x0023_hover_x0023_ui="[]"/>
+                                        </style>
+                                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                                        <fd:scripts
+                                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;var params = new URLSearchParams(window.location.search);\\nguidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-fragments/sprint3-new/welcome-statement.html?wcmmode=disabled&amp;input='+params.get('old')\,'SAME_TAB');\\n//guidelib.util.GuideUtil.navigateToURL('/content/forms/af/caltrans-eadr/welcome-statement.html?input='+params.get('old')\,'SAME_TAB');&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.ResetPasswdPanel.ButtonsPanelReset.CancelReset&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_868276032>
+                                </items>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-left:410px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:—\, —\, —\, 410px]"/>
+                                </style>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                                <fd:scripts jcr:primaryType="nt:unstructured"/>
+                            </panel1648722253317_c>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_responsivepanel
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"
+                                default_x0023_default_x0023_ui="[paddingLock:linkOff,paddingPopover:Set]"/>
+                        </style>
+                    </panel_412165722>
+                </items>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_responsivepanel
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[]"/>
+                </style>
+                <fd:rules jcr:primaryType="nt:unstructured"/>
+                <fd:scripts
+                    fd:init="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;var params = new URLSearchParams(window.location.search);\\nvar navigationValue=JSON.parse(window.atob(params.get('input')));\\nif(navigationValue.navigateReset == 1)\\n  {\\n    MainPanel.visible= false;\\n    ForgotPasswdPanel.visible = false;\\n    ResetPasswdPanel.visible = true;\\n  }\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+            <assets jcr:primaryType="nt:unstructured">
+                <xsdRef.xsd/>
+            </assets>
+        </guideContainer>
+        <image jcr:primaryType="nt:unstructured">
+            <file.sftmp/>
+        </image>
+    </jcr:content>
+</jcr:root>

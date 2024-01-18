@@ -1,0 +1,45 @@
+###############################################################################
+# Copyright 2017 Adobe Systems Incorporated
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+###############################################################################
+#js/bootbox.all
+#js/bootbox.all.min.js
+#js/xmlToJson.js
+js/jquery.min.js
+js/select2.js
+js/SelectDrop.js
+#js/NavigationCode.js
+#js/RetreiveExistingDetailsinPosPaper.js
+js/situationtabs.js
+js/DMChair.js
+js/DMRE.js
+js/DMContractor.js
+js/StatusChair.js
+js/StatusAdvisor.js
+js/StatusCheckConDRA.js
+js/StatusCheckConDRB.js
+js/StatusCheckREDRA.js
+js/StatusCheckREDRB.js
+js/DisputeDashboardRefresh.js
+js/ReuseFuns.js
+js/FinalDMReport.js
+#js/GetExistingPMChAdRecord.js
+#js/GetExistingPMRECONRecord.js
+#js/ReGenerate_PM_Table.js
+#js/GetExistingSubmitPMRECONRecord.js
+#js/GetExistingFinalData.js
+#js/bootbox
+#js/bootbox.locales
+#js/bootbox.locales.min
+#js/bootbox.min

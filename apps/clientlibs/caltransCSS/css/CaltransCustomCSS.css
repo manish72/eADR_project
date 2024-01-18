@@ -1,0 +1,410 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css);
+
+/*to make the af dropdown as select.js dropdown in RE-first screen*/
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-guidedropdownlist___widget{
+    height:28px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+/* to increase the select.js dropdown width */
+.select2{
+        width:200px !important;
+    }
+/* to hide the dropdown selection of DRA/DRB of adaptive form */
+select#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-guidedropdownlist___widget + *{
+	display:none;
+}
+
+select#guideContainer-rootPanel-guidedropdownlist_co___widget + *{
+	display:none;
+}
+
+select#guideContainer-rootPanel-panel_copy-guidedropdownlist___widget + *{
+    display:none;
+}
+/* font weight for select2.js dropdown text */
+.select2-selection__rendered{
+        font-weight:normal;
+    }
+select#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-guidedropdownlist___widget + *{
+    display : none;
+}
+/* to hide the adaptive form dropdowns from line25 to line 107 */
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-guidedropdownlist___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1786518021-panel-panel_1070997719-panel1651236449068-guidedropdownlist___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel1651236449068-guidedropdownlist___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel1651236449068-guidedropdownlist_1001785467___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel1651236449068-guidedropdownlist_2073132100___widget{
+	display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidetextbox___widget{
+    display:none;
+}
+
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidetextbox_1491663097___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidetextbox_872865320___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidetextbox_1231045281___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidedropdownlist___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidedropdownlist_497257957___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidedropdownlist_429123975___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel-guidedropdownlist_244306041___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_558384091-SummaryPanelEst__{
+    width:auto;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel1660201510549-guidedropdownlist___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel_1070997719-panel1651236449068-guidedropdownlist_20___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidetextbox___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidetextbox_1491663097___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidetextbox_872865320___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidetextbox_1231045281___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidedropdownlist___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidedropdownlist_497257957___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidedropdownlist_429123975___widget{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_1786518021_cop-panel-panel-panel_copy-guidedropdownlist_244306041___widget{
+    display:none;
+}
+/* to hide the add/remove icons in the dynamic table 
+.guideTableNode table .guideTableRuntimeRightControls {
+    display: none !important;
+}*/
+
+select#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel-guidedropdownlist___widget  + *{
+    display:none;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel-guidedropdownlist___widget{
+    height:28px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+/*to remove the border bottom for navigation in dispute meeting dashboard page*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382___guide-item-nav-container{
+    border-color:white;
+    border-style:none;
+    border-bottom-width:0px;
+}
+/*to remove the border bottom for navigation in progress meeting dashboard page*/
+#guideContainer-rootPanel-panel_652182736-panel_1490683276-panel-panel1656252988382___guide-item-nav-container{
+	border-color:white;
+    border-style:none;
+    border-bottom-width:0px;
+}
+/*to change styling of dropdown selection in Dispute Meeting Main Page Fragment*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_965048011_copy-panel-panel-guidedropdownlist___widget{
+	height:35px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+/*to hide select.JS dropdown selection in Dispute Meeting Main Page Fragment*/
+select#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_965048011_copy-panel-panel-guidedropdownlist___widget + *{
+	display:none;
+}
+/*to change styling of dropdown selection for Close Dispute Meeting*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_copy-panel-guidedropdownlist___widget{
+	height:35px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+/*to hide select.JS dropdown selection for Close Dispute Meeting*/
+select#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_copy-panel-guidedropdownlist___widget + *{
+	display:none;
+}
+/*to hide select.JS dropdown selection for Meeting type in New dispute creation fragment*/
+select#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel_copy-guidedropdownlist___widget + *{
+	display:none;
+}
+/*to maintain center alignment for Contract Number in dashboard page*/
+#guideContainer-rootPanel-guidetextdraw_1913712296__{
+    margin-top:17px !important;
+}
+
+#guideContainer-rootPanel-guidetextdraw_1913712296___guide-item{
+    margin-left: 8% !important;
+}
+
+/*to maintain request a new dispute meeting button allignment*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_copy-guidebutton_copy__{
+ 	margin-left:-4px !important;
+}
+
+/* select dropdown hide for closed disupute meeting accordian */
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel_copy-guidedropdownlist___widget{
+    display:none;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel_copy-guidedropdownlist_1609340847___widget{
+    display:none;
+}
+
+/*For - Appendix A - Applicable Specifications and Contract Documents*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1657624879388-guidetextdraw__,
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel1657624879388-guidetextdraw__{
+	padding-left:5px;
+}
+
+/*Appendix B - Related Correspondence*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1657624879388-guidetextdraw_1136011006__,
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel1657624879388-guidetextdraw_1136011006__{
+	padding-left:5px;
+}
+
+/*RE & Contractor screen main header information*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel_copy___guide-item-container > div > div {
+	margin-top: -20px !important;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel_copy_copy_copy___guide-item-container > div > div {
+	margin-top: -20px !important;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel_copy_copy___guide-item-container > div > div {
+	margin-top: -20px !important;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_965048011_copy-panel-panel-panel1686553569293___guide-item-container > div > div {
+    margin-top: -20px !important;
+}
+
+/* select role dropdown hide for request additional dispute meeting accordian */
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658221233790-guidedropdownlist___widget{
+    display:none;
+}
+/*UI Loader CSS starts here*/
+#guideContainer-rootPanel-guideimage__ {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:none;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#guideContainer-rootPanel-guideimage__::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:80px;height:80px;
+    border: 8px solid #f3f3f3;
+	border-radius: 50%;
+    border-top: 8px solid #046B99;
+    border-bottom: 8px solid #046B99;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+/*UI Loader CSS ends here*/
+
+
+ /*Labels gap in Submit Additional Information accordian in RE Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1657624947095-guidetextdraw_2064545318___guide-item{
+	width: 8%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1657624947095-guidetextdraw___guide-item{
+	width:14%;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1657624947095-guidetextdraw___guide-item{
+	margin-left:-7px;
+}
+
+/*Labels gap in Request for clarification accordian in RE Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1658498129466-guidetextdraw_136032___guide-item{
+	width: 19%;
+	margin-left:-7px;
+}
+
+/*Labels gap in Request for Reconsideration accordian in RE Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel1658498893643-guidetextdraw_890779___guide-item{
+	width: 22%;
+	margin-left: -7px;
+}
+
+/*Labels gap in Request for Caltrans Response to Recommendation in RE Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_547247398_copy-panel1680595142424_c-panel_1845628188_cop-guidetextdraw_155318___guide-item{
+	width: 16%;
+	margin-left: -7px;
+}
+
+/*Labels gap in Submit Additional Information accordian in Contractors Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel1657624947095-guidetextdraw_2064545318___guide-item{
+	width:9%;
+	margin-left: -7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel1657624947095-guidetextdraw___guide-item{
+	width:16%;
+	margin-left: -7px;
+}
+
+/*Labels gap in Request for clarification accordian in Contractors Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel1658498129466-guidetextdraw_136032___guide-item{
+	width: 20%;
+	margin-left:-7px;
+}
+
+/*Labels gap in Request for contractor's Response to Recommendation accordian in Contractors Reports tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_1774090199_cop-panel1680595142424-panel_1845628188_cop-guidetextdraw_155318___guide-item{
+	width: 16%;
+	margin-left:-7px;
+}
+
+/*Labels gap in Request Additional Information accordian in chair/advisor response tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658221233790-guidetextdraw_1969338060___guide-item{
+	width: 28%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658221233790-guidetextdraw_310354226___guide-item{
+	width: 23%;
+	margin-left:-7px;
+}
+
+/*Labels gap in Recomendation report accordian in chair/advisor response tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel-guidetextdraw___guide-item{
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1195317583___guide-item{
+	margin-left: -5px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1195317583-guidebutton_37246338___guide-item{
+	margin-top:10px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1195317583-guidebutton_19068213___guide-item{
+	margin-top:10px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1195317583-guidetextdraw___guide-item{
+	width:28% !important;
+	margin-left:-14px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-guidetextdraw_208904___guide-item{
+	width: 28%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-guideradiobutton___guide-item{
+	margin-top:-5px !important;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy-guidecheckbox_copy_c___guide-item{
+	margin-top:-5px !important;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1392518202-guidetextdraw___guide-item{
+	margin-left:-7px;
+}
+
+/*Labels gap in Rsponse To Reconsideration Request accordian in chair/advisor response tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078___guide-item-container{
+	margin-left:-2px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy-guidetextdraw_608407943___guide-item{
+	width: 17%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy-guidetextdraw_copy___guide-item{
+    width: 25%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325040252-panel_50891091_copy-panel_1723800572-panel_1392518202-guidetextdraw___guide-item{
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy_copy-guidetextdraw_copy_c___guide-item{
+	width: 23%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy_copy-guidecheckbox_copy_c__{
+	margin-top:-5px !important;
+}
+
+
+/*Labels gap in Rsponse To Request for Reconsiderationt accordian in contractors tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325174078-panel_copy_copy-guidetextdraw_608407943___guide-item{
+	width: 15%;
+	margin-left:-2px;
+}
+
+/*Labels gap in Clarifications- You may attach relevant documents when clarification requested accordian in chair/advisor response tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325123223-panel-guidetextdraw_608407943___guide-item{
+	width: 17%;
+	margin-left:-7px;
+}
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_769133156_copy-panel1680604249953-panel1658325123223-panel_copy-guidetextdraw_608407943___guide-item{
+    width: 14%;
+	margin-left:-7px;
+}
+
+/*Labels gap in cFinal Report tab*/
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382-panel_965048011_copy-panel-panel-guidetextdraw_1916302355___guide-item{
+	width: 23%;
+}
+
+/*Tabs on top alignments for Dispute Dashboard */
+#guideContainer-rootPanel-panel_652182736-panel_27202745-panel-panel1656252988382___layoutContainer > div > .guide-tab-scroller {
+	width:1.68%;
+}
+
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_558384091-SummaryPanelEst___layoutContainer > div > .guide-tab-scroller {
+	width:6.8%;
+}
+
+/* style for Edit button in eADR Dashboard screen */
+#guideContainer-rootPanel-panel_652182736-panel_1552065248-panel_558384091-guidebutton___guide-item {
+	padding-left: 16px;
+}

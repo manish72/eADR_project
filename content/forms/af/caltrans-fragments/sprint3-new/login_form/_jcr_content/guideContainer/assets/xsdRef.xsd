@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="afData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="afUnboundData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="data" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="afBoundData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="test">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="username" type="xs:string" />
+                    <xs:element name="password" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="afSubmissionInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="computedMetaInfo" />
+              <xs:element name="stateOverrides" />
+              <xs:element name="signers" />
+              <xs:element name="afPath" type="xs:string" />
+              <xs:element name="afSubmissionTime" type="xs:unsignedLong" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

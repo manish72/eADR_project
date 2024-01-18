@@ -1,0 +1,190 @@
+//this script is to get existing dropdown lookup data present in the organisation of all members of DRA and DRB
+if(this.value==='DRB'){
+$.ajax({ 
+    type: 'GET', 
+    data:{},
+    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InvokeADREngineerProcess',   
+    success: function (data) {
+      //console.log(data);
+      	var DRBMemsList=[];
+        var CaltransList=[];
+      	var ContractorList=[];
+      	var jsonData=JSON.parse(data);
+        for (var i = 0; i < jsonData.DRB_Members.Member.length; i++) {
+            ContractorList.push(jsonData.DRB_Members.Member[i].NAME);
+            CaltransList.push(jsonData.DRB_Members.Member[i].NAME);
+            DRBMemsList.push(jsonData.DRB_Members.Member[i].NAME);
+        }
+      	ContractorList = ContractorList.sort();
+      	CaltransList = CaltransList.sort();
+      	Contractor1.items=ContractorList;
+      	Contractor2.items=ContractorList;
+      	Contractor3.items=ContractorList;
+      	Contractor4.items=ContractorList;
+      	Caltrans1.items=CaltransList;
+      	Caltrans2.items=CaltransList;
+      	Caltrans3.items=CaltransList;
+      	Caltrans4.items=CaltransList;
+     	DRBMembersDropdownList.items=DRBMemsList.sort();
+      	CaltransDropDownList.items=CaltransList;
+      	ContractorDropDownList.items=ContractorList;
+        if(userRole.value.toUpperCase()==="RE")
+        {
+          DRB_Nominees.enabled=true;
+          SubmittoADREngineerDRB.enabled=true;
+          DRBMembersDropdownList.enabled=true;
+          CaltransDropDownList.enabled=true;
+          ContractorDropDownList.enabled=true;
+        }
+        else
+        {
+          DRB_Nominees.enabled=false;
+          SubmittoADREngineerDRB.enabled=false;
+          DRBMembersDropdownList.enabled=false;
+          CaltransDropDownList.enabled=false;
+          ContractorDropDownList.enabled=false;
+        }
+    },
+  	error: function(err){
+  		alert("something went wrong");
+}
+});
+}
+else if(this.value==='DRA'){
+  $.ajax({ 
+    type: 'GET', 
+    data:{},
+    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InvokeADREngineerProcess',   
+    success: function (data) {
+      	//console.log(data);
+      	AdvisorList=[];
+  		ContractorList=[];
+  		CaltransList=[];
+      	var jsonData=JSON.parse(data);
+        for (var i = 0; i < jsonData.DRB_Members.Member.length; i++) { 
+          if(jsonData.DRB_Members.Member[i].DRA==='DRA'){
+            AdvisorList.push(jsonData.DRB_Members.Member[i].NAME);
+            ContractorList.push(jsonData.DRB_Members.Member[i].NAME);
+            CaltransList.push(jsonData.DRB_Members.Member[i].NAME);
+          }
+        }
+     	AssignAdvisor.items=AdvisorList.sort();
+      	ContractorList = ContractorList.sort();
+      	CaltransList = CaltransList.sort();
+      	Contractor1DRA.items=ContractorList;
+      	Contractor2DRA.items=ContractorList;
+      	Contractor3DRA.items=ContractorList;
+      	Contractor4DRA.items=ContractorList;
+      	Caltrans1DRA.items=CaltransList;
+      	Caltrans2DRA.items=CaltransList;
+      	Caltrans3DRA.items=CaltransList;
+      	Caltrans4DRA.items=CaltransList;
+      	if(userRole.value.toUpperCase()==="RE")
+        {
+           AssignAdvisor.enabled=true;
+           DRA_Nominees.enabled=true;
+		   SubmittoADREngineerDRA.enabled=true;
+        }
+        else
+        {
+          AssignAdvisor.enabled=false;
+          DRA_Nominees.enabled=false;
+		  SubmittoADREngineerDRA.enabled=false;
+        }
+    },
+  	error: function(err){
+  		alert("something went wrong");
+}
+});
+}
+else{
+  guideBridge.resolveNode("DRA-Panel").visible = false;
+  guideBridge.resolveNode("DRBPanel").visible = false;
+}
+
+//this script is to assign the existing data in establishment forms based on dropwdown selection and also restrict access control in establishment forms
+var dropdownValue=this.value;
+$.ajax({ 
+    type: 'GET', 
+    data: {'ContractNo':contractNumber.value,'EA':ea.value,"district":district.value,'Type':dropdownValue},
+    url: 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetEstablishmentDetails',   
+    success: function (data) {
+      var jsonData=JSON.parse(data.getElementsByTagName("EstablishmentJson")[0].innerHTML);
+        if(dropdownValue==="DRA"){
+          if(userRole.value.toUpperCase()==="DRA")
+              {
+                FieldsPanel.enabled=true;
+                DRAInfoTable.enabled=true;
+                FileAttachmentDRA.enabled=true;
+                Submit.enabled=true;
+                CommentsDRA.enabled=true;
+              }
+          	  else
+              {
+                FieldsPanel.enabled=false;
+                DRAInfoTable.enabled=false;
+                FileAttachmentDRA.enabled=false;
+                Submit.enabled=false;
+                CommentsDRA.enabled=false;
+              }
+        	ContractNumberDRA.value=district.value+"-"+ea.value;
+          	CountyRoutePostMileDRA.value=jsonData.EstablishmentDetails.Details.COUNTY+'-'+jsonData.EstablishmentDetails.Details.RTE_PROJ+'-'+jsonData.EstablishmentDetails.Details.PM_AHEAD_1;
+            DateDRA.value=data.getElementsByTagName("created_date")[0].innerHTML;
+          	WorkDescriptionDRA.value=jsonData.EstablishmentDetails.Details.DESC_OF_WORK;
+          	ContractorDRA.value=jsonData.EstablishmentDetails.Details.CONTRACTOR_NAME;
+          	ResidentEngineerDRA.value=jsonData.EstablishmentDetails.Details.RESIDENT_ENGINEER_NAME;
+          	PhoneNumberDRA.value=jsonData.EstablishmentDetails.Details.RESIDENT_ENGINEER_PHONE;
+          	ContractAmountDRA.value=jsonData.EstablishmentDetails.Details.BID_AMT;
+          	ContractApprovalDateDRA.value=jsonData.EstablishmentDetails.Details.APPROVAL_DATE;
+          	OriginalNumberofProjectWorkingDaysDRA.value=jsonData.EstablishmentDetails.Details.ORIG_NO_WORKING_DAYS;
+          	BidOpeningDateDRA.value=jsonData.EstablishmentDetails.Details.BID_OPEN_DATE;
+          	FirstWorkingDayDateDRA.value=jsonData.EstablishmentDetails.Details.WORK_MUST_START_DATE;
+          	DRAName.value=data.getElementsByTagName("Advisor")[0].innerHTML;
+        }
+        if(dropdownValue==="DRB"){
+          if(userRole.value.toUpperCase()==="DRB_CHAIR")
+              {
+                Fields.enabled=true;
+                DRBSecPanel.enabled=true;
+                FileAttachment.enabled=true;
+                SubDRBEst.enabled=true;
+                CommentsDRB.enabled=true;
+              }
+          	  else
+             {
+                Fields.enabled=false;
+                DRBSecPanel.enabled=false;
+                FileAttachment.enabled=false;
+                SubDRBEst.enabled=false;
+                CommentsDRB.enabled=false;
+             }
+          	ContractNumberDRB.value=district.value+"-"+ea.value;
+          CountyRoutePostMileDRB.value=jsonData.EstablishmentDetails.Details.COUNTY+'-'+jsonData.EstablishmentDetails.Details.RTE_PROJ+'-'+jsonData.EstablishmentDetails.Details.PM_AHEAD_1;
+            DateDRB.value=data.getElementsByTagName("created_date")[0].innerHTML;
+        	WorkDescriptionDRB.value=jsonData.EstablishmentDetails.Details.DESC_OF_WORK;
+          	ContractorDRB.value=jsonData.EstablishmentDetails.Details.CONTRACTOR_NAME;
+            ResidentEngineerDRB.value=jsonData.EstablishmentDetails.Details.RESIDENT_ENGINEER_NAME;
+            PhoneNumberDRB.value=jsonData.EstablishmentDetails.Details.RESIDENT_ENGINEER_PHONE;
+            ContractAmountDRB.value=jsonData.EstablishmentDetails.Details.BID_AMT;
+            ContractApprovalDateDRB.value=jsonData.EstablishmentDetails.Details.APPROVAL_DATE;
+            OriginalNumberofProjectWorkingDaysDRB.value=jsonData.EstablishmentDetails.Details.ORIG_NO_WORKING_DAYS;
+            BidOpeningDateDRB.value=jsonData.EstablishmentDetails.Details.BID_OPEN_DATE;
+            FirstWorkingDayDateDRB.value=jsonData.EstablishmentDetails.Details.WORK_MUST_START_DATE;
+          	CaltransNameDRB.value=data.getElementsByTagName("CaltransMember")[0].innerHTML;
+          	ContractorNameDRB.value=data.getElementsByTagName("ContractorMember")[0].innerHTML;
+          	MemberDateDRB.value=data.getElementsByTagName("DRBMember")[0].innerHTML;
+          	if(data.getElementsByTagName("Chair")[0].innerHTML==="Caltrans"){
+              CaltransCBDRB.value=0;
+            }
+          	if(data.getElementsByTagName("Chair")[0].innerHTML==="Contractor"){
+              ContractorCBDRB.value=0;
+            }
+          	if(data.getElementsByTagName("Chair")[0].innerHTML==="DRB"){
+              DRBMemCBDRB.value=0;
+            }
+        }
+    },
+  	error: function(err){
+  		alert("something went wrong");
+}
+});

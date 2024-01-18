@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <eadr-dashboard-re-first/>
+    <backup/>
+    <drb-establishment-report/>
+    <temp/>
+    <dra-establishment-report/>
+    <without-xml-schema/>
+    <dispute-meeting/>
+    <positionpaper/>
+    <disputemeeting-dashboard-fr/>
+    <positionpaper-RE/>
+    <newdisputemeetingrequest/>
+    <duedate/>
+    <dispute-meeting-report-dra/>
+    <dispute-meeting-report-main-page/>
+    <recommendationreport-chair/>
+    <recommendationreport-re/>
+    <recommendationreport-contractor/>
+    <dispute-meeting-report-drb/>
+    <meeting-details-infosection/>
+    <progressmeeting-dashboard-fr/>
+    <progressmeetings6210-drb-dra/>
+    <progressmeetings6210-re/>
+    <progress-meetings6210-contractor/>
+    <sprint3-new/>
+</jcr:root>

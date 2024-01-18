@@ -1,0 +1,44 @@
+// validate the panel fields
+if(DRBPanel.validate()){
+var url = "http://"+ window.location.hostname +":8080/rest/services/Caltrans-eADR/Processes/SubmitCopy"
+var str1={
+		"contractNumber": contractNumber.value,
+		"SelectDRADRB": SelectDRADRB.value,
+		"DRBMembersDropdownList": DRBMembersDropdownList.value,
+		"DRB_CB": DRB_CB.value,
+		"CaltransDropDownList": CaltransDropDownList.value,
+		"Caltrans_CB": Caltrans_CB.value,
+		"ContractorDropDownList": ContractorDropDownList.value,
+		"Contractor_CB": Contractor_CB.value,
+		"Contractor1": Contractor1.value,
+		"Contractor2": Contractor2.value,
+		"Contractor3": Contractor3.value,
+		"Contractor4": Contractor4.value,
+		"Caltrans1": Caltrans1.value,
+		"Caltrans2": Caltrans2.value,
+		"Caltrans3": Caltrans3.value,
+		"Caltrans4": Caltrans4.value,
+		"ea": ea.value,
+		"district": district.value,
+		"userID": userID.value
+};
+var xmldata = OBJtoXML1({"data":str1}); // function to convert json to XML
+      	$.ajax({ 
+         type: 'POST',
+         headers: {
+          'Content-type' : 'application/xml',
+          'Accept' : '*/*'
+       	 },
+          url: url,
+          data: xmldata,
+          success: function (data) { 
+               SucNoteDRB.visible=true;
+               SelectDRADRB.enabled=false;
+               DRBPanel.enabled=false;
+          },
+          error: function(err){
+            //this block is executed when server encounters any problem
+              alert("something went wrong");
+      }
+      });
+}

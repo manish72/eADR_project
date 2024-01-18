@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[granite:FinalArea]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/fd/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2023-06-30T15:25:39.732Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/fd/af/templateForFragment/defaultFragmentTemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="DRA ESTABLISHMENT REPORT"
+        sling:resourceType="fd/af/components/page/basePageForFragment">
+        <guideContainer
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideFragmentContainer"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="fragment1">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:lastModified="{Date}2022-05-24T05:43:17.163Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel_DRAEST"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                    <panel_copy
+                        jcr:created="{Date}2022-03-11T11:11:57.403Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-03-11T11:12:15.874Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="FieldsPanel"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="FieldsPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextbox_copy
+                                jcr:created="{Date}2022-01-06T09:42:37.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-15T17:56:36.000Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Contract Number"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="20"
+                                name="ContractNumberDRA"
+                                shortDescription="&lt;p>Contract Number&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_copy>
+                            <guidetextbox_7482677
+                                jcr:created="{Date}2022-01-06T09:42:46.091Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:32:07.291Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="County-Route-Post Mile"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="50"
+                                name="CountyRoutePostMileDRA"
+                                shortDescription="&lt;p>County-Route-Post Mile&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_7482677>
+                            <guidetextbox_1931580
+                                jcr:created="{Date}2022-01-06T09:42:54.110Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:32:17.664Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideDatePicker"
+                                name="DateDRA"
+                                shortDescription="&lt;p>Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_1931580>
+                            <guidetextbox_4530517
+                                jcr:created="{Date}2022-01-06T09:45:26.209Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:32:28.258Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Work Description"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="2000"
+                                multiLine="true"
+                                name="WorkDescriptionDRA"
+                                shortDescription="&lt;p>Work Description&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextbox_9883585
+                                jcr:created="{Date}2022-01-06T09:45:32.709Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:32:39.183Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Contractor"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="50"
+                                name="ContractorDRA"
+                                shortDescription="&lt;p>Contractor&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_9883585>
+                            <guidetextbox_1130010
+                                jcr:created="{Date}2022-01-06T09:45:42.747Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:32:48.086Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Resident Engineer"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="50"
+                                name="ResidentEngineerDRA"
+                                shortDescription="&lt;p>Resident Engineer&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_1130010>
+                            <guidetextbox_3052049
+                                jcr:created="{Date}2022-01-06T09:45:50.179Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:33:03.789Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Phone Number"
+                                sling:resourceType="fd/af/components/guidenumericbox"
+                                autofillFieldKeyword="name"
+                                displayPatternType="custom"
+                                displayPictureClause="text{'('999')' 999-9999}"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideNumericBox"
+                                maxChars="10"
+                                name="PhoneNumberDRA"
+                                shortDescription="&lt;p>Phone Number&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_3052049>
+                            <guidetextbox_5015912
+                                jcr:created="{Date}2022-01-06T09:48:11.590Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:33:13.757Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Contract Amount"
+                                sling:resourceType="fd/af/components/guidenumericbox"
+                                autofillFieldKeyword="name"
+                                displayPatternType="custom"
+                                displayPictureClause="num{$zzz,zzz,zz9.99}"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideNumericBox"
+                                maxChars="10"
+                                name="ContractAmountDRA"
+                                shortDescription="&lt;p>Contract Amount&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_5015912>
+                            <guidetextbox_5335768
+                                jcr:created="{Date}2022-01-06T09:48:18.228Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:08:43.459Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Approval Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideDatePicker"
+                                name="ContractApprovalDateDRA"
+                                shortDescription="&lt;p>Contract Approval Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="none"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_5335768>
+                            <guidetextbox_1106362
+                                jcr:created="{Date}2022-01-06T09:48:26.375Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-11T15:32:35.329Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Original no.of Project Working Days"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                maxChars="4"
+                                name="OriginalNumberofProjectWorkingDaysDRA"
+                                shortDescription="&lt;p>Original Number of Project Working Days&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox_1106362>
+                            <guidetextbox_1678544
+                                jcr:created="{Date}2022-01-06T09:48:33.403Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:33:40.293Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Bid Opening Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideDatePicker"
+                                name="BidOpeningDateDRA"
+                                shortDescription="&lt;p>Bid Opening Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="3"/>
+                                </cq:responsive>
+                            </guidetextbox_1678544>
+                            <guidetextbox_8292190
+                                jcr:created="{Date}2022-01-06T09:48:47.419Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:33:48.384Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="First Working Day Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideDatePicker"
+                                name="FirstWorkingDayDateDRA"
+                                shortDescription="&lt;p>First Working Day Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="3"/>
+                                </cq:responsive>
+                            </guidetextbox_8292190>
+                            <guidetextbox_6664332
+                                jcr:created="{Date}2022-01-06T09:48:57.503Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:33:52.374Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Establishment Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideDatePicker"
+                                mandatory="true"
+                                name="EstablishmentDateDRA"
+                                placeholderText="Select"
+                                shortDescription="&lt;p>DRA Establishment Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="3"/>
+                                </cq:responsive>
+                            </guidetextbox_6664332>
+                            <guidetextbox_1222846
+                                jcr:created="{Date}2022-01-06T09:49:05.696Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:09:15.463Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Agreement Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideDatePicker"
+                                mandatory="true"
+                                name="AgreementDateDRA"
+                                placeholderText="Select"
+                                shortDescription="&lt;p>DRA Agreement Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="3"/>
+                                </cq:responsive>
+                            </guidetextbox_1222846>
+                            <guidetextbox_4313713
+                                jcr:created="{Date}2022-01-06T09:54:12.130Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-09-06T10:08:55.569Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Initial DRA Meeting Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideDatePicker"
+                                name="InitialMeetingDateDRA"
+                                placeholderText="Select"
+                                shortDescription="&lt;p>Initial DRA Meeting Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="newline"
+                                        offset="0"
+                                        width="6"/>
+                                </cq:responsive>
+                            </guidetextbox_4313713>
+                            <guidetextbox_7363294
+                                jcr:created="{Date}2022-01-06T09:54:20.240Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-09-06T10:09:00.048Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Subsequent Progress Meeting Scheduled Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideDatePicker"
+                                name="SubsequentProgressMeetingScheduledDateDRA"
+                                placeholderText="Select"
+                                shortDescription="&lt;p>Subsequent Progress Meeting Scheduled Date&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="6"/>
+                                </cq:responsive>
+                            </guidetextbox_7363294>
+                        </items>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;ContractNumberDRA.mandatory=true;\\nCountyRoutePostMileDRA.mandatory=true;\\n//DateDRA.mandatory=true;\\nWorkDescriptionDRA.mandatory=true;\\nContractorDRA.mandatory=true;\\nResidentEngineerDRA.mandatory=true;\\nPhoneNumberDRA.mandatory=true;\\nContractAmountDRA.mandatory=true;\\nContractApprovalDateDRA.mandatory=true;\\nOriginalNumberofProjectWorkingDaysDRA.mandatory=true;\\nBidOpeningDateDRA.mandatory=true;\\nFirstWorkingDayDateDRA.mandatory=true;&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.FieldsPanel&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </panel_copy>
+                    <guidetextdraw_212035
+                        jcr:created="{Date}2022-01-06T09:55:55.438Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-03-11T11:17:00.001Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>&lt;b>DISPUTE RESOLUTION ADVISOR INFORMATION&lt;/b>&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="DRAInfoHeading"
+                        textIsRich="true"/>
+                    <panel_1634442147_cop
+                        jcr:created="{Date}2022-05-05T01:04:24.332Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-05-05T01:04:47.723Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DRAInfoTable"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="DRAInfoTable"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                            <guidetextdraw
+                                cq:cssClass="guide-1651712810698"
+                                jcr:created="{Date}2022-05-05T01:05:01.512Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-05T01:05:43.375Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Name of DRA&lt;/p>&#xa;"
+                                cssStyle=".guide-1651712810698 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1651712701581"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center]"/>
+                                </style>
+                            </guidetextdraw>
+                            <guidetextdraw_780850312
+                                cq:cssClass="guide-1651712837082"
+                                jcr:created="{Date}2022-05-05T01:05:12.148Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-05T01:05:53.850Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>APPROVAL OF DRA BY&lt;/p>&#xa;"
+                                cssStyle=".guide-1651712837082 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_7808503121651712712204"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center]"/>
+                                </style>
+                            </guidetextdraw_780850312>
+                            <guidetextdraw_1858120748
+                                cq:cssClass="guide-1651712845658"
+                                jcr:created="{Date}2022-05-05T01:05:18.483Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-05T01:06:08.946Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>DRA APPROVAL DATE&lt;/p>&#xa;"
+                                cssStyle=".guide-1651712845658 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_18581207481651712718538"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[text-align:center]"/>
+                                </style>
+                            </guidetextdraw_1858120748>
+                            <guidetextbox
+                                jcr:created="{Date}2022-05-05T01:07:57.000Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-02T06:35:05.649Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                hideTitle="true"
+                                multiLine="true"
+                                name="DRAName"
+                                shortDescription="&lt;p>DRA Name&lt;/p>&#xd;&#xa;"
+                                textIsRich="[true,true,true]">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="4"/>
+                                </cq:responsive>
+                            </guidetextbox>
+                            <panel
+                                cq:cssClass="guide-1651715462974"
+                                jcr:created="{Date}2022-05-05T01:09:50.363Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-05T01:10:22.750Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="ApprovalPanel"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1651715462974 .guideGridFluidLayout{&#xa;margin-top:-10px;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="ApprovalPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2">
+                                    <guidetextdraw_190327
+                                        cq:cssClass="guide-1651714930259"
+                                        jcr:created="{Date}2022-05-05T01:10:44.801Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-05-05T01:53:44.537Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Resident Engineer&lt;/p>&#xa;"
+                                        cssStyle=".guide-1651714930259 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;margin-top:20px;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="REApprovalTxt"
+                                        text="&lt;p>The text will appear here&lt;/p>"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="none"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[text-align:center,margin-top:20px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:20px\, —\, —\, —]"/>
+                                        </style>
+                                    </guidetextdraw_190327>
+                                    <guidedatepicker
+                                        jcr:created="{Date}2022-05-05T01:10:58.146Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-22T09:32:56.967Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        guideNodeClass="guideDatePicker"
+                                        hideTitle="true"
+                                        name="REApprovalDateDRA"
+                                        placeholderText="Select"
+                                        shortDescription="&lt;p>RE Approval Date &lt;/p>&#xd;&#xa;"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidedatepicker>
+                                    <guidetextdraw_1621118135
+                                        cq:cssClass="guide-1651714968448"
+                                        jcr:created="{Date}2022-05-05T01:11:07.886Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-05-05T01:53:43.041Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Contractor&lt;/p>&#xa;"
+                                        cssStyle=".guide-1651714968448 .guideTextDraw.guideStaticText{&#xa;text-align:center;&#xa;margin-top:20px;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="ContractorAppTxt"
+                                        text="&lt;p>The text will appear here&lt;/p>"
+                                        textIsRich="true">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="newline"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_textdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[text-align:center,margin-top:20px]"
+                                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:20px\, —\, —\, —]"/>
+                                        </style>
+                                    </guidetextdraw_1621118135>
+                                    <guidedatepicker_140308130
+                                        jcr:created="{Date}2022-05-05T01:11:15.928Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-22T09:33:03.225Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        guideNodeClass="guideDatePicker"
+                                        hideTitle="true"
+                                        name="ContractorApprovalDateDRA"
+                                        placeholderText="Select"
+                                        shortDescription="&lt;p>Contractor Approval Date&lt;/p>&#xd;&#xa;"
+                                        textIsRich="[true,true]">
+                                        <cq:responsive jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                behavior="none"
+                                                offset="0"
+                                                width="6"/>
+                                        </cq:responsive>
+                                    </guidedatepicker_140308130>
+                                </items>
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="8"/>
+                                </cq:responsive>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[margin-top:-10px]"
+                                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:-10px\, —\, —\, —]"/>
+                                </style>
+                            </panel>
+                        </items>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;DRAName.mandatory=true;&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.DRAInfoTable&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </panel_1634442147_cop>
+                    <guidetextbox_2594587
+                        jcr:created="{Date}2022-01-06T11:56:46.062Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-10T17:24:06.579Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Comments"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        _value="  "
+                        autofillFieldKeyword="name"
+                        guideNodeClass="guideTextBox"
+                        maxChars="2000"
+                        multiLine="true"
+                        name="CommentsDRA"
+                        shortDescription="&lt;p>Comments&lt;/p>&#xd;&#xa;"
+                        textIsRich="[true,true,true]"/>
+                    <guidetextdraw_518334
+                        cq:cssClass="guide-1656324718308"
+                        jcr:created="{Date}2022-04-26T10:37:50.741Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-26T10:40:37.542Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>Attach Relevant Documents:&lt;/p>&#xa;"
+                        cssStyle=".guide-1656324718308 .guideTextDraw.guideStaticText{&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="Attach_Relevant"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="4"/>
+                        </cq:responsive>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textdraw
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                        </style>
+                    </guidetextdraw_518334>
+                    <guidefileupload_copy
+                        cq:cssClass="guide-1656324774585"
+                        jcr:created="{Date}2022-03-30T08:12:58.219Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-01T15:06:12.187Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidefileupload"
+                        buttonText="Attach"
+                        cssStyle=".guide-1656324774585 .guideFieldNode:not(.guideButton):not(.guideTextDraw):not(.guideChart){&#xa;margin-top:-3px;&#xa;margin-left:-85px;&#xa;&#xa;}&#xa;.guide-1656324774585 button.guide-fu-attach-button:not(.af-icon-button):hover{&#xa;background:#00C3B0;&#xa;cursor:pointer;&#xa;}&#xa;.guide-1656324774585 button.guide-fu-attach-button:not(.af-icon-button){&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;background:#00B1B0;&#xa;border-color:#22C55E;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;cursor:pointer;&#xa;}&#xa;.guide-1656324774585 [data-disabled='true'] button.guide-fu-attach-button:not(.af-icon-button){&#xa;background:#b3b3b3;&#xa;border-color:#b3b3b3;&#xa;pointer-events: none&#xa;}&#xa;"
+                        dorExclusion="true"
+                        fileSizeLimit="10"
+                        guideNodeClass="guideFileUpload"
+                        mimeType="[ application/pdf]"
+                        multiSelection="true"
+                        name="FileAttachmentDRA"
+                        textIsRich="[true,true]">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fileattachment
+                                jcr:primaryType="nt:unstructured"
+                                guideNodeClass="guideCompositeFieldItem"
+                                name="fileAttachment"/>
+                            <comment
+                                jcr:primaryType="nt:unstructured"
+                                guideNodeClass="guideCompositeFieldItem"
+                                name="comment"/>
+                        </items>
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="8"/>
+                        </cq:responsive>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_fileuploadfield
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[margin-top:-3px,margin-left:-85px]"
+                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:-3px\, —\, —\, -85px]"/>
+                            <af_fileuploadfieldwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px,background:#00B1B0,border-color:#22C55E,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor:pointer;]"
+                                default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:Set,backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                default_x0023_disabled="[background:#b3b3b3,cssOverride:pointer-events: none,border-color:#b3b3b3]"
+                                default_x0023_disabled_x0023_ui="[backgroundColor:#b3b3b3]"
+                                default_x0023_hover="[cssOverride:cursor:pointer;,background:#00C3B0]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#00C3B0]"/>
+                        </style>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;var docs=[];\\nguideBridge.getFileAttachmentsInfo({\\n       success:function(list) {\\n            for(var i=0; i&lt;list.length;i++){\\n\\t\\t\\t\\t if(list[i].path.toString().split(\\&quot;.pdf\\&quot;).length>2){\\n\\t\\t\\t\\t   var splitString = list[i].path.toString().split(\\&quot;.pdf\\&quot;);\\n\\t\\t\\t\\t   var splitStringNeeded = splitString[0].split(\\&quot;/\\&quot;\,5);\\n\\t\\t\\t\\t   var splitStringFinal = splitStringNeeded.join('/');\\n\\t\\t\\t\\t   var finalString = splitString.join(\\&quot;.pdf\,\\&quot;+splitStringFinal+\\&quot;/\\&quot;).split(\\&quot;\,\\&quot;);\\n\\t\\t\\t\\t   var lastEle = finalString.pop();\\n\\t\\t\\t\\t   for(var path in finalString){\\n\\t\\t\\t\\t\\t\\tdocs.push(finalString[path].replace(/\\\\n/g\,''));\\n\\t\\t\\t\\t   }\\n\\t\\t\\t\\t }\\n\\t\\t\\t\\t else{\\n\\t\\t\\t\\t\\tdocs.push(list[i].path);\\n\\t\\t\\t\\t }\\n\\t\\t}\\n        FilePaths.value = docs;\\n       }\\n});&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.FileAttachmentDRA&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidefileupload_copy>
+                    <guidebutton_116032263
+                        cq:cssClass="guide-1660920308923"
+                        jcr:created="{Date}2022-06-10T17:04:22.874Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-10T18:20:02.759Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Button"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        cssStyle=".guide-1660920308923 button:not(.af-icon-button):hover{&#xa;background:rgb(0,195,176);&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;box-shadow:0px 1px 2px 0px #20B2AA;&#xa;&#xa;}&#xa;.guide-1660920308923 button:not(.af-icon-button),.guide-1660920308923 input[type='button']{&#xa;background:#00B1B0;&#xa;border-color:#22C55E;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1660920308923 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#b3b3b3;&#xa;border-color:#b3b3b3;&#xa;pointer-events: none&#xa;}&#xa;.guide-1660920308923 button .iconButton-label{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="button_1160322631654880662993"
+                        textIsRich="[true,true]"
+                        type="Button"
+                        visible="{Boolean}false">
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;console.log(FilePaths.value);\\n/*var str1=\\n{\\n    \\&quot;contractNumber\\&quot;: contractNumber.value\,\\n    \\&quot;SelectDRADRB\\&quot;: SelectDRADRB.value\,\\n    \\&quot;AssignAdvisor\\&quot;: AssignAdvisor.value\,\\n    \\&quot;ContractNumberDRA\\&quot;: ContractNumberDRA.value\,\\n    \\&quot;CountyRoutePostMileDRA\\&quot;: CountyRoutePostMileDRA.value\,\\n    \\&quot;DateDRA\\&quot;: DateDRA.value\,\\n    \\&quot;WorkDescriptionDRA\\&quot;: WorkDescriptionDRA.value\,\\n    \\&quot;ContractorDRA\\&quot;: ContractorDRA.value\,\\n    \\&quot;ResidentEngineerDRA\\&quot;: ResidentEngineerDRA.value\,\\n    \\&quot;PhoneNumberDRA\\&quot;: PhoneNumberDRA.value\,\\n    \\&quot;ContractAmountDRA\\&quot;: ContractAmountDRA.value\,\\n    \\&quot;ContractApprovalDateDRA\\&quot;: ContractApprovalDateDRA.value\,\\n    \\&quot;OriginalNumberofProjectWorkingDaysDRA\\&quot;: OriginalNumberofProjectWorkingDaysDRA.value\,\\n    \\&quot;BidOpeningDateDRA\\&quot;: BidOpeningDateDRA.value\,\\n    \\&quot;FirstWorkingDayDateDRA\\&quot;: FirstWorkingDayDateDRA.value\,\\n    \\&quot;EstablishmentDateDRA\\&quot;: EstablishmentDateDRA.value\,\\n    \\&quot;AgreementDateDRA\\&quot;: AgreementDateDRA.value\,\\n    \\&quot;InitialMeetingDateDRA\\&quot;: InitialMeetingDateDRA.value\,\\n    \\&quot;SubsequentProgressMeetingScheduledDateDRA\\&quot;: SubsequentProgressMeetingScheduledDateDRA.value\,\\n    \\&quot;DRAName\\&quot;: DRAName.value\,\\n    \\&quot;REApprovalDateDRA\\&quot;: REApprovalDateDRA.value\,\\n    \\&quot;ContractorApprovalDateDRA\\&quot;: ContractorApprovalDateDRA.value\,\\n    \\&quot;CommentsDRA\\&quot;: CommentsDRA.value\,\\n\\t\\&quot;FilePaths\\&quot;: FilePaths.value\,\\n    \\&quot;userRole\\&quot;: userRole.value\,\\n    \\&quot;ea\\&quot;: ea.value\,\\n    \\&quot;district\\&quot;: district.value\,\\n    \\&quot;userID\\&quot;: userID.value\\n};*/\\nvar str1=\\&quot;&lt;data>&lt;contractNumber>\\&quot;+contractNumber.value+\\&quot;&lt;/contractNumber>&lt;SelectDRADRB>\\&quot;+SelectDRADRB.value+\\&quot;&lt;/SelectDRADRB>&lt;AssignAdvisor>\\&quot;+AssignAdvisor.value+\\&quot;&lt;/AssignAdvisor>&lt;ContractNumberDRA>\\&quot;+ContractNumberDRA.value+\\&quot;&lt;/ContractNumberDRA>&lt;CountyRoutePostMileDRA>\\&quot;+CountyRoutePostMileDRA.value+\\&quot;&lt;/CountyRoutePostMileDRA>&lt;DateDRA>\\&quot;+DateDRA.value+\\&quot;&lt;/DateDRA>&lt;WorkDescriptionDRA>\\&quot;+WorkDescriptionDRA.value+\\&quot;&lt;/WorkDescriptionDRA>&lt;ContractorDRA>\\&quot;+ContractorDRA.value+\\&quot;&lt;/ContractorDRA>&lt;ResidentEngineerDRA>\\&quot;+ResidentEngineerDRA.value+\\&quot;&lt;/ResidentEngineerDRA>&lt;PhoneNumberDRA>\\&quot;+PhoneNumberDRA.value+\\&quot;&lt;/PhoneNumberDRA>&lt;ContractAmountDRA>\\&quot;+ContractAmountDRA.value+\\&quot;&lt;/ContractAmountDRA>&lt;ContractApprovalDateDRA>\\&quot;+ContractApprovalDateDRA.value+\\&quot;&lt;/ContractApprovalDateDRA>&lt;OriginalNumberofProjectWorkingDaysDRA>\\&quot;+OriginalNumberofProjectWorkingDaysDRA.value+\\&quot;&lt;/OriginalNumberofProjectWorkingDaysDRA>&lt;BidOpeningDateDRA>\\&quot;+BidOpeningDateDRA.value+\\&quot;&lt;/BidOpeningDateDRA>&lt;FirstWorkingDayDateDRA>\\&quot;+FirstWorkingDayDateDRA.value+\\&quot;&lt;/FirstWorkingDayDateDRA>&lt;EstablishmentDateDRA>\\&quot;+EstablishmentDateDRA.value+\\&quot;&lt;/EstablishmentDateDRA>&lt;AgreementDateDRA>\\&quot;+AgreementDateDRA.value+\\&quot;&lt;/AgreementDateDRA>&lt;InitialMeetingDateDRA>\\&quot;+InitialMeetingDateDRA.value+\\&quot;&lt;/InitialMeetingDateDRA>&lt;SubsequentProgressMeetingScheduledDateDRA>\\&quot;+SubsequentProgressMeetingScheduledDateDRA.value+\\&quot;&lt;/SubsequentProgressMeetingScheduledDateDRA>&lt;DRAName>\\&quot;+DRAName.value+\\&quot;&lt;/DRAName>&lt;REApprovalDateDRA>\\&quot;+REApprovalDateDRA.value+\\&quot;&lt;/REApprovalDateDRA>&lt;ContractorApprovalDateDRA>\\&quot;+ContractorApprovalDateDRA.value+\\&quot;&lt;/ContractorApprovalDateDRA>&lt;CommentsDRA>\\&quot;+CommentsDRA.value+\\&quot;&lt;/CommentsDRA>&lt;FilePaths>\\&quot;+FilePaths.value+\\&quot;&lt;/FilePaths>&lt;userRole>\\&quot;+userRole.value+\\&quot;&lt;/userRole>&lt;ea>\\&quot;+ea.value+\\&quot;&lt;/ea>&lt;district>\\&quot;+district.value+\\&quot;&lt;/district>&lt;userID>\\&quot;+userID.value+\\&quot;&lt;/userID>&lt;/data>\\&quot;;\\n\\nconsole.log(str1);&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.button_1160322631654880662993&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_button
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[background:#00B1B0,border-color:#22C55E,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor: pointer;]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                default_x0023_disabled="[cssOverride:pointer-events: none,background:#b3b3b3,border-color:#b3b3b3]"
+                                default_x0023_disabled_x0023_ui="[backgroundColor:#b3b3b3]"
+                                default_x0023_hover="[background:rgb(0\,195\,176),border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,box-shadow:0px 1px 2px 0px #20B2AA]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:rgb(0\,195\,176),borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1660920424252&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#20B2AA&quot;}]}]"/>
+                            <af_buttontext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px]"/>
+                        </style>
+                    </guidebutton_116032263>
+                    <guidebutton_28838651
+                        cq:cssClass="guide-1656325959499"
+                        jcr:created="{Date}2022-05-23T12:13:32.128Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-05-23T12:17:43.179Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        cssStyle=".guide-1656325959499 button:not(.af-icon-button):hover{&#xa;background:rgb(0,195,176);&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;box-shadow:0px 1px 2px 0px #20B2AA;&#xa;&#xa;}&#xa;.guide-1656325959499 button:not(.af-icon-button),.guide-1656325959499 input[type='button']{&#xa;background:#00B1B0;&#xa;border-color:#22C55E;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1656325959499 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#b3b3b3;&#xa;border-color:#b3b3b3;&#xa;pointer-events: none&#xa;}&#xa;.guide-1656325959499 button .iconButton-label{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="Submit"
+                        textIsRich="[true,true]"
+                        type="Button">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                behavior="newline"
+                                offset="0"
+                                width="2"/>
+                        </cq:responsive>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_button
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[background:#00B1B0,border-color:#22C55E,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor: pointer;]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                default_x0023_disabled="[cssOverride:pointer-events: none,background:#b3b3b3,border-color:#b3b3b3]"
+                                default_x0023_disabled_x0023_ui="[backgroundColor:#b3b3b3]"
+                                default_x0023_hover="[background:rgb(0\,195\,176),border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,box-shadow:0px 1px 2px 0px #20B2AA]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:rgb(0\,195\,176),borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1660920424252&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#20B2AA&quot;}]}]"/>
+                            <af_buttontext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px]"/>
+                        </style>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;SucNoteEstDRA.visible=false;\\nErrNoteDRARE.visible=false;\\nif(FieldsPanel.validate() &amp;&amp; DRAInfoTable.validate()){\\nvar url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/SubmitEstablishmentFormDataCopy';\\n//var formdata = formdataXMLDRAEsta.value;\\n//var parser = new DOMParser();\\n//xmlDoc = parser.parseFromString(formdata\,\\&quot;text/xml\\&quot;);\\n//var xmldata=xmlDoc.getElementsByTagName(\\&quot;afUnboundData\\&quot;)[0].innerHTML;\\n//console.log(xmldata);\\n//var docs=FilePaths.value;\\nvar xmldata=\\&quot;&lt;data>&lt;contractNumber>\\&quot;+contractNumber.value+\\&quot;&lt;/contractNumber>&lt;SelectDRADRB>\\&quot;+SelectDRADRB.value+\\&quot;&lt;/SelectDRADRB>&lt;AssignAdvisor>\\&quot;+AssignAdvisor.value+\\&quot;&lt;/AssignAdvisor>&lt;ContractNumberDRA>\\&quot;+ContractNumberDRA.value+\\&quot;&lt;/ContractNumberDRA>&lt;CountyRoutePostMileDRA>\\&quot;+CountyRoutePostMileDRA.value+\\&quot;&lt;/CountyRoutePostMileDRA>&lt;DateDRA>\\&quot;+DateDRA.value+\\&quot;&lt;/DateDRA>&lt;WorkDescriptionDRA>\\&quot;+WorkDescriptionDRA.value+\\&quot;&lt;/WorkDescriptionDRA>&lt;ContractorDRA>\\&quot;+ContractorDRA.value+\\&quot;&lt;/ContractorDRA>&lt;ResidentEngineerDRA>\\&quot;+ResidentEngineerDRA.value+\\&quot;&lt;/ResidentEngineerDRA>&lt;PhoneNumberDRA>\\&quot;+PhoneNumberDRA.value+\\&quot;&lt;/PhoneNumberDRA>&lt;ContractAmountDRA>\\&quot;+ContractAmountDRA.value+\\&quot;&lt;/ContractAmountDRA>&lt;ContractApprovalDateDRA>\\&quot;+ContractApprovalDateDRA.value+\\&quot;&lt;/ContractApprovalDateDRA>&lt;OriginalNumberofProjectWorkingDaysDRA>\\&quot;+OriginalNumberofProjectWorkingDaysDRA.value+\\&quot;&lt;/OriginalNumberofProjectWorkingDaysDRA>&lt;BidOpeningDateDRA>\\&quot;+BidOpeningDateDRA.value+\\&quot;&lt;/BidOpeningDateDRA>&lt;FirstWorkingDayDateDRA>\\&quot;+FirstWorkingDayDateDRA.value+\\&quot;&lt;/FirstWorkingDayDateDRA>&lt;EstablishmentDateDRA>\\&quot;+EstablishmentDateDRA.value+\\&quot;&lt;/EstablishmentDateDRA>&lt;AgreementDateDRA>\\&quot;+AgreementDateDRA.value+\\&quot;&lt;/AgreementDateDRA>&lt;InitialMeetingDateDRA>\\&quot;+InitialMeetingDateDRA.value+\\&quot;&lt;/InitialMeetingDateDRA>&lt;SubsequentProgressMeetingScheduledDateDRA>\\&quot;+SubsequentProgressMeetingScheduledDateDRA.value+\\&quot;&lt;/SubsequentProgressMeetingScheduledDateDRA>&lt;DRAName>\\&quot;+DRAName.value+\\&quot;&lt;/DRAName>&lt;REApprovalDateDRA>\\&quot;+REApprovalDateDRA.value+\\&quot;&lt;/REApprovalDateDRA>&lt;ContractorApprovalDateDRA>\\&quot;+ContractorApprovalDateDRA.value+\\&quot;&lt;/ContractorApprovalDateDRA>&lt;CommentsDRA>\\&quot;+CommentsDRA.value+\\&quot;&lt;/CommentsDRA>&lt;FilePaths>\\&quot;+FilePaths.value+\\&quot;&lt;/FilePaths>&lt;userRole>\\&quot;+userRole.value+\\&quot;&lt;/userRole>&lt;ea>\\&quot;+ea.value+\\&quot;&lt;/ea>&lt;district>\\&quot;+district.value+\\&quot;&lt;/district>&lt;userID>\\&quot;+userID.value+\\&quot;&lt;/userID>&lt;/data>\\&quot;;\\n\\n//console.log(xmldata);\\n$.ajax({ \\n      type: 'POST'\,\\n      headers: {\\n        'Content-Type' : 'application/xml'\,\\n        'Accept' : '*/*'\\n      }\,\\n      url: url\,\\n     data: xmldata\,\\n    //data: data1\,\\n      success: function (data) { \\n        this.enabled=false;        \\n        FieldsPanel.enabled=false;\\n        DRAInfoTable.enabled=false;\\n        FileAttachmentDRA.enabled=false;\\n        CommentsDRA.enabled=false;\\n        SucNoteEstDRA.visible=true;\\n        ErrNoteDRARE.visible=false;\\n        PreviewDRAEstForm.visible=true;\\n      }\,\\n      error: function(err){\\n        //this block is executed when server encounters any problem\\n       // alert(\\&quot;something went wrong\\&quot;);\\n        ErrNoteDRARE.visible=true;\\n        SucNoteEstDRA.visible=false; \\n      }\\n});\\n}\\n//formdataXMLDRAEsta.value=\\&quot;\\&quot;;&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.Submit&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false},{&quot;script&quot;:{&quot;content&quot;:&quot;var str1=\\n{\\n    \\&quot;contractNumber\\&quot;: contractNumber.value\,\\n    \\&quot;SelectDRADRB\\&quot;: SelectDRADRB.value\,\\n    \\&quot;AssignAdvisor\\&quot;: AssignAdvisor.value\,\\n    \\&quot;ContractNumberDRA\\&quot;: ContractNumberDRA.value\,\\n    \\&quot;CountyRoutePostMileDRA\\&quot;: CountyRoutePostMileDRA.value\,\\n    \\&quot;DateDRA\\&quot;: DateDRA.value\,\\n    \\&quot;WorkDescriptionDRA\\&quot;: WorkDescriptionDRA.value\,\\n    \\&quot;ContractorDRA\\&quot;: ContractorDRA.value\,\\n    \\&quot;ResidentEngineerDRA\\&quot;: ResidentEngineerDRA.value\,\\n    \\&quot;PhoneNumberDRA\\&quot;: PhoneNumberDRA.value\,\\n    \\&quot;ContractAmountDRA\\&quot;: ContractAmountDRA.value\,\\n    \\&quot;ContractApprovalDateDRA\\&quot;: ContractApprovalDateDRA.value\,\\n    \\&quot;OriginalNumberofProjectWorkingDaysDRA\\&quot;: OriginalNumberofProjectWorkingDaysDRA.value\,\\n    \\&quot;BidOpeningDateDRA\\&quot;: BidOpeningDateDRA.value\,\\n    \\&quot;FirstWorkingDayDateDRA\\&quot;: FirstWorkingDayDateDRA.value\,\\n    \\&quot;EstablishmentDateDRA\\&quot;: EstablishmentDateDRA.value\,\\n    \\&quot;AgreementDateDRA\\&quot;: AgreementDateDRA.value\,\\n    \\&quot;InitialMeetingDateDRA\\&quot;: InitialMeetingDateDRA.value\,\\n    \\&quot;SubsequentProgressMeetingScheduledDateDRA\\&quot;: SubsequentProgressMeetingScheduledDateDRA.value\,\\n    \\&quot;DRAName\\&quot;: DRAName.value\,\\n    \\&quot;REApprovalDateDRA\\&quot;: REApprovalDateDRA.value\,\\n    \\&quot;ContractorApprovalDateDRA\\&quot;: ContractorApprovalDateDRA.value\,\\n    \\&quot;CommentsDRA\\&quot;: CommentsDRA.value\,\\n\\t\\&quot;FilePaths\\&quot;: FilePaths.value\,\\n    \\&quot;userRole\\&quot;: userRole.value\,\\n    \\&quot;ea\\&quot;: ea.value\,\\n    \\&quot;district\\&quot;: district.value\,\\n    \\&quot;userID\\&quot;: userID.value\\n};\\n\\nconsole.log(OBJtoXML(str1));&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.Submit&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false},{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.Submit&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;SucNoteEstDRA.visible=false;\\nErrNoteDRARE.visible=false;\\nif(FieldsPanel.validate() &amp;&amp; DRAInfoTable.validate()){\\n  \\tthis.enabled=false;\\n\\tvar url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/SubmitEstablishmentFormDataCopy';\\n\\tvar jsonData = {\\n\\t\\t\\&quot;contractNumber\\&quot;: contractNumber.value\,\\n\\t\\t\\&quot;SelectDRADRB\\&quot;: SelectDRADRB.value\,\\n\\t\\t\\&quot;AssignAdvisor\\&quot;: AssignAdvisor.value\,\\n\\t\\t\\&quot;ContractNumberDRA\\&quot;: ContractNumberDRA.value\,\\n      \\t\\&quot;DateDRA\\&quot;: DateEFDRA.value\,\\n\\t\\t\\&quot;CountyRoutePostMileDRA\\&quot;: CountyRoutePostMileDRA.value\,\\n\\t\\t\\&quot;WorkDescriptionDRA\\&quot;: WorkDescriptionDRA.value\,\\n\\t\\t\\&quot;ContractorDRA\\&quot;: ContractorDRA.value\,\\n\\t\\t\\&quot;ResidentEngineerDRA\\&quot;: ResidentEngineerDRA.value\,\\n\\t\\t\\&quot;PhoneNumberDRA\\&quot;: PhoneNumberDRA.value\,\\n\\t\\t\\&quot;ContractAmountDRA\\&quot;: ContractAmountDRA.value\,\\n\\t\\t\\&quot;ContractApprovalDateDRA\\&quot;: ContractApprovalDateDRA.value\,\\n\\t\\t\\&quot;OriginalNumberofProjectWorkingDaysDRA\\&quot;: OriginalNumberofProjectWorkingDaysDRA.value\,\\n\\t\\t\\&quot;BidOpeningDateDRA\\&quot;: BidOpeningDateDRA.value\,\\n\\t\\t\\&quot;FirstWorkingDayDateDRA\\&quot;: FirstWorkingDayDateDRA.value\,\\n\\t\\t\\&quot;EstablishmentDateDRA\\&quot;: EstablishmentDateDRA.value\,\\n\\t\\t\\&quot;AgreementDateDRA\\&quot;: AgreementDateDRA.value\,\\n\\t\\t\\&quot;InitialMeetingDateDRA\\&quot;: InitialMeetingDateDRA.value\,\\n\\t\\t\\&quot;SubsequentProgressMeetingScheduledDateDRA\\&quot;: SubsequentProgressMeetingScheduledDateDRA.value\,\\n\\t\\t\\&quot;DRAName\\&quot;: DRAName.value\,\\n\\t\\t\\&quot;REApprovalDateDRA\\&quot;: REApprovalDateDRA.value\,\\n\\t\\t\\&quot;ContractorApprovalDateDRA\\&quot;: ContractorApprovalDateDRA.value\,\\n\\t\\t\\&quot;CommentsDRA\\&quot;: CommentsDRA.value\,\\n\\t\\t\\&quot;FilePaths\\&quot;: FilePaths.value\,\\n\\t\\t\\&quot;userRole\\&quot;: userRole.value\,\\n\\t\\t\\&quot;ea\\&quot;: ea.value\,\\n\\t\\t\\&quot;district\\&quot;: district.value\,\\n\\t\\t\\&quot;userID\\&quot;: userID.value\,\\n\\t\\t\\&quot;HostPath\\&quot;: window.location.protocol+\\&quot;//\\&quot;+window.location.hostname+\\&quot;:\\&quot;+window.location.port\\n\\t};\\n  \\tif(InitialMeetingDateDRA.value === \\&quot;null\\&quot; || InitialMeetingDateDRA.value === \\&quot;\\&quot; || InitialMeetingDateDRA.value === null){\\n      jsonData.InitialMeetingDateDRA = \\&quot;1900-01-01\\&quot;;\\n    }\\n  \\tif(SubsequentProgressMeetingScheduledDateDRA.value === \\&quot;null\\&quot; || SubsequentProgressMeetingScheduledDateDRA.value === \\&quot;\\&quot; || SubsequentProgressMeetingScheduledDateDRA.value === null){\\n      jsonData.SubsequentProgressMeetingScheduledDateDRA = \\&quot;1900-01-01\\&quot;;\\n    }\\n  \\tif(REApprovalDateDRA.value === \\&quot;null\\&quot; || REApprovalDateDRA.value === \\&quot;\\&quot; || REApprovalDateDRA.value === null){\\n      jsonData.REApprovalDateDRA = \\&quot;1900-01-01\\&quot;;\\n    }\\n  \\tif(ContractorApprovalDateDRA.value === \\&quot;null\\&quot; || ContractorApprovalDateDRA.value === \\&quot;\\&quot; || ContractorApprovalDateDRA.value === null){\\n      jsonData.ContractorApprovalDateDRA = \\&quot;1900-01-01\\&quot;;\\n    }\\n\\tvar xmlData = OBJtoXML1({\\&quot;data\\&quot;:jsonData});\\n\\t//console.log(xmlData);\\n  $.ajax({ \\n        type: 'POST'\,\\n        headers: {\\n          'Content-Type' : 'application/xml'\,\\n          'Accept' : '*/*'\\n        }\,\\n        url: url\,\\n       data: xmlData\,\\n        success: function (data) { \\n          this.enabled=false;        \\n          FieldsPanel.enabled=false;\\n          DRAInfoTable.enabled=false;\\n          FileAttachmentDRA.enabled=false;\\n          CommentsDRA.enabled=false;\\n          SucNoteEstDRA.visible=true;\\n          ErrNoteDRARE.visible=false;\\n          PreviewDRAEstForm.visible=true;\\n        }\,\\n        error: function(err){\\n          //this block is executed when server encounters any problem\\n         // alert(\\&quot;something went wrong\\&quot;);\\n          ErrNoteDRARE.visible=true;\\n          SucNoteEstDRA.visible=false;\\n          this.enabled=true;\\n        }\\n  });\\n}\\nelse{\\n  ErrNoteDRARE.visible=true;\\n  ErrNoteDRARE.value=\\&quot;Please fill required details\\&quot;;\\n  SucNoteEstDRA.visible=false; \\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton_28838651>
+                    <guidebutton_80501621
+                        cq:cssClass="guide-1660920557810"
+                        jcr:created="{Date}2022-06-03T10:01:20.991Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-03T18:15:47.019Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Preview"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        cssStyle=".guide-1660920557810 button:not(.af-icon-button):hover{&#xa;background:rgb(0,195,176);&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;box-shadow:0px 1px 2px 0px #20B2AA;&#xa;&#xa;}&#xa;.guide-1660920557810 button:not(.af-icon-button),.guide-1660920557810 input[type='button']{&#xa;background:#00B1B0;&#xa;border-color:#22C55E;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-top-right-radius:6px;&#xa;border-bottom-left-radius:6px;&#xa;border-bottom-right-radius:6px;&#xa;border-top-left-radius:6px;&#xa;cursor: pointer;&#xa;}&#xa;.guide-1660920557810 [data-disabled='true'] button:not(.af-icon-button){&#xa;background:#b3b3b3;&#xa;border-color:#b3b3b3;&#xa;pointer-events: none&#xa;}&#xa;.guide-1660920557810 button .iconButton-label{&#xa;color:#F0FDF4;&#xa;font-weight:bold;&#xa;font-size:14px;&#xa;&#xa;}&#xa;"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="PreviewDRAEstForm"
+                        textIsRich="[true,true]"
+                        type="Button"
+                        visible="{Boolean}false">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                behavior="none"
+                                offset="0"
+                                width="2"/>
+                        </cq:responsive>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.PreviewDRAEstForm&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;var URL =\\&quot;/lc/content/dam/caltrans-eadr/establishment-forms/\\&quot;+district.value+\\&quot;-\\&quot;+ea.value+\\&quot;-Establishment-DRA.pdf\\&quot;;\\nguidelib.util.GuideUtil.navigateToURL(URL\,'_blank');&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_button
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[background:#00B1B0,border-color:#22C55E,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,cssOverride:cursor: pointer;]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00B1B0,borderWidthPopover:1px,borderRadiusPopover:6px]"
+                                default_x0023_disabled="[cssOverride:pointer-events: none,background:#b3b3b3,border-color:#b3b3b3]"
+                                default_x0023_disabled_x0023_ui="[backgroundColor:#b3b3b3]"
+                                default_x0023_hover="[background:rgb(0\,195\,176),border-top-right-radius:6px,border-bottom-left-radius:6px,border-bottom-right-radius:6px,border-top-left-radius:6px,box-shadow:0px 1px 2px 0px #20B2AA]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:rgb(0\,195\,176),borderRadiusPopover:6px,shadowContainer:{&quot;itemList&quot;:[{&quot;id&quot;:&quot;shadow.1660920424252&quot;\,&quot;shadowHorizontal&quot;:&quot;0px&quot;\,&quot;shadowVertical&quot;:&quot;1px&quot;\,&quot;shadowBlur&quot;:&quot;2px&quot;\,&quot;shadowSpread&quot;:&quot;0px&quot;\,&quot;shadowColor&quot;:&quot;#20B2AA&quot;}]}]"/>
+                            <af_buttontext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#F0FDF4,font-weight:bold,font-size:14px]"/>
+                        </style>
+                    </guidebutton_80501621>
+                    <guidetextbox_copy
+                        jcr:created="{Date}2022-05-23T12:18:35.000Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-01T15:07:24.141Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="formdataXMLDRAE"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="formdataXMLDRAEsta"
+                        textIsRich="[true,true,true]"
+                        visible="{Boolean}false"/>
+                    <guidetextbox
+                        jcr:created="{Date}2022-05-26T16:16:48.000Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-10T16:44:44.591Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="FilePaths"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        guideNodeClass="guideTextBox"
+                        name="FilePaths"
+                        textIsRich="[true,true,true]"
+                        visible="{Boolean}false"/>
+                    <guidetextdraw_480587
+                        cq:cssClass="guide-1654092118123"
+                        jcr:created="{Date}2022-06-01T14:00:05.000Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-02T10:53:56.043Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>Details are saved successfully, please check your mail.&lt;/p>&#xa;"
+                        cssStyle=".guide-1654092118123 .guideTextDraw.guideStaticText{&#xa;color:#2E8B57;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="SucNoteEstDRA"
+                        textIsRich="true"
+                        visible="{Boolean}false">
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textdraw
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#2E8B57]"/>
+                        </style>
+                    </guidetextdraw_480587>
+                    <guidetextdraw_203954
+                        cq:cssClass="guide-1654272422857"
+                        jcr:created="{Date}2022-06-03T16:03:08.000Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-06-03T19:24:36.000Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>Something went wrong&lt;/p>&#xa;"
+                        cssStyle=".guide-1654272422857 .guideTextDraw.guideStaticText{&#xa;color:rgb(235,23,25);&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="ErrNoteDRARE"
+                        textIsRich="true"
+                        visible="{Boolean}false">
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textdraw
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:rgb(235\,23\,25)]"/>
+                        </style>
+                    </guidetextdraw_203954>
+                    <guidebutton jcr:primaryType="nt:unstructured">
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;content&quot;:&quot;console.log(FilePaths.value);\\nvar str1=\\n{\\n    \\&quot;contractNumber\\&quot;: contractNumber.value\,\\n    \\&quot;SelectDRADRB\\&quot;: SelectDRADRB.value\,\\n    \\&quot;AssignAdvisor\\&quot;: AssignAdvisor.value\,\\n    \\&quot;ContractNumberDRA\\&quot;: ContractNumberDRA.value\,\\n    \\&quot;CountyRoutePostMileDRA\\&quot;: CountyRoutePostMileDRA.value\,\\n    \\&quot;DateDRA\\&quot;: DateDRA.value\,\\n    \\&quot;WorkDescriptionDRA\\&quot;: WorkDescriptionDRA.value\,\\n    \\&quot;ContractorDRA\\&quot;: ContractorDRA.value\,\\n    \\&quot;ResidentEngineerDRA\\&quot;: ResidentEngineerDRA.value\,\\n    \\&quot;PhoneNumberDRA\\&quot;: PhoneNumberDRA.value\,\\n    \\&quot;ContractAmountDRA\\&quot;: ContractAmountDRA.value\,\\n    \\&quot;ContractApprovalDateDRA\\&quot;: ContractApprovalDateDRA.value\,\\n    \\&quot;OriginalNumberofProjectWorkingDaysDRA\\&quot;: OriginalNumberofProjectWorkingDaysDRA.value\,\\n    \\&quot;BidOpeningDateDRA\\&quot;: BidOpeningDateDRA.value\,\\n    \\&quot;FirstWorkingDayDateDRA\\&quot;: FirstWorkingDayDateDRA.value\,\\n    \\&quot;EstablishmentDateDRA\\&quot;: EstablishmentDateDRA.value\,\\n    \\&quot;AgreementDateDRA\\&quot;: AgreementDateDRA.value\,\\n    \\&quot;InitialMeetingDateDRA\\&quot;: InitialMeetingDateDRA.value\,\\n    \\&quot;SubsequentProgressMeetingScheduledDateDRA\\&quot;: SubsequentProgressMeetingScheduledDateDRA.value\,\\n    \\&quot;DRAName\\&quot;: DRAName.value\,\\n    \\&quot;REApprovalDateDRA\\&quot;: REApprovalDateDRA.value\,\\n    \\&quot;ContractorApprovalDateDRA\\&quot;: ContractorApprovalDateDRA.value\,\\n    \\&quot;CommentsDRA\\&quot;: CommentsDRA.value\,\\n\\t\\&quot;FilePaths\\&quot;: FilePaths.value\,\\n    \\&quot;userRole\\&quot;: userRole.value\,\\n    \\&quot;ea\\&quot;: ea.value\,\\n    \\&quot;district\\&quot;: district.value\,\\n    \\&quot;userID\\&quot;: userID.value\\n};\\n\\nconsole.log(OBJtoXML(str1));&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel_DRAEST.button1654880455327&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton>
+                    <guidedatepicker
+                        jcr:created="{Date}2022-09-30T07:34:10.107Z"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-09-30T07:34:41.541Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Date Picker"
+                        sling:resourceType="fd/af/components/guidedatepicker"
+                        defaultToCurrentDate="true"
+                        guideNodeClass="guideDatePicker"
+                        name="DateEFDRA"
+                        textIsRich="[true,true]"
+                        visible="{Boolean}false"/>
+                </items>
+            </rootPanel>
+        </guideContainer>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <smallScreen
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Decimal}479"/>
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}767"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}991"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

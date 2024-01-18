@@ -1,0 +1,448 @@
+// Prefill code
+if(SelectDisputeIDList.value !== ""  && SelectDisputeIDList.value !== null){
+  	DMRDPanel.visible = false;
+	DisputeReportPanel.visible = true;
+    if(SelectDRADRB.value==="DRB"){
+      DisputeIDDMRDRB.value="Dispute Meeting ID : "+SelectDisputeIDList.value.replace("<p>","").replace("</p>","");
+      MeetingType1DMRDRB.value="Traditional/Informal : "+MeetingTypeValueDMRMain.value.replace("<p>","").replace("</p>","");
+      DMRDRBPanel.visible=true;
+      DMRDRAPanel.visible=false;
+      ContractorNoDMRDRB.value=ContractNumberDRB.value; 
+      REDMRDRB.value=ResidentEngineerDRB.value;
+      REPhoneNumberDMRDRB.value=PhoneNumberDRB.value;
+      ContractorDMRDRB.value=ContractorDRB.value;
+      
+      var tCount = Row1DMRDRB.instanceManager.instanceCount;
+      for(var k=0; k<tCount; k++){
+              DMRDRBTable.Row1DMRDRB.instanceManager.removeInstance(1);
+      }
+      var count = DMRMainPageTable.Row1DMRMainPage.instanceManager.instanceCount-1;
+      var disList =  DMRMainPageTable.Row1DMRMainPage.instanceManager.instances;
+      for(var i=1;i <= count;i++){
+          Row1DMRDRB.instanceManager.addInstance(1);
+          Row1DMRDRB.tableItem11.value = disList[i].tableItem11.value;
+          Row1DMRDRB.tableItem12.value = disList[i].tableItem12.value;
+          Row1DMRDRB.tableItem13.value = disList[i].tableItem13.value;
+          Row1DMRDRB.tableItem14.value = disList[i].tableItem14.value;
+          Row1DMRDRB.tableItem15.value = disList[i].tableItem15.value;
+          Row1DMRDRB.tableItem16.value = disList[i].tableItem16.value;
+          Row1DMRDRB.tableItem17.value = disList[i].tableItem17.value;
+        Row1DMRDRB.visible=true;
+      }
+      
+      var jsonData={
+      'ea' : ea.value,
+      'district' : district.value,
+      'DRType' : SelectDRADRB.value,
+      'DisputeID' : SelectDisputeIDList.value
+      };
+      xmlData = OBJtoXML1({"data":jsonData});
+      url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetEntireDisputeDetails';
+      
+      $.ajax({ 
+            type: 'POST',
+            headers: {
+              'Content-Type' : 'application/xml',
+              'Accept' : '*/*'
+            },
+            url: url,
+           data: xmlData,
+            success: function (data) {
+                  var parsedData = JSON.parse(data.getElementsByTagName('RecomDetailsJson')[0].innerHTML);
+                  var parsedData1 = JSON.parse(data.getElementsByTagName('MeetDetailsJson')[0].innerHTML);
+              	  var attenddetails = JSON.parse(data.getElementsByTagName('DMAttendDetailsJson')[0].innerHTML);
+              	  parsedData1 = parsedData1.MeetingDetails.Details;
+                  MeetCallDMRDRB.value = parsedData1.MEETING_CALLED_BY;
+                  DRBChairDMRDRB.value = parsedData1.DRB_CHAIR;
+                  MeetingDateDMRDRB.value = parsedData1.MEETING_DATE;
+                  DRBMemr1DMRDRB.value = parsedData1.DRB_MEMEBER;
+                  if(parsedData1.MEETING_LOCATION !== "null"){
+                    MeetLOCDMRDRB.value = parsedData1.MEETING_LOCATION;
+                  }
+                  if(parsedData1.CALTRANS_REPRESENTATIVE !== "null"){
+                    CalRepDMRDRB.value = parsedData1.CALTRANS_REPRESENTATIVE;
+                  }
+              	  if(parsedData1.ATTENDEE_1 !== "null"){
+                    attendee1DMRDRB.value = parsedData1.ATTENDEE_1;
+                  }
+              	  if(parsedData1.CONTRACTORS_REPRESENTATIVE !== "null"){
+                    ContractoRepDMRDRB.value = parsedData1.CONTRACTORS_REPRESENTATIVE;
+                  }
+              	  if(parsedData1.ATTENDEE_2 !== "null"){
+                    attendee2DMRDRB.value = parsedData1.ATTENDEE_2;
+                  }
+              	  //Add Attendee Details
+              	  var count_check;
+                  if(Object.values(attenddetails.AttendDet).length>0){
+                    count_check = typeof(attenddetails.AttendDet.Record.DISPUTE_MEETING_ID)==="undefined"?attenddetails.AttendDet.Record.length:1;
+                  }
+                  var tCount = guideBridge.resolveNode("MeetAtendPanelDMRDRB").instanceManager.instanceCount;
+                  for(var i=0;i<tCount;i++){
+                    guideBridge.resolveNode("MeetAtendPanelDMRDRB").enabled=false;
+                    guideBridge.resolveNode("MeetAtendPanelDMRDRB").instanceManager.removeInstance(1);
+                  }
+              	  MeetAtendPanelDMRDRB.resetData();
+                  if(count_check===1){
+                    if(attenddetails.AttendDet.Record.ATTENDEE_NAME!=="null"){
+                      MeetAtendPanelDMRDRB.AttendNameDMRDRB.value = attenddetails.AttendDet.Record.ATTENDEE_NAME;
+                    }
+                    if(attenddetails.AttendDet.Record.JOB_TITLE!=="null"){
+                      MeetAtendPanelDMRDRB.AttendJobTitleDMRDRB.value = attenddetails.AttendDet.Record.JOB_TITLE;
+                    }
+                    if(attenddetails.AttendDet.Record.ATTENDEE_CHECK!=="null"){
+                      MeetAtendPanelDMRDRB.AttendCheckDMRDRB.value = attenddetails.AttendDet.Record.ATTENDEE_CHECK;
+                    }
+                    MeetAtendPanelDMRDRB.enabled=false;
+                    MeetAtendPanelDMRDRB.visible=true;
+                  }
+                  else if(count_check>1){
+                    for(var k=0; k<attenddetails.AttendDet.Record.length; k++){
+                      if(k>0){
+                        MeetAtendPanelDMRDRB.instanceManager.addInstance(1);
+                      }
+                      if(attenddetails.AttendDet.Record[k].ATTENDEE_NAME!=="null"){
+                        MeetAtendPanelDMRDRB.AttendNameDMRDRB.value = attenddetails.AttendDet.Record[k].ATTENDEE_NAME;
+                      }
+                      if(attenddetails.AttendDet.Record[k].JOB_TITLE!=="null"){
+                        MeetAtendPanelDMRDRB.AttendJobTitleDMRDRB.value = attenddetails.AttendDet.Record[k].JOB_TITLE;
+                      }
+                      if(attenddetails.AttendDet.Record[k].ATTENDEE_CHECK!=="null"){
+                        MeetAtendPanelDMRDRB.AttendCheckDMRDRB.value = attenddetails.AttendDet.Record[k].ATTENDEE_CHECK;
+                      }
+                      MeetAtendPanelDMRDRB.enabled=false;
+                      MeetAtendPanelDMRDRB.visible=true;
+                    }
+                  }
+                  if(Object.values(parsedData.RecomDetails).length>0){
+                      if(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE!=="null"){
+                        DRBRequestDMRDRB.value=0;
+                        if(parsedData.RecomDetails.Details.ADD_INFO_RE!=="null"){
+                            CalDMRDRB.value=0;
+                            CalDateDMRDRB.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();
+                        }
+                        if(parsedData.RecomDetails.Details.ADD_INFO_CONTRACTOR!=="null"){
+                            CONDMRDRB.value=1;
+                            CONDateDMRDRB.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();
+                        }
+                      }
+                      if(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML!==""){
+                          DateAddInfoProvDMRDRB.value=new Date(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML).toISOString();
+                      }
+                      if(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML!==""){
+                          DateAddInfoProvDMRDRB.value=new Date(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML).toISOString();
+                      }
+                      if(parsedData.RecomDetails.Details.CREATED_DATE!=="null"){
+                        	DateDMRDRB1.value=new Date(parsedData.RecomDetails.Details.CREATED_DATE).toISOString();
+                        	if(parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE!=="null"){
+                              DRBRecomDateDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;
+                              SignDateDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;
+                          	}
+                        	else{
+                          		DRBRecomDateDMRDRB.value=parsedData.RecomDetails.Details.CREATED_DATE;
+                              	SignDateDMRDRB.value=parsedData.RecomDetails.Details.CREATED_DATE;
+                        	}
+                      }
+                      if(parsedData.RecomDetails.Details.FAVOR_PARTY!=="null"){
+                        	if(parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY!=="null"){
+                              DRBDateFavPartyDMRDRB.value=parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY;
+                          	}
+                            else{
+                              DRBDateFavPartyDMRDRB.value=parsedData.RecomDetails.Details.FAVOR_PARTY;
+                            }
+                      }
+                      if(data.getElementsByTagName('RE_Response')[0].innerHTML!==""){
+                            CalTransResponseDMRDRB.value=data.getElementsByTagName('RE_Response')[0].innerHTML;
+                      }
+                      if(data.getElementsByTagName('RE_ResDate')[0].innerHTML!==""){
+                            CalTransResDateDMRDRB.value=data.getElementsByTagName('RE_ResDate')[0].innerHTML;
+                      }
+                      if(data.getElementsByTagName('Con_Response')[0].innerHTML!==""){
+                            ContractorResponseDMRDRB.value=data.getElementsByTagName('Con_Response')[0].innerHTML;
+                      }
+                      if(data.getElementsByTagName('Con_ResDate')[0].innerHTML!==""){
+                            ContractorResDateDMRDRB.value=data.getElementsByTagName('Con_ResDate')[0].innerHTML;
+                      }
+               		}
+            },
+            error: function(err){
+              //this block is executed when server encounters any problem
+            }
+      });
+    }
+    else if(SelectDRADRB.value==="DRA"){
+      DMRDRBPanel.visible=false;
+      DMRDRAPanel.visible=true;
+      DisputeIDDMRDRA.value="Dispute Meeting ID : "+SelectDisputeIDList.value.replace("<p>","").replace("</p>","");
+      MeetingType1DMRDRA.value="Traditional/Informal : "+MeetingTypeValueDMRMain.value.replace("<p>","").replace("</p>","");
+      ContractorNoDMRDRA.value=ContractNumberDRA.value;
+      REDMRDRA.value=ResidentEngineerDRA.value;
+      REPhoneNumberDMRDRA.value=PhoneNumberDRA.value;
+      ContractorDMRDRA.value=ContractorDRA.value;
+      var tCount = Row1DMRDRA.instanceManager.instanceCount;
+      
+      for(var k=0; k<tCount; k++){
+        DMRDRATable.Row1DMRDRA.instanceManager.removeInstance(1);
+      }
+      var count = DMRMainPageTable.Row1DMRMainPage.instanceManager.instanceCount-1;
+      var disList =  DMRMainPageTable.Row1DMRMainPage.instanceManager.instances;
+      for(var i=1;i <= count;i++){
+          Row1DMRDRA.instanceManager.addInstance(1);
+          Row1DMRDRA.tableItem11.value = disList[i].tableItem11.value;
+          Row1DMRDRA.tableItem12.value = disList[i].tableItem12.value;
+          Row1DMRDRA.tableItem13.value = disList[i].tableItem13.value;
+          Row1DMRDRA.tableItem14.value = disList[i].tableItem14.value;
+          Row1DMRDRA.tableItem15.value = disList[i].tableItem15.value;
+          Row1DMRDRA.tableItem16.value = disList[i].tableItem16.value;
+          Row1DMRDRA.tableItem17.value = disList[i].tableItem17.value;
+        Row1DMRDRA.visible=true;
+      }
+      var jsonData={
+      'ea' : ea.value,
+      'district' : district.value,
+      'DRType' : SelectDRADRB.value,
+      'DisputeID' : SelectDisputeIDList.value
+      };
+      xmlData = OBJtoXML1({"data":jsonData});
+      url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/GetEntireDisputeDetails';  
+      
+      $.ajax({ 
+            type: 'POST',
+            headers: {
+              'Content-Type' : 'application/xml',
+              'Accept' : '*/*'
+            },
+            url: url,
+           data: xmlData,
+          //data: data1,
+            success: function (data) {
+              //console.log(data);
+              var parsedData = JSON.parse(data.getElementsByTagName('RecomDetailsJson')[0].innerHTML);
+              var parsedData1 = JSON.parse(data.getElementsByTagName('MeetDetailsJson')[0].innerHTML);
+              var attenddetails = JSON.parse(data.getElementsByTagName('DMAttendDetailsJson')[0].innerHTML);
+              parsedData1 = parsedData1.MeetingDetails.Details;
+              MeetCallDMRDRA.value = parsedData1.MEETING_CALLED_BY;
+              MeetingDateDMRDRA.value = parsedData1.MEETING_DATE;
+              AdvisorDMRDRA.value = parsedData1.DRA_MEMBER;
+              if(parsedData1.MEETING_LOCATION !== "null"){
+                  MeetLOCDMRDRA.value = parsedData1.MEETING_LOCATION;
+              }
+              if(parsedData1.CALTRANS_REPRESENTATIVE !== "null"){
+                  CalRepDMRDRA.value = parsedData1.CALTRANS_REPRESENTATIVE;
+              }
+              if(parsedData1.ATTENDEE_1 !== "null"){
+                  attendee1DMRDRA.value = parsedData1.ATTENDEE_1;
+              }
+              if(parsedData1.CONTRACTORS_REPRESENTATIVE !== "null"){
+                  ContractoRepDMRDRA.value = parsedData1.CONTRACTORS_REPRESENTATIVE;
+              }
+              if(parsedData1.ATTENDEE_2 !== "null"){
+                  attendee2DMRDRA.value = parsedData1.ATTENDEE_2;
+              } 
+              //add attendee details
+              var count_check;
+              if(Object.values(attenddetails.AttendDet).length>0){
+                count_check = typeof(attenddetails.AttendDet.Record.DISPUTE_MEETING_ID)==="undefined" ? attenddetails.AttendDet.Record.length : 1;
+              }
+              var tCount = guideBridge.resolveNode("MeetAtendPanelDMRDRA").instanceManager.instanceCount;
+              for(var i=0;i<tCount;i++){
+                guideBridge.resolveNode("MeetAtendPanelDMRDRA").enabled=false;
+                guideBridge.resolveNode("MeetAtendPanelDMRDRA").instanceManager.removeInstance(1);
+              }
+              MeetAtendPanelDMRDRA.resetData();
+              if(count_check===1){
+                if(attenddetails.AttendDet.Record.ATTENDEE_NAME!=="null"){
+                  MeetAtendPanelDMRDRA.AttendNameDMRDRA.value = attenddetails.AttendDet.Record.ATTENDEE_NAME;
+                }
+                if(attenddetails.AttendDet.Record.JOB_TITLE!=="null"){
+                  MeetAtendPanelDMRDRA.AttendJobTitleDMRDRA.value = attenddetails.AttendDet.Record.JOB_TITLE;
+                }
+                if(attenddetails.AttendDet.Record.ATTENDEE_CHECK!=="null"){
+                  MeetAtendPanelDMRDRA.AttendCheckDMRDRA.value = attenddetails.AttendDet.Record.ATTENDEE_CHECK;
+                }
+                MeetAtendPanelDMRDRA.enabled=false;
+                MeetAtendPanelDMRDRA.visible=true;
+              }
+              else if(count_check>1){
+                for(var k=0; k<attenddetails.AttendDet.Record.length; k++){
+                  if(k>0){
+                    MeetAtendPanelDMRDRA.instanceManager.addInstance(1);
+                  }
+                  if(attenddetails.AttendDet.Record[k].ATTENDEE_NAME!=="null"){
+                    MeetAtendPanelDMRDRA.AttendNameDMRDRA.value = attenddetails.AttendDet.Record[k].ATTENDEE_NAME;
+                  }
+                  if(attenddetails.AttendDet.Record[k].JOB_TITLE!=="null"){
+                    MeetAtendPanelDMRDRA.AttendJobTitleDMRDRA.value = attenddetails.AttendDet.Record[k].JOB_TITLE;
+                  }
+                  if(attenddetails.AttendDet.Record[k].ATTENDEE_CHECK!=="null"){
+                    MeetAtendPanelDMRDRA.AttendCheckDMRDRA.value = attenddetails.AttendDet.Record[k].ATTENDEE_CHECK;
+                  }
+                  MeetAtendPanelDMRDRA.enabled=false;
+                  MeetAtendPanelDMRDRA.visible=true;
+                }
+              }
+			  if(Object.values(parsedData.RecomDetails).length>0){
+				if(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE!=="null"){
+					DRARequestDMRDRA.value=0;
+					if(parsedData.RecomDetails.Details.ADD_INFO_RE!=="null"){
+						CalDMRDRA.value=0;
+						CalDateDMRDRA.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();
+					}
+					if(parsedData.RecomDetails.Details.ADD_INFO_CONTRACTOR!=="null"){
+						CONDMRDRA.value=1;
+						CONDateDMRDRA.value=new Date(parsedData.RecomDetails.Details.ADD_INFO_DUEDATE).toISOString();
+					}
+				}
+				if(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML!==""){
+					DateAddInfoProvDMRDRA.value=new Date(data.getElementsByTagName('AddInfoSubDateRE')[0].innerHTML).toISOString();
+				}
+                if(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML!==""){
+					DateAddInfoProvDMRDRA.value=new Date(data.getElementsByTagName('AddInfoSubDateCon')[0].innerHTML).toISOString();
+				}
+				if(parsedData.RecomDetails.Details.CREATED_DATE!=="null"){
+                  DateDMRDRA1.value=new Date(parsedData.RecomDetails.Details.CREATED_DATE).toISOString();
+                  if(parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE!=="null"){
+                    DRARecomDateDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;
+                    SignDateDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDERATION_SUBMITTED_DATE;
+                  }
+                  else{
+                    DRARecomDateDMRDRA.value=parsedData.RecomDetails.Details.CREATED_DATE;
+                    SignDateDMRDRA.value=parsedData.RecomDetails.Details.CREATED_DATE;
+                  }
+                }
+                if(parsedData.RecomDetails.Details.FAVOR_PARTY!=="null"){
+                  if(parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY!=="null"){
+                    DRADateFavPartyDMRDRA.value=parsedData.RecomDetails.Details.RECONSIDER_FAVOR_PARTY;
+                  }
+                  else{
+                    DRADateFavPartyDMRDRA.value=parsedData.RecomDetails.Details.FAVOR_PARTY;
+                  }
+                }
+				if(data.getElementsByTagName('RE_Response')[0].innerHTML!=="null"){
+					CalTransResponseDMRDRA.value=data.getElementsByTagName('RE_Response')[0].innerHTML;
+				}
+				if(data.getElementsByTagName('RE_ResDate')[0].innerHTML!=="null"){
+					CalTransResDateDMRDRA.value=data.getElementsByTagName('RE_ResDate')[0].innerHTML;
+				}
+				if(data.getElementsByTagName('Con_Response')[0].innerHTML!=="null"){
+					ContractorResponseDMRDRA.value=data.getElementsByTagName('Con_Response')[0].innerHTML;
+				}
+				if(data.getElementsByTagName('Con_ResDate')[0].innerHTML!=="null"){
+					ContractorResDateDMRDRA.value=data.getElementsByTagName('Con_ResDate')[0].innerHTML;
+				}
+              }
+            },
+            error: function(err){
+              //this block is executed when server encounters any problem
+            }
+      });
+    }
+}
+else{
+  alert("Please select dispute ID and click on on next buttton");
+  DMRDPanel.visible = true;
+  DisputeReportPanel.visible = false;
+}
+
+//Submit PDF code
+var jsonData={};
+var disputeArray=[];
+jsonData.templateName="CEM6204.xdp";
+jsonData.ProjectInfo={
+	"ContractNumber": ContractorNoDMRDRB.value,
+	"Date": DateDMRDRB1.value,
+	"REName": REDMRDRB.value,
+	"REPhoneNo": REPhoneNumberDMRDRB.value,
+	"ContractorName": ContractorDMRDRB.value,
+  	"DisputeMeetingID":SelectDisputeIDList.value
+};
+jsonData.meetingCalled = MeetCallDMRDRB.value;
+jsonData.MeetInfoChair = DRBChairDMRDRB.value;
+jsonData.MeetInfoMeetingDate = MeetingDateDMRDRB.value;
+jsonData.MeetDRBMember1 = DRBMemr1DMRDRB.value;
+jsonData.MeetLocation = MeetLOCDMRDRB.value;
+jsonData.CaltransRep = CalRepDMRDRB.value;
+jsonData.MeetAtt1 = attendee1DMRDRB.value;
+jsonData.ContractorRep = ContractoRepDMRDRB.value;
+jsonData.MeetAtt2 = attendee2DMRDRB.value;
+
+//check and add attendes into the json
+var AttendListArr=[];
+  var Attendist =  MeetAtendPanelDMRDRB.instanceManager.instances;
+  for(var i=0;i < MeetAtendPanelDMRDRB.instanceManager.instanceCount;i++){
+    var checkbool = Attendist[i].AttendNameDMRDRB.value!==null || Attendist[i].AttendJobTitleDMRDRB.value!==null || Attendist[i].AttendCheckDMRDRB.value!==null;
+    if(checkbool){
+      var eachAttend={};
+      eachAttend.name=Attendist[i].AttendNameDMRDRB.value;
+      eachAttend.jobtitle=Attendist[i].AttendJobTitleDMRDRB.value;
+      eachAttend.attendType=Attendist[i].AttendCheckDMRDRB.value;
+      AttendListArr.push(eachAttend);
+    }
+}
+jsonData.AttendDetails=AttendListArr;
+var PCRArray=[];
+var PCRList =  DMRDRBTable.Row1DMRDRB.instanceManager.instances;
+for(var i=0;i < DMRDRBTable.Row1DMRDRB.instanceManager.instanceCount;i++){
+  if(i!==0){
+  	var eachPCR={};
+    eachPCR.PCRNo = PCRList[i].tableItem11.value;
+    eachPCR.Description = PCRList[i].tableItem12.value;
+  	if(PCRList[i].tableItem13.value !== null){
+        eachPCR.DollarValue=PCRList[i].tableItem13.value.toString().substring(2);
+    }
+    else{
+     eachPCR.DollarValue="";
+    }
+    eachPCR.DelayDays=PCRList[i].tableItem14.value;
+    eachPCR.SupplementalDate=PCRList[i].tableItem15.value;
+    eachPCR.DateREResponseTOSPCR=PCRList[i].tableItem16.value;
+    eachPCR.DateRefer=PCRList[i].tableItem17.value;
+	eachPCR.MeetingType=MeetingTypeValueDMRMain.value.replace("<p>","").replace("</p>","");
+	eachPCR.MeetingDate=MeetingDateValueDMRMain.value.replace("<p>","").replace("</p>","");
+    PCRArray.push(eachPCR);
+  }
+}
+jsonData.DisputeDetails=PCRArray;
+var MeetingTy=MeetingTypeValueDMRMain.value.replace("<p>","").replace("</p>","");
+jsonData.filename = "6204_"+district.value+"-"+ea.value+"_"+SelectDisputeIDList.value;
+jsonData.DRBRequestDMR=DRBRequestDMRDRB.value;
+jsonData.CalDMR=CalDMRDRB.value;
+jsonData.CalDateDMR=CalDateDMRDRB.value;
+jsonData.CONDMR=CONDMRDRB.value;
+jsonData.CONDateDMR=CONDateDMRDRB.value;
+jsonData.DateAddInfoProvDMR=DateAddInfoProvDMRDRB.value;
+jsonData.RecomDateDMR=DRBRecomDateDMRDRB.value;
+jsonData.DateFavPartyDMR=DRBDateFavPartyDMRDRB.value;
+jsonData.signature = SignatureDMRDRB.value;
+jsonData.NameSignDMR=NameSignDMRDRB.value;
+jsonData.SignDateDMR=SignDateDMRDRB.value;
+jsonData.CalTransResponseDMR=CalTransResponseDMRDRB.value;
+jsonData.CalTransResDateDMR=CalTransResDateDMRDRB.value;
+jsonData.ContractorResponseDMR=ContractorResponseDMRDRB.value;
+jsonData.ContractorResDateDMR=ContractorResDateDMRDRB.value;
+url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/PrintPDF';
+xmlData = OBJtoXML1({"data":jsonData});
+
+$.ajax({ 
+     type: 'POST',
+      headers: {
+       'Content-Type' : 'application/xml',
+       'Accept' : '*/*'
+      },
+     url: url,
+     data: xmlData,
+    //data: data1,
+      success: function (data) {
+        //console.log("hello");
+        SucMssgeDMRDRB.visible=true;
+        SucMssgeDMRDRB.value="<p>PDF Generated Successfully, Click on preview button to see the PDF</p>";
+        ErrMssgeDMRDRB.visible=false;
+        PreviewDMRDRB.visible=true;
+      },
+      error: function(err){
+        //this block is executed when server encounters any problem
+        SucMssgeDMRDRB.visible=false;
+        ErrMssgeDMRDRB.value="<p>Error occurred while previewing pdf</p>";
+        ErrMssgeDMRDRB.visible=true;
+        PreviewDMRDRB.visible=true;       	
+      }
+});

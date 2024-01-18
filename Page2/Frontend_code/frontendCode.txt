@@ -1,0 +1,235 @@
+// request for clarification
+if(ReqClarifyInputPPRES.value !== "" && ReqClarifyInputPPRES.value !== null){
+this.enabled=false;
+var jsonData={};
+var disputeArray=[];
+jsonData.templateName="ADR002.xdp";
+if(SelectDRADRB.value==="DRB"){
+      jsonData.ProjectInfo={
+        "ContractNumber": ContractNumberDRB.value,
+        "Date": DateDRB.value,
+        "DisputeMeetingID": DisputeMeetIDHide.value,
+        "REName": ResidentEngineerDRB.value,
+        "REPhoneNo": PhoneNumberDRB.value,
+        "ContractorName": ContractorDRB.value
+    };
+}
+else if(SelectDRADRB.value==="DRA"){
+  jsonData.ProjectInfo={
+        "ContractNumber": ContractNumberDRA.value,
+        "Date": DateDRA.value,
+        "DisputeMeetingID": DisputeMeetIDHide.value,
+        "REName": ResidentEngineerDRA.value,
+        "REPhoneNo": PhoneNumberDRA.value,
+        "ContractorName": ContractorDRA.value
+    };
+}
+var meetDate=new Date(MeetDatePPRES.value.replace('<p>','').replace('</p>',''));
+jsonData.ProjectInfo.meetDate=setMon(meetDate.getMonth())+"/"+setDate1(meetDate.getDate())+"/"+meetDate.getFullYear();
+var PCRArray=[];
+var PCRList =  PCPPPRES.Row1PPRES.instanceManager.instances;
+for(var i=0;i < PCPPPRES.Row1PPRES.instanceManager.instanceCount;i++){
+  if(i!==0){
+  	var eachPCR={};
+    eachPCR.PCRNo = PCRList[i].tableItem11.value;
+    eachPCR.Description = PCRList[i].tableItem12.value;
+  	if(PCRList[i].tableItem13.value !== null){
+        eachPCR.DollarValue=PCRList[i].tableItem13.value.toString().substring(2);
+    }
+    else{
+     eachPCR.DollarValue="";
+    }
+    eachPCR.DelayDays=PCRList[i].tableItem14.value;
+    eachPCR.SupplementalDate=PCRList[i].tableItem15.value;
+    eachPCR.DateREResponseTOSPCR=PCRList[i].tableItem16.value;
+    eachPCR.DateRefer=PCRList[i].tableItem17.value;
+    PCRArray.push(eachPCR);
+  }
+}
+jsonData.DisputeDetails=PCRArray;
+var count = guideBridge.resolveNode("DisputeDashDisTable.Row1.instanceManager").instanceCount-1;
+var meetingType,disputeID;
+var disList =  guideBridge.resolveNode("DisputeDashDisTable.Row1.instanceManager.instances");
+for(var i=0;i < count;i++){
+  if(disList[i].tableItem11.value==='Y'){
+    meetingType = disList[i].table1_item3.value;
+    disputeID = disList[i].table1_item1.value;
+    break;
+  }
+}
+
+jsonData.ea=ea.value;
+jsonData.district=district.value;
+jsonData.DisputeID=disputeID;
+jsonData.MeetingType=meetingType;
+jsonData.DRType=SelectDRADRB.value;
+jsonData.FilePaths=FilePathsPPRES.value;
+jsonData.type="Clarification";
+jsonData.userRole=userRole.value.toUpperCase();
+jsonData.userID=userID.value;
+jsonData.reqclainput=ReqClarifyInputPPRES.value;
+var reqcladeadline=new Date(ReqClariDatePPRES.value.replace('<p>','').replace('</p>',''));
+jsonData.ReqClarifyDeadline=setMon(reqcladeadline.getMonth())+"/"+setDate1(reqcladeadline.getDate())+"/"+reqcladeadline.getFullYear();
+jsonData.FilePaths=FilePathsPPRES.value;
+jsonData.HostPath=window.location.protocol+"//"+window.location.hostname+":"+window.location.port;
+xmlData = OBJtoXML1({"data":jsonData});
+url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InsertRecomResponseRecord';
+
+$.ajax({ 
+      type: 'POST',
+      headers: {
+        'Content-Type' : 'application/xml',
+        'Accept' : '*/*'
+      },
+      url: url,
+     data: xmlData,
+      success: function (data) {        
+        //console.log(data);
+        ReqClaSucMssgePPRES.value="<p>"+data+"</p>";
+        ReqClaSucMssgePPRES.visible=true;
+        ReqClaErrMssgePPRES.visible=false;
+        this.enabled=false;
+      },
+      error: function(err){        
+        //alert("something went wrong");
+        ReqClaErrMssgePPRES.value="<p>something went wrong</p>";
+        ReqClaErrMssgePPRES.visible=true;
+        ReqClaSucMssgePPRES.enabled=false;
+        this.enabled=true;
+      }
+});
+}
+else{
+  ReqClaErrMssgePPRES.value="<p>Please enter input inside text area</p>";
+  ReqClaErrMssgePPRES.visible=true;
+  ReqClaSucMssgePPRES.visible=false;
+}
+
+//request for reconsideration
+if(ReqRecNewInfoCheckPPRES.value!==null && ReqRecNewInfoCheckPPRES.value!=="" && ReqResInputPPRES.value!==null && ReqResInputPPRES.value!==""){
+this.enabled=false;
+var jsonData={};
+var disputeArray=[];
+jsonData.templateName="ADR002.xdp";
+if(SelectDRADRB.value==="DRB"){
+      jsonData.ProjectInfo={
+        "ContractNumber": ContractNumberDRB.value,
+        "Date": DateDRB.value,
+        "DisputeMeetingID": DisputeMeetIDHide.value,
+        "REName": ResidentEngineerDRB.value,
+        "REPhoneNo": PhoneNumberDRB.value,
+        "ContractorName": ContractorDRB.value
+    };
+}
+else if(SelectDRADRB.value==="DRA"){
+  jsonData.ProjectInfo={
+        "ContractNumber": ContractNumberDRA.value,
+        "Date": DateDRA.value,
+        "DisputeMeetingID": DisputeMeetIDHide.value,
+        "REName": ResidentEngineerDRA.value,
+        "REPhoneNo": PhoneNumberDRA.value,
+        "ContractorName": ContractorDRA.value
+    };
+}
+var meetDate=new Date(MeetDatePPRES.value.replace('<p>','').replace('</p>',''));
+jsonData.ProjectInfo.meetDate=setMon(meetDate.getMonth())+"/"+setDate1(meetDate.getDate())+"/"+meetDate.getFullYear();
+var PCRArray=[];
+var PCRList =  PCPPPRES.Row1PPRES.instanceManager.instances;
+for(var i=0;i < PCPPPRES.Row1PPRES.instanceManager.instanceCount;i++){
+  if(i!==0){
+  	var eachPCR={};
+    eachPCR.PCRNo = PCRList[i].tableItem11.value;
+    eachPCR.Description = PCRList[i].tableItem12.value;
+  	if(PCRList[i].tableItem13.value !== null){
+        eachPCR.DollarValue=PCRList[i].tableItem13.value.toString().substring(2);
+    }
+    else{
+     eachPCR.DollarValue="";
+    }
+    eachPCR.DelayDays=PCRList[i].tableItem14.value;
+    eachPCR.SupplementalDate=PCRList[i].tableItem15.value;
+    eachPCR.DateREResponseTOSPCR=PCRList[i].tableItem16.value;
+    eachPCR.DateRefer=PCRList[i].tableItem17.value;
+    PCRArray.push(eachPCR);
+  }
+}
+jsonData.DisputeDetails=PCRArray;
+var count = guideBridge.resolveNode("DisputeDashDisTable.Row1.instanceManager").instanceCount-1;
+var meetingType,disputeID;
+var disList =  guideBridge.resolveNode("DisputeDashDisTable.Row1.instanceManager.instances");
+for(var i=0;i < count;i++){
+  if(disList[i].tableItem11.value==='Y'){
+    meetingType = disList[i].table1_item3.value;
+    disputeID = disList[i].table1_item1.value;
+    break;
+  }
+}
+
+jsonData.ea=ea.value;
+jsonData.district=district.value;
+jsonData.DisputeID=disputeID;
+jsonData.MeetingType=meetingType;
+jsonData.DRType=SelectDRADRB.value;
+jsonData.type="Reconsideration";
+jsonData.userRole=userRole.value.toUpperCase();
+jsonData.userID=userID.value;
+jsonData.reqclainput=ReqClarifyInputPPRES.value;
+var reqcladeadline=new Date(ReqClariDatePPRES.value.replace('<p>','').replace('</p>',''));
+jsonData.ReqClarifyDeadline=setMon(reqcladeadline.getMonth())+"/"+setDate1(reqcladeadline.getDate())+"/"+reqcladeadline.getFullYear();
+jsonData.reqrecnewinfock=ReqRecNewInfoCheckPPRES.value;
+jsonData.reqrecnewinfoinput=ReqResInputPPRES.value;
+var reqrecdeadline=new Date(ReqRecDatePPRES.value.replace('<p>','').replace('</p>',''));
+jsonData.ReqReconsiderDeadline=setMon(reqrecdeadline.getMonth())+"/"+setDate1(reqrecdeadline.getDate())+"/"+reqrecdeadline.getFullYear();
+jsonData.FilePaths=FilePathsPPRES.value;
+jsonData.DisputeMeetingID = DisputeMeetIDHide.value;
+jsonData.fileName="62RR_"+district.value+"-"+ea.value+"_"+jsonData.DisputeMeetingID+"_"+userRole.value;
+jsonData.HostPath=window.location.protocol+"//"+window.location.hostname+":"+window.location.port;
+xmlData = OBJtoXML1({"data":jsonData});
+
+url = 'http://'+window.location.hostname+':8080/rest/services/Caltrans-eADR/Processes/InsertRecomResponseRecord';
+$.ajax({ 
+      type: 'POST',
+      headers: {
+        'Content-Type' : 'application/xml',
+        'Accept' : '*/*'
+      },
+      url: url,
+     data: xmlData,
+      success: function (data) {        
+        //console.log(data);
+        ReqRecSucMssgePPRES.value="<p>"+data+"</p>";
+		ReqRecSucMssgePPRES.visible=true;
+		ReqRecErrMssgePPRES.visible=false;
+        this.enabled=false;
+      },
+      error: function(err){        
+        //alert("something went wrong");
+        ReqRecErrMssgePPRES.value="<p>something went wrong</p>";
+		ReqRecErrMssgePPRES.visible=true;
+		ReqRecSucMssgePPRES.visible=false;
+        this.enabled=true;
+      }
+});
+}
+else{
+  ReqRecErrMssgePPRES.value="<p>Please select checkbox and enter reconsideration input inside textarea</p>";
+  ReqRecErrMssgePPRES.visible=true;
+  ReqRecSucMssgePPRES.visible=false;
+}
+function setMon(month){
+  if(month<9){
+    return "0"+(month+1);
+  }
+  else{
+    return  month+1;
+  }
+}
+
+function setDate1(date1){
+  if(date1<10){
+    return "0"+(date1);
+  }
+  else{
+    return  date1;
+  }
+}

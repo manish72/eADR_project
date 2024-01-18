@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2022-12-03T10:38:18.044Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2022-02-27T23:28:06.025Z"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:templateType="/libs/settings/wcm/template-types/afpage"
+        jcr:description="caltrans-eADR Template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="caltrans-eADRTemplate"
+        status="enabled"/>
+</jcr:root>
